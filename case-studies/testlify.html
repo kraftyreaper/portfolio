@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Testlify Case Study — Scaling an AI-Powered Hiring Platform. Product Designer Prashant Ahire's work on AI Resume Parser, enterprise workflows, and 500+ Jira tickets.">
+    <title>Testlify — Case Study | Prashant Ahire</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <!-- ── Header ── -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="../index.html" class="header__name">Prashant Ahire</a>
+            <nav class="header__nav" id="nav">
+                <a href="https://www.linkedin.com/in/prashantahire/" target="_blank" rel="noopener noreferrer"
+                    class="header__link">
+                    LinkedIn
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                </a>
+            </nav>
+            <button class="header__menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ── Case Study Content ── -->
+    <main class="case-detail">
+        <div class="container">
+
+            <!-- Hero -->
+            <div class="case-detail__hero reveal">
+                <span class="case-detail__category">AI-Powered Hiring Platform</span>
+                <h1 class="case-detail__title">Testlify: Scaling a Configurable Hiring Platform</h1>
+                <p
+                    style="color: var(--text-secondary); font-size: var(--font-size-md); margin-bottom: var(--space-md);">
+                    Building structure in ambiguity · August 2024 – January 2026</p>
+                <div class="testlify-hero__meta">
+                    <span class="testlify-hero__meta-item"><strong>Role:</strong> Product Designer</span>
+                    <span class="testlify-hero__meta-item"><strong>Duration:</strong> 18 Months</span>
+                    <span class="testlify-hero__meta-item"><strong>Scale:</strong> 500+ Jira Tickets</span>
+                </div>
+                <div class="case-detail__hero-image">
+                    <div class="laptop-frame">
+                        <div class="laptop-frame__browser-bar">
+                            <span class="laptop-frame__dot laptop-frame__dot--red"></span>
+                            <span class="laptop-frame__dot laptop-frame__dot--yellow"></span>
+                            <span class="laptop-frame__dot laptop-frame__dot--green"></span>
+                            <span class="laptop-frame__url">testlify.com</span>
+                        </div>
+                        <div class="laptop-frame__content">
+                            <div class="placeholder-image" style="min-height: 300px;">
+                                <span class="placeholder-image__icon">🖼️</span>
+                                <span class="placeholder-image__label">PLACEHOLDER: Testlify Platform Overview</span>
+                                <span class="placeholder-image__desc">Replace with Testlify employer portal screenshot
+                                    or hero composition</span>
+                            </div>
+                        </div>
+                        <div class="laptop-frame__base"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- At a Glance -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">At a Glance</h2>
+                <div class="at-a-glance">
+                    <div class="at-a-glance__row">
+                        <div class="at-a-glance__label">What is Testlify?</div>
+                        <div class="at-a-glance__value">AI-powered B2B hiring platform used by companies to screen and
+                            evaluate candidates through skill assessments, automated resume parsing, and psychometric
+                            evaluations. Strictly workspace-based — access requires company email domain.</div>
+                    </div>
+                    <div class="at-a-glance__row">
+                        <div class="at-a-glance__label">My Role</div>
+                        <div class="at-a-glance__value">Product Designer leading major feature initiatives across the
+                            entire ecosystem. Translated ambiguous business requirements into production-ready flows,
+                            owned features end-to-end, and maintained system coherence as the platform scaled.</div>
+                    </div>
+                    <div class="at-a-glance__row">
+                        <div class="at-a-glance__label">Scope</div>
+                        <div class="at-a-glance__value">Employer Portal (web-based hiring workflows) · Candidate
+                            Experience (web + Android/iOS apps) · Marketing Website (positioning and conversion) ·
+                            White-label & Reseller Systems (enterprise configurations)</div>
+                    </div>
+                    <div class="at-a-glance__row">
+                        <div class="at-a-glance__label">Scale of Work</div>
+                        <div class="at-a-glance__value">500+ Jira tickets across 18 months — spanning new feature
+                            design, UX enhancements, bugs identified and reported, content fixes, and cross-module UI
+                            improvements · Supported 2–3 junior designers · Operated across 4 testing environments</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Real Problem -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">The Real Problem</h2>
+                <div class="case-section__content">
+                    <p>Hiring software operates in a high-stakes environment. Design mistakes can lead to:</p>
+                    <div class="problem-list">
+                        <div class="problem-list__item">
+                            <span class="problem-list__icon">▸</span>
+                            <span><strong style="color: var(--text-primary);">Wrong hires</strong> — financial loss,
+                                productivity impact, team morale decline</span>
+                        </div>
+                        <div class="problem-list__item">
+                            <span class="problem-list__icon">▸</span>
+                            <span><strong style="color: var(--text-primary);">Biased evaluation</strong> — legal
+                                exposure, reputation damage</span>
+                        </div>
+                        <div class="problem-list__item">
+                            <span class="problem-list__icon">▸</span>
+                            <span><strong style="color: var(--text-primary);">Client churn</strong> — direct revenue
+                                loss</span>
+                        </div>
+                        <div class="problem-list__item">
+                            <span class="problem-list__icon">▸</span>
+                            <span><strong style="color: var(--text-primary);">Operational chaos</strong> — fragmented
+                                workflows, inconsistent scoring</span>
+                        </div>
+                    </div>
+
+                    <p>When I joined Testlify, the platform had strong functional depth but growing complexity:</p>
+                    <div class="problem-list">
+                        <div class="problem-list__item"><span class="problem-list__icon">▸</span><span>AI vs. manual
+                                scoring options</span></div>
+                        <div class="problem-list__item"><span class="problem-list__icon">▸</span><span>Configurable
+                                proctoring rules with tolerance thresholds</span></div>
+                        <div class="problem-list__item"><span class="problem-list__icon">▸</span><span>Multiple question
+                                types — MCQ, hands-on, third-party integrations, voice/video AI</span></div>
+                        <div class="problem-list__item"><span class="problem-list__icon">▸</span><span>ATS integrations
+                                (Greenhouse)</span></div>
+                        <div class="problem-list__item"><span class="problem-list__icon">▸</span><span>Psychometric
+                                reports — Big Five, 16 Personality, Enneagram, and more</span></div>
+                        <div class="problem-list__item"><span class="problem-list__icon">▸</span><span>White-label
+                                environments and reseller-managed workspaces</span></div>
+                        <div class="problem-list__item"><span class="problem-list__icon">▸</span><span>Multi-language
+                                support</span></div>
+                    </div>
+
+                    <p><strong style="color: var(--text-primary);">The challenge wasn't adding more features. It was
+                            preventing the system from collapsing under its own complexity.</strong></p>
+
+                    <p>Every configuration decision cascaded across multiple surfaces. One employer toggle could affect:
+                    </p>
+
+                    <div class="cascade-flow">
+                        Candidate status <span class="cascade-flow__arrow">→</span> Report output structure <span
+                            class="cascade-flow__arrow">→</span> PDF generation logic <span
+                            class="cascade-flow__arrow">→</span> Shareable link visibility <span
+                            class="cascade-flow__arrow">→</span> Historical data consistency <span
+                            class="cascade-flow__arrow">→</span> Cross-platform behaviour
+                    </div>
+
+                    <p>The core design question became: <em style="color: var(--text-primary);">How do we preserve
+                            flexibility without introducing confusion, risk, or unintended consequences?</em></p>
+                </div>
+            </section>
+
+            <!-- How I Worked -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">How I Worked</h2>
+                <div class="case-section__content">
+                    <table class="decision-table">
+                        <thead>
+                            <tr>
+                                <th>Daily Reality</th>
+                                <th>How I Responded</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Founder provided high-level references</td>
+                                <td>Mapped business intent → structured product logic — converting vague asks into
+                                    clear, actionable requirements with documented flows and edge cases</td>
+                            </tr>
+                            <tr>
+                                <td>No detailed PRDs or structured documentation</td>
+                                <td>Structured undefined requirements — architected TUX tickets (design proposals),
+                                    secured approval, moved to TF tickets (development)</td>
+                            </tr>
+                            <tr>
+                                <td>Requirements from sales, CS, client requests</td>
+                                <td>Surfaced edge cases before development — modelling failure states, data conditions,
+                                    and system interactions before engineering began</td>
+                            </tr>
+                            <tr>
+                                <td>Vague or half-baked requirements</td>
+                                <td>Validated feasibility with engineering — aligned on technical constraints,
+                                    development timeline, and implementation approach</td>
+                            </tr>
+                            <tr>
+                                <td>Revenue-driven prioritisation</td>
+                                <td>Enforced quality standards via UAT — tested across Preview → Staging → Release →
+                                    Production; blocked releases when specs weren't met</td>
+                            </tr>
+                            <tr>
+                                <td>No senior UX reviewer</td>
+                                <td>Directed 2–3 junior designers — reviewed complex flows before dev handoff,
+                                    maintained system-wide consistency</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: var(--space-lg); font-style: italic; color: var(--text-primary);">I wasn't
+                        just designing screens. I was structuring what the product should do when no one else had
+                        defined it.</p>
+                </div>
+            </section>
+
+            <!-- Design Principles -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">Design Principles</h2>
+                <p class="case-section__content" style="margin-bottom: var(--space-lg);">Five core principles governed
+                    my decisions across 18 months:</p>
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <span class="principle-card__number">Principle 01</span>
+                        <h3 class="principle-card__title">Control Over Automation</h3>
+                        <p class="principle-card__desc">AI and automation should assist decisions, not replace them.
+                            Every automated action required a manual override option, a pause capability, and clear
+                            transparency into what the system was doing.</p>
+                    </div>
+                    <div class="principle-card">
+                        <span class="principle-card__number">Principle 02</span>
+                        <h3 class="principle-card__title">Transparency in Complexity</h3>
+                        <p class="principle-card__desc">When systems are complex, surface that complexity visibly —
+                            don't hide it. Sync states, threshold logic, criteria scoring, and configuration impact
+                            should all be legible.</p>
+                    </div>
+                    <div class="principle-card">
+                        <span class="principle-card__number">Principle 03</span>
+                        <h3 class="principle-card__title">Progressive Disclosure</h3>
+                        <p class="principle-card__desc">Don't overwhelm users with all options at once. Reveal
+                            configuration depth step-by-step based on user journey and technical comfort level.</p>
+                    </div>
+                    <div class="principle-card">
+                        <span class="principle-card__number">Principle 04</span>
+                        <h3 class="principle-card__title">Guardrails, Not Gates</h3>
+                        <p class="principle-card__desc">Enable power users while protecting novice users. Confirmation
+                            modals, default limits, and clear warnings — but never block capabilities entirely.</p>
+                    </div>
+                    <div class="principle-card">
+                        <span class="principle-card__number">Principle 05</span>
+                        <h3 class="principle-card__title">Consistency Across Chaos</h3>
+                        <p class="principle-card__desc">As features expanded rapidly, enforce consistent patterns across
+                            every surface: status indicators, action buttons, empty states, error handling, sync
+                            visibility.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Major Contribution: AI Resume Parser -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">Major Contribution: AI Resume Parser</h2>
+                <div class="case-section__content">
+                    <table class="decision-table" style="margin-bottom: var(--space-xl);">
+                        <tbody>
+                            <tr>
+                                <td>The Ask</td>
+                                <td>A client requested automated resume screening integrated with their ATS workflow.
+                                    The founder wanted it architected as a scalable feature for all Testlify customers —
+                                    not a one-off solution.</td>
+                            </tr>
+                            <tr>
+                                <td>The Risk</td>
+                                <td>Over-automation could silently reject qualified candidates. Incorrect threshold
+                                    configuration, unclear criteria selection, or aggressive automation without
+                                    transparency could cause hiring mistakes, damage client trust, and create legal
+                                    liability.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3
+                    style="color: var(--text-primary); font-size: var(--font-size-lg); font-weight: 600; margin-bottom: var(--space-lg);">
+                    The 6-Stage Flow I Architected</h3>
+
+                <div class="stage-flow">
+                    <div class="stage-card">
+                        <span class="stage-card__number">1</span>
+                        <h4 class="stage-card__title">ATS Integration Gate</h4>
+                        <p class="stage-card__detail">Enforced prerequisite: Greenhouse ATS must be connected before
+                            accessing Resume Parser. Engineered contextual empty states for every condition: ATS not
+                            connected / ATS connected but no jobs / Jobs exist but no candidates / Job not configured
+                            for parsing.</p>
+                        <div class="stage-card__why">Why: Prevents users entering a broken flow. Makes prerequisites
+                            explicit upfront.</div>
+                    </div>
+                    <div class="stage-card">
+                        <span class="stage-card__number">2</span>
+                        <h4 class="stage-card__title">Job Selection & Stage Mapping</h4>
+                        <p class="stage-card__detail">System surfaces ATS jobs in 'Not Setup' state by default. Employer
+                            selects which ATS stage to pull candidates from + optional job description upload.</p>
+                        <div class="stage-card__why">Why: Connects external pipeline data with internal screening logic.
+                            Allows flexibility in when candidates enter screening.</div>
+                    </div>
+                    <div class="stage-card">
+                        <span class="stage-card__number">3</span>
+                        <h4 class="stage-card__title">AI Criteria Suggestion</h4>
+                        <p class="stage-card__detail">AI generates 10 evaluation criteria based on role name and job
+                            description. Employer must select minimum 8 — or build completely custom criteria from
+                            scratch.</p>
+                        <div class="stage-card__why">Why: Balances AI assistance with recruiter judgement. Prevents
+                            over-reliance on AI while reducing manual work.</div>
+                    </div>
+                    <div class="stage-card">
+                        <span class="stage-card__number">4</span>
+                        <h4 class="stage-card__title">Score Threshold Configuration</h4>
+                        <p class="stage-card__detail">Employer defines three scoring bands: High / Medium / Low.
+                            Configures automation rules per band — above X score moves candidate to next ATS stage;
+                            below Y score triggers auto-reject.</p>
+                        <div class="stage-card__why">Why: Makes automation consequences explicit. Forces deliberate
+                            decision-making about rejection thresholds.</div>
+                    </div>
+                    <div class="stage-card">
+                        <span class="stage-card__number">5</span>
+                        <h4 class="stage-card__title">Parsing Controls</h4>
+                        <p class="stage-card__detail">Default processing cap: 20 candidates per batch. Pause-resume
+                            capability during active screening. Sync-state visibility: Never synced / Failed / Synced X
+                            minutes ago. Manual re-sync as fallback.</p>
+                        <div class="stage-card__why">Why: Prevents bulk processing errors. Allows recovery from
+                            mistakes. Handles ATS dependency failures gracefully.</div>
+                    </div>
+                    <div class="stage-card">
+                        <span class="stage-card__number">6</span>
+                        <h4 class="stage-card__title">Candidate Evaluation Interface</h4>
+                        <p class="stage-card__detail">High/Medium/Low badges per candidate. Criteria-level scoring
+                            breakdown. On candidate detail: resume preview, basic info, and manual controls — reject
+                            candidate / move to next ATS stage / invite to assessment.</p>
+                        <div class="stage-card__why">Why: Provides transparency into AI decisions. Maintains human
+                            control at every decision point.</div>
+                    </div>
+                </div>
+
+                <!-- Placeholder for AI Resume Parser visuals -->
+                <div class="placeholder-image reveal" style="min-height: 250px; margin: var(--space-xl) 0;">
+                    <span class="placeholder-image__icon">🖼️</span>
+                    <span class="placeholder-image__label">PLACEHOLDER: AI Resume Parser Flow Screens</span>
+                    <span class="placeholder-image__desc">Replace with screenshots of the 6-stage AI Resume Parser flow
+                        from the Testlify employer portal</span>
+                </div>
+            </section>
+
+            <!-- Key Design Decisions -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">Key Design Decisions With Reasoning</h2>
+                <table class="decision-table">
+                    <thead>
+                        <tr>
+                            <th>Decision</th>
+                            <th>Reasoning & Trade-off</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mandatory Confirmation Before Rejection</td>
+                            <td><strong style="color: var(--text-primary);">What:</strong> Engineered an explicit
+                                confirmation popup before any automated rejection activates.<br><strong
+                                    style="color: var(--text-primary);">Why:</strong> Rejection is irreversible and
+                                affects real people's careers. Every bulk rejection must require a conscious, deliberate
+                                action.<br><strong style="color: var(--text-primary);">Trade-off:</strong> Adds friction
+                                — but prevents accidental mass rejection.</td>
+                        </tr>
+                        <tr>
+                            <td>Pause Capability</td>
+                            <td><strong style="color: var(--text-primary);">What:</strong> Built pause-resume controls
+                                directly into the active parsing flow.<br><strong
+                                    style="color: var(--text-primary);">Why:</strong> If an employer discovers an
+                                incorrect threshold after screening starts, they need an immediate stop
+                                mechanism.<br><strong style="color: var(--text-primary);">Trade-off:</strong> Added UI
+                                complexity — but it's a critical safety valve.</td>
+                        </tr>
+                        <tr>
+                            <td>Sync Transparency</td>
+                            <td><strong style="color: var(--text-primary);">What:</strong> Made ATS sync state highly
+                                visible with a manual re-sync fallback always accessible.<br><strong
+                                    style="color: var(--text-primary);">Why:</strong> External ATS dependency creates
+                                unpredictable failure states. Users need to see when the system isn't
+                                working.<br><strong style="color: var(--text-primary);">Trade-off:</strong> Exposes
+                                technical complexity — but builds durable trust.</td>
+                        </tr>
+                        <tr>
+                            <td>Default Candidate Limit</td>
+                            <td><strong style="color: var(--text-primary);">What:</strong> Set the default processing
+                                cap at 20 candidates per batch.<br><strong
+                                    style="color: var(--text-primary);">Why:</strong> Prevents first-time user overwhelm
+                                and reduces bulk processing errors.<br><strong
+                                    style="color: var(--text-primary);">Trade-off:</strong> Power users adjust manually
+                                — but the safe default protects against the more costly error.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: var(--space-lg); color: var(--text-secondary); font-style: italic;">Fast
+                    automation feels impressive in demos. Responsible automation builds long-term client trust. I built
+                    for reliability over speed.</p>
+            </section>
+
+            <!-- Impact -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">Impact</h2>
+                <div class="impact-list">
+                    <div class="impact-list__item"><span class="impact-list__icon">▸</span><span>Transformed Testlify
+                            from a passive post-application assessment tool into an active AI screening layer embedded
+                            in live enterprise ATS pipelines</span></div>
+                    <div class="impact-list__item"><span class="impact-list__icon">▸</span><span>Enabled ATS-based
+                            candidate filtering before manual review — reducing recruiter workload at the top of the
+                            hiring funnel</span></div>
+                    <div class="impact-list__item"><span class="impact-list__icon">▸</span><span>Configurable automation
+                            aligned with each company's individual hiring policies — not a one-size enforcement</span>
+                    </div>
+                    <div class="impact-list__item"><span class="impact-list__icon">▸</span><span>Scalable architecture
+                            created the foundation for expanding beyond Greenhouse to additional ATS platforms</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other Key Contributions -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">Other Key Contributions</h2>
+
+                <div class="contribution-card">
+                    <span class="contribution-card__number">01</span>
+                    <h3 class="contribution-card__title">Decision Visibility Across Libraries</h3>
+                    <div class="contribution-card__problem">
+                        <span class="contribution-card__problem-label">The Problem</span>
+                        <p class="contribution-card__problem-text">Employers had access to 3,000+ tests, 182,000+
+                            questions, 100+ templates, and 100+ interview kits — with no quick way to identify which
+                            assets were proven or popular. Selection was guesswork.</p>
+                    </div>
+                    <p class="contribution-card__problem-text"><strong style="color: var(--text-primary);">What I
+                            Did:</strong> Added 'Candidates Assessed' count directly onto listing cards and detail pages
+                        — applied consistently across all library types. Small UI addition. Large behavioural impact.
+                    </p>
+                </div>
+
+                <div class="contribution-card">
+                    <span class="contribution-card__number">02</span>
+                    <h3 class="contribution-card__title">Reporting as a Product</h3>
+                    <div class="contribution-card__problem">
+                        <span class="contribution-card__problem-label">The Problem</span>
+                        <p class="contribution-card__problem-text">Reports were treated as exports. But they're consumed
+                            by HR teams, leadership, and candidates — shared externally. Poor reports directly damage
+                            product perception and client trust.</p>
+                    </div>
+                    <table class="decision-table">
+                        <tbody>
+                            <tr>
+                                <td>Redesigned Core Reports</td>
+                                <td>Overhauled assessment-level and test-level reports — elevated visual hierarchy,
+                                    score presentation logic, and data readability for non-technical HR users.</td>
+                            </tr>
+                            <tr>
+                                <td>8 Psychometric PDF Reports</td>
+                                <td>Big Five · 16 Personality Types · Enneagram · Leadership Style · Sales Profiler ·
+                                    Leadership Potential · 360 Degree Feedback · PicOcean</td>
+                            </tr>
+                            <tr>
+                                <td>Restructured Export Architecture</td>
+                                <td>Organised into: Single assessment report · Library-only report · Merged PDF · ZIP
+                                    download</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="contribution-card">
+                    <span class="contribution-card__number">03</span>
+                    <h3 class="contribution-card__title">Employer Portal Structural Improvements</h3>
+                    <table class="decision-table">
+                        <thead>
+                            <tr>
+                                <th>Area</th>
+                                <th>What I Did</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Billing Page</td>
+                                <td>Modular card system — View plans / View usage / View invoices / Subscription
+                                    duration / Add-on usage / Credit consumption</td>
+                            </tr>
+                            <tr>
+                                <td>Email Configuration</td>
+                                <td>Tab-based organisation — Default (Testlify servers) / Domain-based (DNS
+                                    verification) / SMTP-based (Custom server)</td>
+                            </tr>
+                            <tr>
+                                <td>SAML SSO Flow</td>
+                                <td>Engineered complete enterprise Single Sign-On configuration inside Settings —
+                                    critical enterprise-readiness requirement</td>
+                            </tr>
+                            <tr>
+                                <td>Navigation Density</td>
+                                <td>Surfaced platform scale in navigation: Tests 3,000+ · Questions 182,000+ · Templates
+                                    100+ · Interviews 100+</td>
+                            </tr>
+                            <tr>
+                                <td>Referral System</td>
+                                <td>Orchestrated 'Refer & Earn $500' feature + dedicated landing page — organic
+                                    acquisition channel</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="contribution-card">
+                    <span class="contribution-card__number">04</span>
+                    <h3 class="contribution-card__title">Marketing Website Contributions</h3>
+                    <table class="decision-table">
+                        <thead>
+                            <tr>
+                                <th>Area</th>
+                                <th>What I Did</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AI Capability Positioning</td>
+                                <td>Made the AI assistance vs. automation distinction explicit, avoided 'AI will do
+                                    everything' messaging</td>
+                            </tr>
+                            <tr>
+                                <td>Feature Communication</td>
+                                <td>Elevated information hierarchy for complex features — assessment creation,
+                                    proctoring, ATS integration, psychometric types</td>
+                            </tr>
+                            <tr>
+                                <td>Enterprise Trust Signals</td>
+                                <td>Integrated compliance messaging — SOC 2 Type II, GDPR, ISO 27001, CCPA</td>
+                            </tr>
+                            <tr>
+                                <td>Product-Marketing Alignment</td>
+                                <td>Reviewed feature descriptions against actual workflows. Flagged misalignments.
+                                    Prevented overselling.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Cross-Platform Considerations -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">Cross-Platform Considerations</h2>
+                <table class="decision-table">
+                    <thead>
+                        <tr>
+                            <th>Coverage</th>
+                            <th>Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Platforms Validated</td>
+                            <td>Employer Portal: Desktop web · Candidate Experience: Web + Android + iOS · Browsers:
+                                Chrome, Safari, Edge, Firefox · OS: Windows, macOS, iOS, Android</td>
+                        </tr>
+                        <tr>
+                            <td>Validation Process</td>
+                            <td>Desktop responsiveness · Tablet layouts · Mobile web compatibility · Android app
+                                consistency · iOS app parity · Browser rendering differences · OS-level inconsistencies
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="cascade-flow" style="margin-top: var(--space-lg);">
+                    <p style="color: var(--text-primary); font-weight: 600; margin-bottom: var(--space-sm);">A concrete
+                        cascade example:</p>
+                    Employer enables video question in assessment
+                    <br><span class="cascade-flow__arrow">↓</span> Affects mobile camera permissions (Android/iOS)
+                    <br><span class="cascade-flow__arrow">↓</span> Affects browser permission handling (Safari blocks
+                    differently than Chrome)
+                    <br><span class="cascade-flow__arrow">↓</span> Affects performance on older devices
+                    <br><span class="cascade-flow__arrow">↓</span> Affects instruction clarity about technical
+                    requirements for candidates
+                </div>
+                <p style="margin-top: var(--space-md); color: var(--text-secondary); font-style: italic;">Design
+                    decisions weren't screen-based. They were behaviour-based across touchpoints.</p>
+            </section>
+
+            <!-- The Messy Reality -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">The Messy Reality — What Made This Hard</h2>
+                <p class="case-section__content" style="margin-bottom: var(--space-lg);">This wasn't clean product work.
+                    It was structured chaos.</p>
+                <table class="decision-table">
+                    <thead>
+                        <tr>
+                            <th>Challenge</th>
+                            <th>Reality & How I Navigated It</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>No Structured UX Validation Layer</td>
+                            <td>No senior UX reviewer or structured design critique process. <strong
+                                    style="color:var(--text-primary)">Solution:</strong> Leveraged AI tools to
+                                stress-test logic, simulate edge cases, and surface potential interaction loops.</td>
+                        </tr>
+                        <tr>
+                            <td>Revenue-Driven Prioritisation</td>
+                            <td>Client-requested features took priority over UX refinement. <strong
+                                    style="color:var(--text-primary)">Approach:</strong> Documented design debt
+                                explicitly. Balanced urgency against minimum viable quality.</td>
+                        </tr>
+                        <tr>
+                            <td>Cross-Browser Inconsistencies</td>
+                            <td>Chrome on Windows ≠ Safari on macOS. <strong
+                                    style="color:var(--text-primary)">Process:</strong> Enforced cross-environment
+                                validation for every feature before user release.</td>
+                        </tr>
+                        <tr>
+                            <td>Constant Context Switching</td>
+                            <td>Simultaneously owned: employer portal, candidate experience, marketing website, PDF
+                                reports, configuration settings, white-label environments.</td>
+                        </tr>
+                        <tr>
+                            <td>Supporting Junior Designers</td>
+                            <td>Reviewed work before every dev handoff. Elevated quality bar. Reduced team-level rework.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Parallel Projects -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">Parallel Projects — Quality Under Volume</h2>
+                <div class="parallel-projects">
+                    <div class="project-mini-card">
+                        <h3 class="project-mini-card__name">Metanotes AI Notetaker</h3>
+                        <span class="project-mini-card__role">UI Designer (Solo) · Marketing Website</span>
+                        <p class="project-mini-card__desc">Built marketing website foundation from scratch for an AI
+                            notetaker product. Researched competitors (Otter.ai, Fireflies), produced homepage,
+                            features, and pricing pages.</p>
+                    </div>
+                    <div class="project-mini-card">
+                        <h3 class="project-mini-card__name">DYMON Storage & Moving</h3>
+                        <span class="project-mini-card__role">UI Designer · Client Website</span>
+                        <p class="project-mini-card__desc">Produced new pages using existing styling and component
+                            library. Maintained brand consistency within a pre-defined design system.</p>
+                    </div>
+                    <div class="project-mini-card">
+                        <h3 class="project-mini-card__name">Appforest Time Tracking</h3>
+                        <span class="project-mini-card__role">UI Designer · Jira Marketplace App</span>
+                        <p class="project-mini-card__desc">Produced time tracking tool UI inside the Jira ecosystem.
+                            Referenced Tempo, matched Jira design system requirements.</p>
+                    </div>
+                </div>
+                <p style="margin-top: var(--space-md); color: var(--text-secondary); font-style: italic;">4 simultaneous
+                    products. 500+ Jira tickets. 18 months. No regression.</p>
+            </section>
+
+            <!-- What I Actually Delivered -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">What I Actually Delivered</h2>
+                <table class="decision-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Delivered</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Feature Leadership</td>
+                            <td>AI Resume Parser (ATS integration) · 8 Psychometric PDF Reports · SAML SSO Configuration
+                                · Billing Page Restructure · Email Configuration System · Referral Programme + Landing
+                                Page · Library Visibility Improvements · Report Architecture Redesign · Marketing
+                                Website Contributions</td>
+                        </tr>
+                        <tr>
+                            <td>System-Level Work</td>
+                            <td>500+ Jira tickets · Cross-module consistency enforcement · White-label/reseller UX
+                                considerations · Multi-device validation protocols · Logic gap identification before
+                                development · Cross-browser compatibility · UAT across 4 environments</td>
+                        </tr>
+                        <tr>
+                            <td>Team Impact</td>
+                            <td>Directed 2–3 junior designers · Enforced system-wide design quality standards · Elevated
+                                team output through upfront validation · Reduced post-handoff rework</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Key Outcomes -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">Key Outcomes</h2>
+                <div class="impact-list">
+                    <div class="impact-list__item"><span class="impact-list__icon">▸</span><span>Enabled scalable
+                            ATS-based resume screening without sacrificing employer control</span></div>
+                    <div class="impact-list__item"><span class="impact-list__icon">▸</span><span>Reduced manual resume
+                            review workload through intelligent, governed automation</span></div>
+                    <div class="impact-list__item"><span class="impact-list__icon">▸</span><span>Elevated decision
+                            confidence through visibility enhancements across all library surfaces</span></div>
+                    <div class="impact-list__item"><span class="impact-list__icon">▸</span><span>Transformed reporting
+                            professionalism — making psychometric data accessible to non-technical HR teams</span></div>
+                    <div class="impact-list__item"><span class="impact-list__icon">▸</span><span>Strengthened enterprise
+                            readiness through SSO, billing clarity, and configuration structure</span></div>
+                    <div class="impact-list__item"><span class="impact-list__icon">▸</span><span>Prevented automation
+                            errors through confirmation guardrails and pause capabilities</span></div>
+                    <div class="impact-list__item"><span class="impact-list__icon">▸</span><span>Maintained system
+                            coherence through 18 months of rapid, revenue-driven feature expansion</span></div>
+                    <div class="impact-list__item"><span class="impact-list__icon">▸</span><span>Elevated team output
+                            quality through mentorship, review, and design governance</span></div>
+                    <div class="impact-list__item"><span class="impact-list__icon">▸</span><span>Aligned marketing and
+                            product expectations — improving sales clarity and reducing churn risk</span></div>
+                </div>
+            </section>
+
+            <!-- What This Shows -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">What This Shows About How I Work</h2>
+                <table class="decision-table">
+                    <thead>
+                        <tr>
+                            <th>Capability</th>
+                            <th>How It Showed Up</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>I Map Ambiguity</td>
+                            <td>Most features started as vague founder direction. I surfaced what they should actually
+                                do — structuring logic, identifying edge cases, translating business intent into product
+                                behaviour.</td>
+                        </tr>
+                        <tr>
+                            <td>I Think in Systems</td>
+                            <td>Every design decision was evaluated for downstream impact. Screens are the output —
+                                systems are the work.</td>
+                        </tr>
+                        <tr>
+                            <td>I Balance Speed & Safety</td>
+                            <td>Client urgency is real. Revenue impact matters. But product risk is equally real. I
+                                navigated both.</td>
+                        </tr>
+                        <tr>
+                            <td>I Anticipate Problems</td>
+                            <td>Proactively surfaced logic gaps, edge cases, and potential failure states before they
+                                reached production.</td>
+                        </tr>
+                        <tr>
+                            <td>I Elevate Team Output</td>
+                            <td>Directing junior designers, maintaining consistency, preventing regression,
+                                strengthening the overall quality bar.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Reflection -->
+            <div class="reflection reveal">
+                <h2 class="reflection__title">Reflection</h2>
+                <div class="reflection__text">
+                    <p>Testlify wasn't a 'design this feature' project.</p>
+                    <p>It was: <span class="reflection__highlight">Build structure in a rapidly evolving,
+                            configuration-heavy platform where requirements are unclear, timelines are tight, and
+                            mistakes have real business consequences.</span></p>
+                    <p>I evolved across these 18 months:</p>
+                    <div class="reflection__flow">
+                        <span class="reflection__flow-item">Feature execution</span>
+                        <span class="reflection__flow-arrow">→</span>
+                        <span class="reflection__flow-item">System stewardship</span>
+                        <span class="reflection__flow-arrow">→</span>
+                        <span class="reflection__flow-item">Risk reduction</span>
+                        <span class="reflection__flow-arrow">→</span>
+                        <span class="reflection__flow-item">Team multiplier</span>
+                    </div>
+                    <p style="margin-top: var(--space-md);">The platform served real hiring teams making real decisions
+                        about real people's careers. Every design choice carried weight.</p>
+                    <p><span class="reflection__highlight">I'm proud of building scalable structure in genuine
+                            operational complexity.</span></p>
+                </div>
+            </div>
+
+            <!-- Next Project -->
+            <div class="next-project reveal">
+                <p class="next-project__label">Next Project</p>
+                <a href="homes-collection.html" class="next-project__card">
+                    <span class="next-project__category">Real Estate</span>
+                    <h3 class="next-project__title">Homes Collection - Revolutionizing fractional ownership platform for
+                        real estate investment</h3>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
