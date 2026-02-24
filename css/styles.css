@@ -283,19 +283,23 @@ ol {
 }
 
 .hero__title {
-    font-size: clamp(2rem, 4.2vw, 4.5rem);
+    font-size: clamp(3rem, 6vw, 5.5rem);
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.04em;
+    color: #FFFFFF;
+    max-width: 1200px;
+    width: 100%;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+}
+
+.hero__title-gradient {
+    display: block;
     background: var(--gradient-heading);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    max-width: 1200px;
-    width: 100%;
-    white-space: nowrap;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease 0.2s forwards;
 }
 
 .hero__scroll-indicator {
