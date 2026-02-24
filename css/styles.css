@@ -235,7 +235,7 @@ ol {
     text-align: center;
     padding-top: var(--header-height);
     position: relative;
-    /* Removed overflow: hidden so background gradients blend into next section */
+    overflow-x: clip;
 }
 
 /* Add a subtle fading mask at the bottom of the hero to completely blend it */
@@ -271,6 +271,7 @@ ol {
 .hero__content {
     position: relative;
     z-index: 1;
+    padding: 0 var(--space-md);
 }
 
 .hero__greeting {
@@ -1351,6 +1352,10 @@ ol {
         --font-size-2xl: 1.5rem;
     }
 
+    .hero__title {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+
     .header__nav {
         position: fixed;
         top: var(--header-height);
@@ -1361,12 +1366,16 @@ ol {
         flex-direction: column;
         padding: var(--space-lg);
         gap: var(--space-md);
-        transform: translateY(-110%);
-        transition: transform var(--transition-base);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity var(--transition-base), transform var(--transition-base), visibility var(--transition-base);
         border-bottom: 1px solid var(--border-subtle);
     }
 
     .header__nav.active {
+        opacity: 1;
+        visibility: visible;
         transform: translateY(0);
     }
 
@@ -1451,6 +1460,10 @@ ol {
 
     .container {
         padding: 0 var(--space-sm);
+    }
+
+    .hero__title {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
     }
 
     .case-card {
