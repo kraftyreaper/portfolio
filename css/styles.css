@@ -304,55 +304,40 @@ ol {
 
 .hero__scroll-indicator {
     position: absolute;
-    bottom: 60px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
     opacity: 0;
     animation: fadeIn 1s ease 1s forwards;
 }
 
 .hero__scroll-x {
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: var(--space-xs);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
     transition: opacity var(--transition-fast);
     line-height: 1;
+    margin-bottom: 8px;
 }
 
 .hero__scroll-x:hover {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .hero__scroll-line {
-    width: 2px;
-    height: 120px;
-    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8));
-    border-radius: 2px;
-    position: relative;
-}
-
-.hero__scroll-line::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 8px solid rgba(255, 255, 255, 0.8);
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent);
+    margin-bottom: 8px;
 }
 
 .hero__scroll-arrow {
     display: block;
-    color: #FFFFFF;
-    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
     animation: bounce 2s infinite;
 }
 
@@ -367,11 +352,11 @@ ol {
     }
 
     40% {
-        transform: translateY(-10px);
+        transform: translateY(-8px);
     }
 
     60% {
-        transform: translateY(-5px);
+        transform: translateY(-4px);
     }
 }
 
