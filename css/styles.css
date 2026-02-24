@@ -769,9 +769,6 @@ ol {
     padding: var(--space-2xl) 0;
 }
 
-.role-team__section {
-    /* no extra bg needed */
-}
 
 .role-team__heading {
     font-size: var(--font-size-lg);
