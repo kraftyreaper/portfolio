@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Header Background on Scroll ──
   const header = document.getElementById('header');
-  
+
   if (header) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 80) {
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const centerY = rect.height / 2;
       const rotateX = (y - centerY) / centerY * -2;
       const rotateY = (x - centerX) / centerX * 2;
-      
+
       card.style.transform = `translateY(-4px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     });
 
