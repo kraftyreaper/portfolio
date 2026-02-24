@@ -5,25 +5,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── Mobile Menu Toggle ──
-  const menuToggle = document.getElementById('menuToggle');
-  const nav = document.getElementById('nav');
-
-  if (menuToggle && nav) {
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      nav.classList.toggle('active');
-    });
-
-    // Close menu when clicking a nav link
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        nav.classList.remove('active');
-      });
-    });
-  }
-
   // ── Scroll Reveal ──
   const revealElements = document.querySelectorAll('.reveal');
 
