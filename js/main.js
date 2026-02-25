@@ -70,4 +70,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Tabs Switching (Case Studies) ──
+  const tabButtons = document.querySelectorAll('.case-tabs__btn');
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tabId = btn.getAttribute('data-tab');
+      const tabsGroup = btn.closest('.case-section');
+
+      // Remove active from all buttons and panes in this group
+      tabsGroup.querySelectorAll('.case-tabs__btn').forEach(b => b.classList.remove('active'));
+      tabsGroup.querySelectorAll('.case-tabs__pane').forEach(p => p.classList.remove('active'));
+
+      // Add active to current button and target pane
+      btn.classList.add('active');
+      tabsGroup.querySelector(tabId).classList.add('active');
+    });
+  });
+
+  // ── Carousel Logic ──
+  const carousels = document.querySelectorAll('.case-carousel');
+  carousels.forEach(carousel => {
+    const track = carousel.querySelector('.case-carousel__track');
+    const slides = carousel.querySelectorAll('.case-carousel__slide');
+    const btnPrev = carousel.querySelector('.case-carousel__btn--prev');
+    const btnNext = carousel.querySelector('.case-carousel__btn--next');
+
+    if (!track || slides.length === 0) return;
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    if (btnPrev) {
+      btnPrev.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+        updateCarousel();
+      });
+    }
+
+    if (btnNext) {
+      btnNext.addEventListener('click', () => {
+        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+      });
+    }
+  });
+
 });

@@ -792,19 +792,23 @@ ol {
 .case-section__title {
     font-size: var(--font-size-xl);
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    background: var(--gradient-heading);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: var(--space-md);
     display: flex;
     align-items: center;
-    gap: var(--space-md);
+    gap: var(--space-lg);
 }
 
 .case-section__title::after {
     content: '';
     flex: 1;
     height: 1px;
-    background: var(--accent);
-    opacity: 0.4;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
 }
 
 .case-section__content {
@@ -849,18 +853,23 @@ ol {
 .role-team__heading {
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    background: var(--gradient-heading);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: var(--space-md);
     display: flex;
     align-items: center;
-    gap: var(--space-md);
+    gap: var(--space-lg);
 }
 
 .role-team__heading::after {
     content: '';
     flex: 1;
-    height: 2px;
-    background: var(--accent);
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
 }
 
 .role-team__title {
@@ -1285,11 +1294,23 @@ ol {
 .reflection__title {
     font-size: var(--font-size-2xl);
     font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
     background: var(--gradient-heading);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: var(--space-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.reflection__title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
 }
 
 .reflection__text {
@@ -1431,6 +1452,173 @@ ol {
     margin-top: var(--space-2xl);
     font-size: var(--font-size-sm);
     color: var(--text-tertiary);
+}
+
+/* ── Case Study Custom UI (Stats & Tabs) ── */
+.client-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-xl) 0 var(--space-3xl);
+}
+
+.client-vision-stat {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+    transition: transform var(--transition-fast);
+}
+
+.client-vision-stat:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-accent);
+}
+
+.client-vision-stat__value {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: var(--space-xs);
+    background: var(--gradient-heading);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.client-vision-stat__label {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.case-tabs {
+    display: flex;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--border-card);
+    padding-bottom: 0;
+}
+
+.case-tabs__btn {
+    background: transparent;
+    border: none;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    padding: var(--space-sm) 0;
+    position: relative;
+    transition: color var(--transition-fast);
+    font-family: var(--font-family);
+}
+
+.case-tabs__btn:hover {
+    color: var(--text-secondary);
+}
+
+.case-tabs__btn.active {
+    color: var(--accent);
+}
+
+.case-tabs__btn::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.case-tabs__btn.active::after {
+    opacity: 1;
+}
+
+.case-tabs__pane {
+    display: none;
+    margin-bottom: var(--space-2xl);
+}
+
+.case-tabs__pane.active {
+    display: block;
+    animation: fadeIn var(--transition-base);
+}
+
+/* ── Case Study Carousel ── */
+.case-carousel {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl) var(--space-xl);
+    overflow: hidden;
+    margin-bottom: var(--space-2xl);
+}
+
+.case-carousel__title {
+    text-align: center;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xl);
+}
+
+.case-carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: all var(--transition-fast);
+}
+
+.case-carousel__btn:hover {
+    color: var(--accent);
+    border-color: var(--border-accent);
+}
+
+.case-carousel__btn--prev {
+    left: var(--space-md);
+}
+
+.case-carousel__btn--next {
+    right: var(--space-md);
+}
+
+.case-carousel__track {
+    display: flex;
+    transition: transform var(--transition-base);
+}
+
+.case-carousel__slide {
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 0 var(--space-2xl);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.case-carousel__slide-text {
+    font-size: var(--font-size-md);
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 /* ── Responsive ── */
