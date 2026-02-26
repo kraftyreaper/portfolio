@@ -756,30 +756,40 @@ ol {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--space-md);
-    margin-bottom: var(--space-md);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
 }
 
 .case-detail__hero-line {
-    flex: 0 0 40px;
+    flex: 0 0 120px;
     height: 1px;
-    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.case-detail__hero-line:last-child {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
 }
 
 .case-detail__project {
     font-size: var(--font-size-sm);
-    font-weight: 500;
-    color: var(--text-secondary);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    background: var(--gradient-heading);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
 }
 
 .case-detail__domain {
     font-size: var(--font-size-sm);
-    font-weight: 500;
-    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    background: var(--gradient-heading);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
 }
 
 .case-detail__dot {
