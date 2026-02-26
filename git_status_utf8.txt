@@ -1,0 +1,24 @@
+﻿On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   case-studies/asvi-thoughtworks.html
+	modified:   case-studies/gray-institute.html
+	modified:   case-studies/homes-collection.html
+	modified:   case-studies/milestone.html
+	modified:   case-studies/testlify.html
+	modified:   css/styles.css
+	modified:   js/main.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	git_status.txt
+	matches_utf8.txt
+	old-gray-utf8.html
+	old-gray.html
+	old-homes-utf8.html
+	old-homes.html
+
+no changes added to commit (use "git add" and/or "git commit -a")

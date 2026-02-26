@@ -276,7 +276,7 @@ ol {
 }
 
 .hero__title-gradient {
-    display: block;
+    display: inline;
     background: var(--gradient-heading);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1402,7 +1402,7 @@ ol {
 
 /* ── Footer ── */
 .site-footer {
-    padding: var(--space-xl) 0;
+    padding: var(--space-lg) 0;
     border-top: 1px solid var(--border-subtle);
     margin-top: var(--space-xl);
 }
