@@ -749,6 +749,42 @@ ol {
 
 .case-detail__hero {
     margin-bottom: var(--space-3xl);
+    text-align: center;
+}
+
+.case-detail__hero-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.case-detail__hero-line {
+    flex: 0 0 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+}
+
+.case-detail__project {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.case-detail__domain {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.case-detail__dot {
+    color: var(--text-tertiary);
+    font-weight: 700;
 }
 
 .case-detail__category {
@@ -764,11 +800,15 @@ ol {
     font-size: var(--font-size-4xl);
     font-weight: 700;
     line-height: 1.15;
+    margin-top: var(--space-md);
     margin-bottom: var(--space-xl);
     background: var(--gradient-heading);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .case-detail__hero-image {
