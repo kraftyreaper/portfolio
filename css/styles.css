@@ -873,7 +873,7 @@ ol {
 }
 
 .case-section__content ul {
-    padding-left: var(--space-lg);
+    padding-left: var(--space-md);
     margin-bottom: var(--space-md);
 }
 
@@ -888,6 +888,17 @@ ol {
     position: absolute;
     left: 0;
     color: var(--accent);
+}
+
+/* Single point list - no bullet */
+.case-carousel__list.list--single li,
+.case-section__content ul.list--single li {
+    padding-left: 0;
+}
+
+.case-carousel__list.list--single li::before,
+.case-section__content ul.list--single li::before {
+    display: none;
 }
 
 /* Role & Team Section */
@@ -2087,7 +2098,7 @@ ol {
 
 .case-carousel__list li {
     position: relative;
-    padding-left: var(--space-xl);
+    padding-left: var(--space-lg);
     margin-bottom: var(--space-sm);
 }
 
@@ -2113,6 +2124,22 @@ ol {
     flex-direction: column;
     gap: var(--space-3xl);
     margin-top: var(--space-2xl);
+    position: relative;
+}
+
+.lifecycle-steps::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            var(--border-subtle) 10%,
+            var(--border-subtle) 90%,
+            transparent 100%);
+    z-index: 0;
 }
 
 .lifecycle-step {
@@ -2120,6 +2147,8 @@ ol {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-2xl);
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .lifecycle-step:nth-child(even) .lifecycle-step__content {
@@ -2180,18 +2209,11 @@ ol {
 }
 
 @media (max-width: 768px) {
-    .lifecycle-step {
-        grid-template-columns: 1fr;
-        gap: var(--space-md);
-    }
-
-    .lifecycle-step:nth-child(even) .lifecycle-step__content,
-    .lifecycle-step:nth-child(even) .lifecycle-step__media {
-        order: initial;
+    .lifecycle-steps::before {
+        left: 20px;
     }
 
     .lifecycle-step__media {
         order: -1 !important;
-        /* Put image above text on mobile always */
     }
 }
