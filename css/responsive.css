@@ -1,0 +1,107 @@
+/* =================================================================
+   PRASHANT AHIRE — PORTFOLIO 2026
+   Consolidated Media Queries & Final Animation Polish
+   ================================================================= */
+
+/* ── Tablet (1024px) ── */
+@media (max-width: 1024px) {
+    :root {
+        --font-size-hero: 3.5rem;
+        --font-size-4xl: 2.5rem;
+        --font-size-3xl: 2rem;
+    }
+
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    .at-a-glance__row {
+        grid-template-columns: 160px 1fr;
+    }
+
+    .lifecycle-step {
+        gap: var(--space-xl);
+    }
+
+    .lifecycle-step__content {
+        padding: var(--space-xl);
+    }
+}
+
+/* ── Tablet Portrait (768px) ── */
+@media (max-width: 768px) {
+    :root {
+        --font-size-hero: 2.5rem;
+        --font-size-4xl: 2rem;
+        --font-size-3xl: 1.75rem;
+        --font-size-2xl: 1.5rem;
+    }
+
+    .hero__title {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+
+    .role-team {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .at-a-glance__row {
+        grid-template-columns: 1fr;
+    }
+
+    .at-a-glance__label {
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+        padding-bottom: var(--space-xs);
+    }
+
+    .lifecycle-steps::before {
+        left: 20px;
+    }
+
+    .lifecycle-step__media {
+        order: -1 !important;
+    }
+
+    .reveal {
+        transform: translateY(10px);
+        /* Less movement on mobile */
+    }
+}
+
+/* ── Mobile (480px) ── */
+@media (max-width: 480px) {
+    :root {
+        --font-size-hero: 2rem;
+        --font-size-4xl: 1.75rem;
+        --font-size-3xl: 1.5rem;
+        --font-size-2xl: 1.25rem;
+        --font-size-xl: 1.125rem;
+    }
+
+    .container {
+        padding: 0 var(--space-sm);
+    }
+
+    .hero__title {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
+    }
+
+    .case-card {
+        padding: var(--space-md);
+    }
+
+    .phone-frames {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phone-frame {
+        width: 200px;
+    }
+
+    .section-heading__line {
+        flex: 0 0 30px;
+    }
+}
