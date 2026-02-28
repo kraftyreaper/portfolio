@@ -5,8 +5,27 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── Page Fade In ──
+  document.body.style.opacity = '0';
+  document.body.style.transition = 'opacity 0.6s ease';
+  requestAnimationFrame(() => {
+    document.body.style.opacity = '1';
+  });
+
+  // ── Scroll Progress Bar ──
+  const progressBar = document.createElement('div');
+  progressBar.className = 'progress-bar';
+  document.body.appendChild(progressBar);
+
+  window.addEventListener('scroll', () => {
+    const windowScroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (windowScroll / height) * 100;
+    progressBar.style.width = scrolled + '%';
+  }, { passive: true });
+
   // ── Scroll Reveal ──
-  const revealElements = document.querySelectorAll('.reveal');
+  const revealElements = document.querySelectorAll('.reveal, .stagger-reveal');
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -16,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -60px 0px'
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
   });
 
   revealElements.forEach(el => revealObserver.observe(el));
@@ -27,13 +46,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (header) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 80) {
-        header.style.background = 'rgba(13, 13, 13, 0.95)';
+      if (window.scrollY > 50) {
+        header.style.background = 'rgba(13, 13, 13, 0.9)';
+        header.style.backdropFilter = 'blur(10px)';
+        header.classList.add('header--scrolled');
       } else {
-        header.style.background = 'rgba(13, 13, 13, 0.85)';
+        header.style.background = 'transparent';
+        header.style.backdropFilter = 'none';
+        header.classList.remove('header--scrolled');
       }
     }, { passive: true });
   }
+
+  // ── Magnetic Buttons/Links ──
+  const magneticElements = document.querySelectorAll('.header__link, .site-footer__link, .case-tabs__btn');
+
+  magneticElements.forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      el.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
+    });
+
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = 'translate(0, 0)';
+    });
+  });
 
   // ── Smooth scroll for scroll indicator ──
   const scrollX = document.querySelector('.hero__scroll-x');
@@ -49,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (scrollX) scrollX.addEventListener('click', scrollToProjects);
   if (scrollArrow) scrollArrow.addEventListener('click', scrollToProjects);
 
-  // ── Card hover tilt (subtle) ──
+  // ── Card Hover Effects ──
   const cards = document.querySelectorAll('.case-card');
 
   cards.forEach(card => {
@@ -57,12 +97,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
+
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      const rotateX = (y - centerY) / centerY * -2;
-      const rotateY = (x - centerX) / centerX * 2;
+      const rotateX = (y - centerY) / centerY * -3;
+      const rotateY = (x - centerX) / centerX * 3;
 
-      card.style.transform = `translateY(-4px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      card.style.transform = `translateY(-8px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     });
 
     card.addEventListener('mouseleave', () => {
@@ -70,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── Tabs Switching (Case Studies) ──
+  // ── Tabs Logic ──
   const tabButtons = document.querySelectorAll('.case-tabs__btn');
   tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -83,11 +127,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Add active to current button and target pane
       btn.classList.add('active');
-      tabsGroup.querySelector(tabId).classList.add('active');
+      const targetPane = tabsGroup.querySelector(tabId);
+      if (targetPane) targetPane.classList.add('active');
     });
   });
 
-  // ── Carousel Logic ──
+  // ── Carousel ── (Kept logic but ensured it interacts well)
   const carousels = document.querySelectorAll('.case-carousel');
   carousels.forEach(carousel => {
     const track = carousel.querySelector('.case-carousel__track');
