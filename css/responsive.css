@@ -81,34 +81,57 @@
 
     .reveal {
         transform: translateY(10px);
-        /* Less movement on mobile */
     }
 }
 
 /* ── Mobile (480px) ── */
 @media (max-width: 480px) {
     :root {
-        --font-size-hero: 2rem;
-        --font-size-4xl: 1.75rem;
-        --font-size-3xl: 1.5rem;
-        --font-size-2xl: 1.25rem;
-        --font-size-xl: 1.125rem;
+        --font-size-hero: 2.25rem;
+        --font-size-4xl: 1.85rem;
+        --font-size-3xl: 1.6rem;
+        --font-size-2xl: 1.4rem;
+        --font-size-xl: 1.25rem;
+        --font-size-lg: 1.125rem;
+        --font-size-md: 1rem;
+        --font-size-sm: 0.875rem;
+        --font-size-xs: 0.75rem;
     }
 
     .container {
-        padding: 0 var(--space-sm);
+        padding: 0 var(--space-md);
     }
 
     .hero__title {
-        font-size: clamp(1.6rem, 8vw, 2.2rem);
+        font-size: clamp(1.8rem, 9vw, 2.5rem);
+        line-height: 1.1;
     }
 
-    .case-card {
-        padding: var(--space-md);
+    /* Standard Card Padding Override (Consistent 24px) */
+    .case-card,
+    .case-card__inner,
+    .stage-card,
+    .contribution-card,
+    .principle-card,
+    .project-mini-card,
+    .next-project__card,
+    .decision-table tr,
+    .role-team__section,
+    .at-a-glance {
+        padding: var(--space-md) !important;
     }
 
     .case-card__title {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+        max-width: 100% !important;
+    }
+
+    /* Section Spacing Reductions */
+    .case-section,
+    .lifecycle-section,
+    .role-team,
+    .site-footer {
+        margin-bottom: var(--space-xl);
     }
 
     /* ── Table Redesign: Stacked Cards for Mobile ── */
@@ -142,29 +165,43 @@
         background: var(--bg-card);
         border: 1px solid var(--border-card);
         border-radius: var(--radius-lg);
-        margin-bottom: var(--space-lg);
+        margin-bottom: var(--space-md);
         padding: var(--space-md);
     }
 
     .decision-table td {
-        padding: var(--space-sm) 0 !important;
+        padding: var(--space-xs) 0 !important;
         border: none !important;
         white-space: normal !important;
     }
 
     .decision-table td:first-child {
-        font-size: var(--font-size-sm);
+        font-size: var(--font-size-xs);
         text-transform: uppercase;
         letter-spacing: 0.1em;
         color: var(--accent);
-        margin-bottom: var(--space-xs);
+        margin-bottom: 4px;
         padding-top: 0 !important;
         min-width: 0 !important;
     }
 
     .decision-table td:last-child {
         color: var(--text-secondary);
-        font-size: var(--font-size-base);
+        font-size: 0.95rem;
         padding-bottom: 0 !important;
+    }
+
+    .phone-frames {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-md);
+    }
+
+    .phone-frame {
+        width: 180px;
+    }
+
+    .section-heading__line {
+        flex: 0 0 20px;
     }
 }

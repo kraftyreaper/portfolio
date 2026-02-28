@@ -2129,28 +2129,62 @@ a {
 /* ── Mobile (480px) ── */
 @media (max-width: 480px) {
     :root {
-        --font-size-hero: 2rem;
-        --font-size-4xl: 1.75rem;
-        --font-size-3xl: 1.5rem;
-        --font-size-2xl: 1.25rem;
-        --font-size-xl: 1.125rem;
+        --font-size-hero: 2.25rem;
+        --font-size-4xl: 1.85rem;
+        --font-size-3xl: 1.6rem;
+        --font-size-2xl: 1.4rem;
+        --font-size-xl: 1.25rem;
+        --font-size-lg: 1.125rem;
+        --font-size-md: 1rem;
+        --font-size-sm: 0.875rem;
+        --font-size-xs: 0.75rem;
     }
 
     .container {
-        padding: 0 var(--space-sm);
+        padding: 0 var(--space-md);
+        /* Consistent page padding (24px) */
     }
 
     .hero__title {
-        font-size: clamp(1.6rem, 8vw, 2.2rem);
+        font-size: clamp(1.8rem, 9vw, 2.5rem);
+        line-height: 1.1;
     }
 
-    .case-card {
-        padding: var(--space-md);
+    /* Standard Card Padding Override (Consistent 24px) */
+    .case-card,
+    .case-card__inner,
+    .stage-card,
+    .contribution-card,
+    .principle-card,
+    .project-mini-card,
+    .next-project__card,
+    .decision-table tr,
+    .role-team__section,
+    .at-a-glance {
+        padding: var(--space-md) !important;
+    }
+
+    .case-card__inner {
+        padding: var(--space-md) !important;
     }
 
     .case-card__title {
-        font-size: 1.4rem;
-        /* Further reduced */
+        font-size: 1.5rem;
+        /* Tie to hierarchy */
+        max-width: 100% !important;
+    }
+
+    /* Section Spacing Reductions for Mobile */
+    .case-section,
+    .lifecycle-section,
+    .role-team,
+    .site-footer {
+        margin-bottom: var(--space-xl);
+    }
+
+    .case-detail__hero {
+        padding-top: var(--space-xl);
+        margin-bottom: var(--space-2xl);
     }
 
     /* ── Table Redesign: Stacked Cards for Mobile ── */
@@ -2184,34 +2218,31 @@ a {
         background: var(--bg-card);
         border: 1px solid var(--border-card);
         border-radius: var(--radius-lg);
-        margin-bottom: var(--space-lg);
-        padding: var(--space-md);
+        margin-bottom: var(--space-md);
+        /* Consistent gap */
         transition: transform var(--transition-base);
     }
 
-    .decision-table tr:hover {
-        border-color: var(--border-accent);
-    }
-
     .decision-table td {
-        padding: var(--space-sm) 0 !important;
+        padding: var(--space-xs) 0 !important;
+        /* Tight internal cell gap */
         border: none !important;
         white-space: normal !important;
     }
 
     .decision-table td:first-child {
-        font-size: var(--font-size-sm);
+        font-size: var(--font-size-xs);
         text-transform: uppercase;
         letter-spacing: 0.1em;
         color: var(--accent);
-        margin-bottom: var(--space-xs);
+        margin-bottom: 4px;
         padding-top: 0 !important;
-        min-width: 0 !important;
     }
 
     .decision-table td:last-child {
         color: var(--text-secondary);
-        font-size: var(--font-size-base);
+        font-size: 0.95rem;
+        /* Slightly smaller for density */
         padding-bottom: 0 !important;
     }
 
@@ -2222,11 +2253,16 @@ a {
     .at-a-glance__label {
         border-right: none;
         border-bottom: 1px solid var(--border-subtle);
-        padding: var(--space-sm) var(--space-md);
+        padding: var(--space-xs) 0 !important;
+        background: transparent !important;
+        font-size: var(--font-size-xs);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
     }
 
     .at-a-glance__value {
-        padding: var(--space-sm) var(--space-md);
+        padding: var(--space-xs) 0 var(--space-sm) 0 !important;
+        font-size: var(--font-size-sm);
     }
 
     .phone-frames {
@@ -2236,10 +2272,10 @@ a {
     }
 
     .phone-frame {
-        width: 200px;
+        width: 180px;
     }
 
     .section-heading__line {
-        flex: 0 0 30px;
+        flex: 0 0 20px;
     }
 }
