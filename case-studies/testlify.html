@@ -166,46 +166,49 @@
             <section class="case-section reveal">
                 <h2 class="case-section__title">How I Worked</h2>
                 <div class="case-section__content">
-                    <table class="decision-table">
-                        <thead>
-                            <tr>
-                                <th>Daily Reality</th>
-                                <th>How I Responded</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Founder provided high-level references</td>
-                                <td>Mapped business intent → structured product logic — converting vague asks into
-                                    clear, actionable requirements with documented flows and edge cases</td>
-                            </tr>
-                            <tr>
-                                <td>No detailed PRDs or structured documentation</td>
-                                <td>Structured undefined requirements — architected TUX tickets (design proposals),
-                                    secured approval, moved to TF tickets (development)</td>
-                            </tr>
-                            <tr>
-                                <td>Requirements from sales, CS, client requests</td>
-                                <td>Surfaced edge cases before development — modelling failure states, data conditions,
-                                    and system interactions before engineering began</td>
-                            </tr>
-                            <tr>
-                                <td>Vague or half-baked requirements</td>
-                                <td>Validated feasibility with engineering — aligned on technical constraints,
-                                    development timeline, and implementation approach</td>
-                            </tr>
-                            <tr>
-                                <td>Revenue-driven prioritisation</td>
-                                <td>Enforced quality standards via UAT — tested across Preview → Staging → Release →
-                                    Production; blocked releases when specs weren't met</td>
-                            </tr>
-                            <tr>
-                                <td>No senior UX reviewer</td>
-                                <td>Directed 2–3 junior designers — reviewed complex flows before dev handoff,
-                                    maintained system-wide consistency</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-wrapper">
+                        <table class="decision-table">
+                            <thead>
+                                <tr>
+                                    <th>Daily Reality</th>
+                                    <th>How I Responded</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Founder provided high-level references</td>
+                                    <td>Mapped business intent → structured product logic — converting vague asks into
+                                        clear, actionable requirements with documented flows and edge cases</td>
+                                </tr>
+                                <tr>
+                                    <td>No detailed PRDs or structured documentation</td>
+                                    <td>Structured undefined requirements — architected TUX tickets (design proposals),
+                                        secured approval, moved to TF tickets (development)</td>
+                                </tr>
+                                <tr>
+                                    <td>Requirements from sales, CS, client requests</td>
+                                    <td>Surfaced edge cases before development — modelling failure states, data
+                                        conditions,
+                                        and system interactions before engineering began</td>
+                                </tr>
+                                <tr>
+                                    <td>Vague or half-baked requirements</td>
+                                    <td>Validated feasibility with engineering — aligned on technical constraints,
+                                        development timeline, and implementation approach</td>
+                                </tr>
+                                <tr>
+                                    <td>Revenue-driven prioritisation</td>
+                                    <td>Enforced quality standards via UAT — tested across Preview → Staging → Release →
+                                        Production; blocked releases when specs weren't met</td>
+                                </tr>
+                                <tr>
+                                    <td>No senior UX reviewer</td>
+                                    <td>Directed 2–3 junior designers — reviewed complex flows before dev handoff,
+                                        maintained system-wide consistency</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <p style="margin-top: var(--space-lg); font-style: italic; color: var(--text-primary);">I wasn't
                         just designing screens. I was structuring what the product should do when no one else had
                         defined it.</p>
@@ -367,52 +370,63 @@
             <!-- Key Design Decisions -->
             <section class="case-section reveal">
                 <h2 class="case-section__title">Key Design Decisions With Reasoning</h2>
-                <table class="decision-table">
-                    <thead>
-                        <tr>
-                            <th>Decision</th>
-                            <th>Reasoning & Trade-off</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Mandatory Confirmation Before Rejection</td>
-                            <td><strong style="color: var(--text-primary);">What:</strong> Engineered an explicit
-                                confirmation popup before any automated rejection activates.<br><strong
-                                    style="color: var(--text-primary);">Why:</strong> Rejection is irreversible and
-                                affects real people's careers. Every bulk rejection must require a conscious, deliberate
-                                action.<br><strong style="color: var(--text-primary);">Trade-off:</strong> Adds friction
-                                — but prevents accidental mass rejection.</td>
-                        </tr>
-                        <tr>
-                            <td>Pause Capability</td>
-                            <td><strong style="color: var(--text-primary);">What:</strong> Built pause-resume controls
-                                directly into the active parsing flow.<br><strong
-                                    style="color: var(--text-primary);">Why:</strong> If an employer discovers an
-                                incorrect threshold after screening starts, they need an immediate stop
-                                mechanism.<br><strong style="color: var(--text-primary);">Trade-off:</strong> Added UI
-                                complexity — but it's a critical safety valve.</td>
-                        </tr>
-                        <tr>
-                            <td>Sync Transparency</td>
-                            <td><strong style="color: var(--text-primary);">What:</strong> Made ATS sync state highly
-                                visible with a manual re-sync fallback always accessible.<br><strong
-                                    style="color: var(--text-primary);">Why:</strong> External ATS dependency creates
-                                unpredictable failure states. Users need to see when the system isn't
-                                working.<br><strong style="color: var(--text-primary);">Trade-off:</strong> Exposes
-                                technical complexity — but builds durable trust.</td>
-                        </tr>
-                        <tr>
-                            <td>Default Candidate Limit</td>
-                            <td><strong style="color: var(--text-primary);">What:</strong> Set the default processing
-                                cap at 20 candidates per batch.<br><strong
-                                    style="color: var(--text-primary);">Why:</strong> Prevents first-time user overwhelm
-                                and reduces bulk processing errors.<br><strong
-                                    style="color: var(--text-primary);">Trade-off:</strong> Power users adjust manually
-                                — but the safe default protects against the more costly error.</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-wrapper">
+                    <table class="decision-table">
+                        <thead>
+                            <tr>
+                                <th>Decision</th>
+                                <th>Reasoning & Trade-off</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mandatory Confirmation Before Rejection</td>
+                                <td><strong style="color: var(--text-primary);">What:</strong> Engineered an explicit
+                                    confirmation popup before any automated rejection activates.<br><strong
+                                        style="color: var(--text-primary);">Why:</strong> Rejection is irreversible and
+                                    affects real people's careers. Every bulk rejection must require a conscious,
+                                    deliberate
+                                    action.<br><strong style="color: var(--text-primary);">Trade-off:</strong> Adds
+                                    friction
+                                    — but prevents accidental mass rejection.</td>
+                            </tr>
+                            <tr>
+                                <td>Pause Capability</td>
+                                <td><strong style="color: var(--text-primary);">What:</strong> Built pause-resume
+                                    controls
+                                    directly into the active parsing flow.<br><strong
+                                        style="color: var(--text-primary);">Why:</strong> If an employer discovers an
+                                    incorrect threshold after screening starts, they need an immediate stop
+                                    mechanism.<br><strong style="color: var(--text-primary);">Trade-off:</strong> Added
+                                    UI
+                                    complexity — but it's a critical safety valve.</td>
+                            </tr>
+                            <tr>
+                                <td>Sync Transparency</td>
+                                <td><strong style="color: var(--text-primary);">What:</strong> Made ATS sync state
+                                    highly
+                                    visible with a manual re-sync fallback always accessible.<br><strong
+                                        style="color: var(--text-primary);">Why:</strong> External ATS dependency
+                                    creates
+                                    unpredictable failure states. Users need to see when the system isn't
+                                    working.<br><strong style="color: var(--text-primary);">Trade-off:</strong> Exposes
+                                    technical complexity — but builds durable trust.</td>
+                            </tr>
+                            <tr>
+                                <td>Default Candidate Limit</td>
+                                <td><strong style="color: var(--text-primary);">What:</strong> Set the default
+                                    processing
+                                    cap at 20 candidates per batch.<br><strong
+                                        style="color: var(--text-primary);">Why:</strong> Prevents first-time user
+                                    overwhelm
+                                    and reduces bulk processing errors.<br><strong
+                                        style="color: var(--text-primary);">Trade-off:</strong> Power users adjust
+                                    manually
+                                    — but the safe default protects against the more costly error.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <p style="margin-top: var(--space-lg); color: var(--text-secondary); font-style: italic;">Fast
                     automation feels impressive in demos. Responsible automation builds long-term client trust. I built
                     for reliability over speed.</p>
@@ -465,65 +479,72 @@
                             by HR teams, leadership, and candidates — shared externally. Poor reports directly damage
                             product perception and client trust.</p>
                     </div>
-                    <table class="decision-table">
-                        <tbody>
-                            <tr>
-                                <td>Redesigned Core Reports</td>
-                                <td>Overhauled assessment-level and test-level reports — elevated visual hierarchy,
-                                    score presentation logic, and data readability for non-technical HR users.</td>
-                            </tr>
-                            <tr>
-                                <td>8 Psychometric PDF Reports</td>
-                                <td>Big Five · 16 Personality Types · Enneagram · Leadership Style · Sales Profiler ·
-                                    Leadership Potential · 360 Degree Feedback · PicOcean</td>
-                            </tr>
-                            <tr>
-                                <td>Restructured Export Architecture</td>
-                                <td>Organised into: Single assessment report · Library-only report · Merged PDF · ZIP
-                                    download</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-wrapper">
+                        <table class="decision-table">
+                            <tbody>
+                                <tr>
+                                    <td>Redesigned Core Reports</td>
+                                    <td>Overhauled assessment-level and test-level reports — elevated visual hierarchy,
+                                        score presentation logic, and data readability for non-technical HR users.</td>
+                                </tr>
+                                <tr>
+                                    <td>8 Psychometric PDF Reports</td>
+                                    <td>Big Five · 16 Personality Types · Enneagram · Leadership Style · Sales Profiler
+                                        ·
+                                        Leadership Potential · 360 Degree Feedback · PicOcean</td>
+                                </tr>
+                                <tr>
+                                    <td>Restructured Export Architecture</td>
+                                    <td>Organised into: Single assessment report · Library-only report · Merged PDF ·
+                                        ZIP
+                                        download</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="contribution-card">
                     <span class="contribution-card__number">03</span>
                     <h3 class="contribution-card__title">Employer Portal Structural Improvements</h3>
-                    <table class="decision-table">
-                        <thead>
-                            <tr>
-                                <th>Area</th>
-                                <th>What I Did</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Billing Page</td>
-                                <td>Modular card system — View plans / View usage / View invoices / Subscription
-                                    duration / Add-on usage / Credit consumption</td>
-                            </tr>
-                            <tr>
-                                <td>Email Configuration</td>
-                                <td>Tab-based organisation — Default (Testlify servers) / Domain-based (DNS
-                                    verification) / SMTP-based (Custom server)</td>
-                            </tr>
-                            <tr>
-                                <td>SAML SSO Flow</td>
-                                <td>Engineered complete enterprise Single Sign-On configuration inside Settings —
-                                    critical enterprise-readiness requirement</td>
-                            </tr>
-                            <tr>
-                                <td>Navigation Density</td>
-                                <td>Surfaced platform scale in navigation: Tests 3,000+ · Questions 182,000+ · Templates
-                                    100+ · Interviews 100+</td>
-                            </tr>
-                            <tr>
-                                <td>Referral System</td>
-                                <td>Orchestrated 'Refer & Earn' feature + dedicated landing page — organic
-                                    growth driver through user network.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-wrapper">
+                        <table class="decision-table">
+                            <thead>
+                                <tr>
+                                    <th>Area</th>
+                                    <th>What I Did</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Billing Page</td>
+                                    <td>Modular card system — View plans / View usage / View invoices / Subscription
+                                        duration / Add-on usage / Credit consumption</td>
+                                </tr>
+                                <tr>
+                                    <td>Email Configuration</td>
+                                    <td>Tab-based organisation — Default (Testlify servers) / Domain-based (DNS
+                                        verification) / SMTP-based (Custom server)</td>
+                                </tr>
+                                <tr>
+                                    <td>SAML SSO Flow</td>
+                                    <td>Engineered complete enterprise Single Sign-On configuration inside Settings —
+                                        critical enterprise-readiness requirement</td>
+                                </tr>
+                                <tr>
+                                    <td>Navigation Density</td>
+                                    <td>Surfaced platform scale in navigation: Tests 3,000+ · Questions 182,000+ ·
+                                        Templates
+                                        100+ · Interviews 100+</td>
+                                </tr>
+                                <tr>
+                                    <td>Referral System</td>
+                                    <td>Orchestrated 'Refer & Earn' feature + dedicated landing page — organic
+                                        growth driver through user network.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="contribution-card">
@@ -564,27 +585,30 @@
             <!-- Cross-Platform Considerations -->
             <section class="case-section reveal">
                 <h2 class="case-section__title">Cross-Platform Considerations</h2>
-                <table class="decision-table">
-                    <thead>
-                        <tr>
-                            <th>Coverage</th>
-                            <th>Detail</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Platforms Validated</td>
-                            <td>Employer Portal: Desktop web · Candidate Experience: Web + Android + iOS · Browsers:
-                                Chrome, Safari, Edge, Firefox · OS: Windows, macOS, iOS, Android</td>
-                        </tr>
-                        <tr>
-                            <td>Validation Process</td>
-                            <td>Desktop responsiveness · Tablet layouts · Mobile web compatibility · Android app
-                                consistency · iOS app parity · Browser rendering differences · OS-level inconsistencies
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-wrapper">
+                    <table class="decision-table">
+                        <thead>
+                            <tr>
+                                <th>Coverage</th>
+                                <th>Detail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Platforms Validated</td>
+                                <td>Employer Portal: Desktop web · Candidate Experience: Web + Android + iOS · Browsers:
+                                    Chrome, Safari, Edge, Firefox · OS: Windows, macOS, iOS, Android</td>
+                            </tr>
+                            <tr>
+                                <td>Validation Process</td>
+                                <td>Desktop responsiveness · Tablet layouts · Mobile web compatibility · Android app
+                                    consistency · iOS app parity · Browser rendering differences · OS-level
+                                    inconsistencies
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <div class="cascade-flow" style="margin-top: var(--space-lg);">
                     <p style="color: var(--text-primary); font-weight: 600; margin-bottom: var(--space-sm);">A concrete
@@ -606,44 +630,48 @@
                 <h2 class="case-section__title">The Messy Reality — What Made This Hard</h2>
                 <p class="case-section__content" style="margin-bottom: var(--space-lg);">This wasn't clean product work.
                     It was structured chaos.</p>
-                <table class="decision-table">
-                    <thead>
-                        <tr>
-                            <th>Challenge</th>
-                            <th>Reality & How I Navigated It</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>No Structured UX Validation Layer</td>
-                            <td>No senior UX reviewer or structured design critique process. <strong
-                                    style="color:var(--text-primary)">Solution:</strong> Leveraged AI tools to
-                                stress-test logic, simulate edge cases, and surface potential interaction loops.</td>
-                        </tr>
-                        <tr>
-                            <td>Revenue-Driven Prioritisation</td>
-                            <td>Client-requested features took priority over UX refinement. <strong
-                                    style="color:var(--text-primary)">Approach:</strong> Documented design debt
-                                explicitly. Balanced urgency against minimum viable quality.</td>
-                        </tr>
-                        <tr>
-                            <td>Cross-Browser Inconsistencies</td>
-                            <td>Chrome on Windows ≠ Safari on macOS. <strong
-                                    style="color:var(--text-primary)">Process:</strong> Enforced cross-environment
-                                validation for every feature before user release.</td>
-                        </tr>
-                        <tr>
-                            <td>Constant Context Switching</td>
-                            <td>Simultaneously owned: employer portal, candidate experience, marketing website, PDF
-                                reports, configuration settings, white-label environments.</td>
-                        </tr>
-                        <tr>
-                            <td>Supporting Junior Designers</td>
-                            <td>Reviewed work before every dev handoff. Elevated quality bar. Reduced team-level rework.
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-wrapper">
+                    <table class="decision-table">
+                        <thead>
+                            <tr>
+                                <th>Challenge</th>
+                                <th>Reality & How I Navigated It</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>No Structured UX Validation Layer</td>
+                                <td>No senior UX reviewer or structured design critique process. <strong
+                                        style="color:var(--text-primary)">Solution:</strong> Leveraged AI tools to
+                                    stress-test logic, simulate edge cases, and surface potential interaction loops.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Revenue-Driven Prioritisation</td>
+                                <td>Client-requested features took priority over UX refinement. <strong
+                                        style="color:var(--text-primary)">Approach:</strong> Documented design debt
+                                    explicitly. Balanced urgency against minimum viable quality.</td>
+                            </tr>
+                            <tr>
+                                <td>Cross-Browser Inconsistencies</td>
+                                <td>Chrome on Windows ≠ Safari on macOS. <strong
+                                        style="color:var(--text-primary)">Process:</strong> Enforced cross-environment
+                                    validation for every feature before user release.</td>
+                            </tr>
+                            <tr>
+                                <td>Constant Context Switching</td>
+                                <td>Simultaneously owned: employer portal, candidate experience, marketing website, PDF
+                                    reports, configuration settings, white-label environments.</td>
+                            </tr>
+                            <tr>
+                                <td>Supporting Junior Designers</td>
+                                <td>Reviewed work before every dev handoff. Elevated quality bar. Reduced team-level
+                                    rework.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
 
             <!-- Parallel Projects -->
@@ -788,6 +816,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
 

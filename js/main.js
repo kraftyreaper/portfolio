@@ -110,4 +110,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ── Lenis Smooth Scroll ──
+  if (typeof Lenis !== 'undefined') {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      smoothWheel: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }
+
+  // ── Custom Cursor ──
+  const cursor = document.createElement('div');
+  cursor.className = 'custom-cursor';
+  document.body.appendChild(cursor);
+
+  window.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+
+  document.querySelectorAll('a, button, .case-card').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('active'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+  });
+
+  // ── Magnetic Buttons ──
+  const magnets = document.querySelectorAll('.header__link, .site-footer__link');
+  magnets.forEach((magnet) => {
+    magnet.addEventListener('mousemove', (e) => {
+      const bound = magnet.getBoundingClientRect();
+      const x = (e.clientX - bound.left) - bound.width / 2;
+      const y = (e.clientY - bound.top) - bound.height / 2;
+      magnet.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    });
+
+    magnet.addEventListener('mouseleave', () => {
+      magnet.style.transform = `translate(0px, 0px)`;
+    });
+  });
+
 });

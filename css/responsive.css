@@ -56,12 +56,27 @@
         padding-bottom: var(--space-xs);
     }
 
+    .lifecycle-step {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
     .lifecycle-steps::before {
         left: 20px;
     }
 
     .lifecycle-step__media {
         order: -1 !important;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+
+    .lifecycle-step:nth-child(even) .lifecycle-step__content {
+        order: 1;
+    }
+
+    .lifecycle-step:nth-child(even) .lifecycle-step__media {
+        order: -1;
     }
 
     .reveal {
