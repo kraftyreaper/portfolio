@@ -2148,6 +2148,41 @@ a {
         padding: var(--space-md);
     }
 
+    .case-card__title {
+        font-size: 1.4rem;
+        /* Further reduced */
+    }
+
+    /* Force tables to be scrollable if wrapper is missing */
+    .table-wrapper {
+        margin: var(--space-md) 0;
+        width: 100%;
+        overflow-x: auto;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-card);
+    }
+
+    .decision-table {
+        min-width: 500px;
+        /* Reduced for mobile scrollability */
+        width: 100%;
+        table-layout: auto;
+    }
+
+    .at-a-glance__row {
+        grid-template-columns: 1fr;
+    }
+
+    .at-a-glance__label {
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .at-a-glance__value {
+        padding: var(--space-sm) var(--space-md);
+    }
+
     .phone-frames {
         flex-direction: column;
         align-items: center;
