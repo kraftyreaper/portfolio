@@ -131,6 +131,20 @@
             color: var(--accent);
             font-weight: 700;
         }
+
+        /* ── Glance cards: forced 3-col horizontal ── */
+        .glance-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: var(--space-xl);
+        }
+
+        @media (max-width: 767px) {
+            .glance-cards {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -194,8 +208,7 @@
                 <h2 class="case-section__title" id="section-at-a-glance">AT A GLANCE</h2>
 
                 <!-- What is Testlify + My Role + Scope -->
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: var(--space-xl);">
+                <div class="glance-cards">
                     <div class="contribution-card" style="margin: 0;">
                         <h3 class="card-section-title">What is Testlify?</h3>
                         <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
