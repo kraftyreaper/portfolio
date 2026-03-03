@@ -1821,9 +1821,9 @@ a {
 }
 
 .site-footer__link:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
-    background: var(--accent);
+    transform: scale(1.03);
+    box-shadow: 0 0 18px rgba(234, 255, 113, 0.2);
+    background: #FFFFFF;
     border-color: var(--accent);
     color: #000000;
 }
@@ -1885,7 +1885,7 @@ a {
 /* Ensure Magnetic elements have a transition for leaving */
 .header__link,
 .site-footer__link {
-    transition: transform var(--transition-base), color var(--transition-fast);
+    transition: transform var(--transition-base), box-shadow var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
 }
 
 /* ── Case Study Custom UI (Stats & Tabs) ── */
@@ -2322,96 +2322,96 @@ a {
 
 /* ── Testlify Specific Components (Now Global) ── */
 .t-grid {
-            display: flex;
-            flex-direction: column;
-            background: var(--bg-card);
-            border: 1px solid var(--border-card);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            margin-bottom: var(--space-xl);
-        }
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: var(--space-xl);
+}
 
-        .t-row {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            padding: var(--space-md) var(--space-lg);
-            border-bottom: 1px solid var(--border-card);
-        }
+.t-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--border-card);
+}
 
-        .t-row:last-child {
-            border-bottom: none;
-        }
+.t-row:last-child {
+    border-bottom: none;
+}
 
-        .t-col-1 {
-            font-weight: 600;
-            color: var(--text-primary);
-            line-height: 1.5;
-        }
+.t-col-1 {
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
 
-        .t-col-2 {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
+.t-col-2 {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
 
-        .t-header {
-            background: rgba(255, 255, 255, 0.02);
-            font-size: var(--font-size-xs);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+.t-header {
+    background: rgba(255, 255, 255, 0.02);
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
 
-        .t-header .t-col-1,
-        .t-header .t-col-2 {
-            color: var(--text-secondary);
-            font-weight: 600;
-        }
+.t-header .t-col-1,
+.t-header .t-col-2 {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
 
-        .option-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-md);
-            margin-bottom: var(--space-xl);
-        }
+.option-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
 
-        .option-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-card);
-            border-radius: var(--radius-md);
-            padding: var(--space-lg);
-        }
+.option-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+}
 
-        .option-card--selected {
-            border-color: var(--accent);
-            background: rgba(224, 192, 104, 0.03);
-        }
+.option-card--selected {
+    border-color: var(--accent);
+    background: rgba(224, 192, 104, 0.03);
+}
 
-        @media (min-width: 768px) {
-            .t-row {
-                flex-direction: row;
-                gap: var(--space-2xl);
-            }
+@media (min-width: 768px) {
+    .t-row {
+        flex-direction: row;
+        gap: var(--space-2xl);
+    }
 
-            .t-col-1 {
-                width: 35%;
-                flex-shrink: 0;
-            }
+    .t-col-1 {
+        width: 35%;
+        flex-shrink: 0;
+    }
 
-            .t-col-2 {
-                flex-grow: 1;
-            }
+    .t-col-2 {
+        flex-grow: 1;
+    }
 
-            .option-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
+    .option-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-        @media (max-width: 767px) {
-            .t-header {
-                display: none;
-            }
+@media (max-width: 767px) {
+    .t-header {
+        display: none;
+    }
 
-            .t-row {
-                padding: var(--space-md);
-            }
-        }
+    .t-row {
+        padding: var(--space-md);
+    }
+}
