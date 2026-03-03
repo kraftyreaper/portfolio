@@ -152,13 +152,15 @@
         .btn-download {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
             margin-top: var(--space-lg);
+            width: 220px;
             padding: var(--space-md) var(--space-xl);
             border-radius: var(--radius-xl);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            background: transparent;
-            color: var(--text-primary);
+            border: 1px solid #FFFFFF;
+            background: #FFFFFF;
+            color: #000000;
             font-family: var(--font-family-heading);
             font-size: var(--font-size-sm);
             font-weight: 600;
@@ -342,8 +344,7 @@
                     <p style="margin-bottom: var(--space-sm); font-weight: 600; color: var(--text-primary);">The
                         complexity came from three sources:</p>
 
-                    <div
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: var(--space-xl);">
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: var(--space-xl);">
                         <div class="contribution-card" style="margin: 0;">
                             <div class="card-label">01</div>
                             <h3 class="card-section-title">Multiple User Contexts</h3>
