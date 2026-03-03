@@ -613,17 +613,22 @@
                 </div>
                 <p
                     style="color: var(--text-secondary); text-align: center; margin-bottom: var(--space-xl); font-style: italic;">
-                    Transforming fragmented PDFs into a cohesive evaluation system</p>
+                    Structuring complex psychometric data into clear, actionable insights</p>
 
                 <div class="case-section__content" style="max-width: 100%; margin-bottom: var(--space-xl);">
                     <div class="contribution-card" style="margin-bottom: var(--space-xl);">
-                        <div class="card-label">The Problem</div>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
-                            Employers needed to evaluate candidates quickly, but our reporting system was fragmented:
-                            basic reports lacked depth, psychometric reports (DISC, personality) weren't customized to
-                            Testlify's brand, and there was no unified export system—users had to download multiple PDFs
-                            per candidate.
+                        <div class="card-label">The Problem I Identified</div>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            Employers needed to evaluate candidates quickly, but our reporting was fragmented:
                         </p>
+                        <ul>
+                            <li>Basic reports lacked depth</li>
+                            <li>Psychometric reports weren't branded or had UI inconsistencies</li>
+                            <li>No unified export—users downloaded multiple PDFs per candidate</li>
+                            <li>Inconsistent visual language across report types</li>
+                            <li>Some reports had structural issues that made data hard to interpret</li>
+                        </ul>
                     </div>
 
                     <h3
@@ -633,67 +638,111 @@
                         <div class="option-card">
                             <h3>Option 1: Basic Template Redesign</h3>
                             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Clean up existing
-                                reports; keep separate PDFs per test type.<br><br><strong
-                                    style="color: var(--text-secondary);">✗ Trade-off:</strong> Quick fix but doesn't
-                                solve fragmentation or customization needs.</p>
+                                reports; keep separate PDFs.<br><br><strong style="color: var(--text-secondary);">✗
+                                    Rejected:</strong> Quick fix but doesn't
+                                solve fragmentation or structural issues.</p>
                         </div>
                         <div class="option-card">
                             <h3>Option 2: Unified Report Builder</h3>
                             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Let employers
-                                customize report sections, choose which tests to include, design their own
-                                layouts.<br><br><strong style="color: var(--text-secondary);">✗ Trade-off:</strong>
-                                Powerful but too complex for most users—over-engineered.</p>
+                                customize sections, choose tests, design layouts.<br><br><strong
+                                    style="color: var(--text-secondary);">✗ Rejected:</strong>
+                                Too complex for most users—over-engineered.</p>
                         </div>
                         <div class="option-card option-card--selected">
                             <h3>Option 3: Curated Report System ✓</h3>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Redesign core
-                                reports with Testlify branding; create 8 standardized psychometric PDFs; build smart
-                                export (one-click download).<br><br><strong style="color: var(--accent);">✓ Chosen
-                                    because:</strong> Balanced quality with usability—professional output without
-                                configuration overhead.</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Design new reports
+                                from scratch where needed; fix and improve existing reports; build smart
+                                export.<br><br><strong style="color: var(--accent);">✓ Selected:</strong>
+                                Professional output through structured data presentation without configuration
+                                overhead.</p>
                         </div>
                     </div>
                 </div>
 
-                <h3 style="color: var(--text-primary); font-size: var(--font-size-lg); margin-bottom: var(--space-md);">
+                <h3 style="color: var(--text-primary); font-size: var(--font-size-lg); margin-bottom: var(--space-lg);">
                     What I Designed</h3>
-                <div class="t-grid" style="margin-bottom: var(--space-xl);">
-                    <div class="t-row t-header">
-                        <div class="t-col-1">Deliverable</div>
-                        <div class="t-col-2">Details</div>
-                    </div>
-                    <div class="t-row">
-                        <div class="t-col-1">Core Report Redesign</div>
-                        <div class="t-col-2">Rebuilt the primary assessment report with: visual scoring system
-                            (color-coded performance indicators), test-by-test breakdowns (skill tests, psychometric,
-                            coding, AI interviews), candidate timeline (time spent per question, completion patterns),
-                            and comparison view (candidate vs. job requirements).</div>
-                    </div>
-                    <div class="t-row">
-                        <div class="t-col-1">8 Psychometric PDFs</div>
-                        <div class="t-col-2">Created branded report templates for: DISC personality (4-quadrant
-                            behavioral analysis), Big Five traits (detailed personality dimensions), Work style
-                            assessments, Communication preferences, Leadership potential, Team dynamics, and
-                            Problem-solving approaches. Each included visual data representations (charts, graphs),
-                            narrative interpretations (plain-language explanations), and actionable insights (hiring
-                            recommendations).</div>
-                    </div>
-                    <div class="t-row">
-                        <div class="t-col-1">Export Architecture</div>
-                        <div class="t-col-2">Designed one-click export: single button downloads all candidate reports as
-                            a ZIP file. Reports auto-named with candidate name and test type (e.g.,
-                            "John_Doe_DISC_Assessment.pdf"). Smart bundling — only includes completed tests, skips
-                            incomplete ones. Eliminated manual PDF collection.</div>
-                    </div>
+
+                <!-- Card 1: Three New Reports -->
+                <div class="contribution-card reveal" style="margin-bottom: var(--space-md);">
+                    <div class="card-label">01 — Three New Psychometric Reports (From Scratch)</div>
+                    <p
+                        style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                        I designed these reports from the ground up—understanding assessment requirements, structuring
+                        how each data type should be presented, and creating interactive PDF formats:
+                    </p>
+                    <ul>
+                        <li><strong>Sales Profiler Report:</strong> Structured sales-specific competencies, behavioural
+                            indicators, and performance predictors</li>
+                        <li><strong>PicOcean Personality &amp; Cultural Fit:</strong> Designed data presentation for
+                            personality traits mapped to cultural alignment</li>
+                        <li><strong>360 Degree Feedback Report:</strong> Created comprehensive feedback visualisation
+                            from multiple evaluators (peers, managers, self-assessment)</li>
+                    </ul>
+                    <p
+                        style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.8; margin: 0; font-style: italic;">
+                        Each required: Understanding raw assessment data → Structuring information hierarchy → Designing
+                        visual representations → Creating actionable insights format
+                    </p>
+                </div>
+
+                <!-- Card 2: Seven Report Improvements -->
+                <div class="contribution-card reveal" style="margin-bottom: var(--space-md);">
+                    <div class="card-label">02 — Seven Report Improvements (UI Fixes &amp; Enhancements)</div>
+                    <p
+                        style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                        For existing reports, I identified issues and improved UI and structure:
+                    </p>
+                    <ul>
+                        <li><strong>Big Five Personality:</strong> Fixed layout issues, improved trait visualisation
+                        </li>
+                        <li><strong>16 PF (16 Personality Factors):</strong> Enhanced data hierarchy, clarified factor
+                            relationships</li>
+                        <li><strong>Leadership Assessment:</strong> Restructured competency display, improved scoring
+                            clarity</li>
+                        <li><strong>SMART Personality:</strong> Fixed UI inconsistencies, improved readability</li>
+                        <li><strong>DISC Personality:</strong> Enhanced 4-quadrant visualisation, improved behavioural
+                            descriptions</li>
+                        <li><strong>Enneagram:</strong> Fixed structural issues, improved type descriptions and score
+                            display</li>
+                        <li><strong>Motivational Traits:</strong> Restructured data presentation, improved actionability
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- My Core Contribution callout -->
+                <div class="evidence-quote" style="margin-bottom: var(--space-xl);">
+                    <strong>My Core Contribution:</strong> Understanding assessment requirements → Structuring complex
+                    data into clear formats → Designing interactive, readable PDFs that translate raw scores into hiring
+                    insights
+                </div>
+
+                <!-- Card 3: Export Architecture -->
+                <div class="contribution-card reveal" style="margin-bottom: var(--space-xl);">
+                    <div class="card-label">03 — Export Architecture</div>
+                    <p
+                        style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                        Designed a one-click ZIP download system:
+                    </p>
+                    <ul>
+                        <li>All candidate reports bundled automatically</li>
+                        <li>Smart naming (candidate name + test type)</li>
+                        <li>Intelligent bundling — only completed tests included</li>
+                    </ul>
                 </div>
 
                 <div class="impact-highlight">
                     <h3>Impact</h3>
                     <ul>
-                        <li>Reduced employer time-to-decision by consolidating fragmented reports</li>
-                        <li>Eliminated manual PDF collection — one-click export vs. downloading 5–10 separate files</li>
-                        <li>Professional, branded output improved perceived platform quality</li>
-                        <li>Psychometric reports became a competitive differentiator in sales demos</li>
+                        <li>Designed <strong>3 reports from scratch</strong>, improved <strong>7 existing
+                                reports</strong> (10 total psychometric reports)</li>
+                        <li>Reduced time-to-decision by consolidating fragmented reports</li>
+                        <li>Eliminated manual PDF collection — one-click export vs. 5–10 separate downloads</li>
+                        <li>Professional output improved perceived platform quality</li>
+                        <li>Clear data structure made complex psychometric insights accessible to non-specialist HR
+                            teams
+                        </li>
+                        <li>Psychometric reports became a sales demo differentiator</li>
                     </ul>
                 </div>
             </section>
