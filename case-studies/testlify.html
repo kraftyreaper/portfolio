@@ -145,6 +145,66 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* ── Download PDF Reports Button ── */
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: var(--space-lg);
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: transparent;
+            color: var(--text-primary);
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            transition: border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-download::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: radial-gradient(ellipse at center, rgba(234, 255, 113, 0.08) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-download:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            box-shadow: 0 0 18px rgba(234, 255, 113, 0.2);
+            transform: scale(1.03);
+        }
+
+        .btn-download:hover::before {
+            opacity: 1;
+        }
+
+        .btn-download:disabled,
+        .btn-download.loading {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-download svg {
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+        }
+
+        .btn-download:hover svg {
+            transform: translateY(2px);
+        }
     </style>
 </head>
 
@@ -684,6 +744,17 @@
                         Each required: Understanding raw assessment data → Structuring information hierarchy → Designing
                         visual representations → Creating actionable insights format
                     </p>
+                    <button class="btn-download" onclick="downloadAllReports(this)" id="dl-btn-card1"
+                        aria-label="Download all psychometric PDF reports as ZIP">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Download PDF Reports
+                    </button>
                 </div>
 
                 <!-- Card 2: Seven Report Improvements -->
@@ -708,6 +779,17 @@
                         <li><strong>Motivational Traits:</strong> Restructured data presentation, improved actionability
                         </li>
                     </ul>
+                    <button class="btn-download" onclick="downloadAllReports(this)" id="dl-btn-card2"
+                        aria-label="Download all psychometric PDF reports as ZIP">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Download PDF Reports
+                    </button>
                 </div>
 
                 <!-- My Core Contribution callout -->
@@ -989,6 +1071,70 @@
     </footer>
 
     <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script>
+        const REPORT_FILES = [
+            'Prashant Ahire - 16 Personality Trait.pdf',
+            'Prashant Ahire - Assessment level report.pdf',
+            'Prashant Ahire - Big Five Personality.pdf',
+            'Prashant Ahire - Cultural Fit.pdf',
+            'Prashant Ahire - DISC Personality Assessment.pdf',
+            'Prashant Ahire - Enneagram Personality.pdf',
+            'Prashant Ahire - Grit.pdf',
+            'Prashant Ahire - Leadership Style.pdf',
+            'Prashant Ahire - Motivational Traits.pdf',
+            'Prashant Ahire - PicOCEAN Personality.pdf',
+            'Prashant Ahire - SMART - Personality.pdf',
+            'Prashant Ahire - Sales Profiler.pdf',
+            'Prashant Ahire - Test level report (covers all type of question).pdf'
+        ];
+
+        async function downloadAllReports(btn) {
+            if (btn.disabled) return;
+
+            const originalHTML = btn.innerHTML;
+            btn.disabled = true;
+            btn.classList.add('loading');
+            btn.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 1s linear infinite;" aria-hidden="true">
+                    <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+                </svg>
+                Preparing ZIP…
+            `;
+
+            try {
+                const zip = new JSZip();
+                const basePath = '../assets/reports/';
+
+                await Promise.all(
+                    REPORT_FILES.map(async (filename) => {
+                        const res = await fetch(basePath + encodeURIComponent(filename));
+                        if (!res.ok) throw new Error(`Could not load: ${filename}`);
+                        const blob = await res.blob();
+                        zip.file(filename, blob);
+                    })
+                );
+
+                const content = await zip.generateAsync({ type: 'blob', compression: 'DEFLATE' });
+                saveAs(content, 'Prashant Ahire - Psychometric Reports.zip');
+            } catch (err) {
+                console.error('Download error:', err);
+                alert('One or more files could not be loaded. Please try again.');
+            } finally {
+                btn.innerHTML = originalHTML;
+                btn.disabled = false;
+                btn.classList.remove('loading');
+            }
+        }
+    </script>
+    <style>
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
     <script src="../js/main.js"></script>
 </body>
 
