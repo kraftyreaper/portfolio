@@ -1117,7 +1117,7 @@
                 );
 
                 const content = await zip.generateAsync({ type: 'blob', compression: 'DEFLATE' });
-                saveAs(content, 'Prashant Ahire - Psychometric Reports.zip');
+                saveAs(content, 'Prashant Ahire - PDF Reports.zip');
             } catch (err) {
                 console.error('Download error:', err);
                 alert('One or more files could not be loaded. Please try again.');
