@@ -132,33 +132,20 @@
             font-weight: 700;
         }
 
-        /* ── Glance cards: forced 3-col horizontal ── */
+        /* ── Glance cards: single-column stacked ── */
         .glance-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-direction: column;
             gap: 1.5rem;
             margin-bottom: var(--space-xl);
         }
 
-        @media (max-width: 767px) {
-            .glance-cards {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ── Reporting section: 3-col horizontal cards ── */
+        /* ── Reporting cards: single-column stacked ── */
         .reporting-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-direction: column;
             gap: 1.5rem;
-            align-items: stretch;
             margin-bottom: var(--space-xl);
-        }
-
-        @media (max-width: 900px) {
-            .reporting-cards-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
         /* ── Download PDF Reports Button ── */
