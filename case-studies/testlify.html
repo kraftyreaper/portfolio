@@ -259,18 +259,9 @@
                     assessments &amp; interviewing tool
                 </p>
                 <div class="case-detail__hero-image">
-                    <div class="laptop-frame">
-                        <div class="laptop-frame__browser-bar">
-                            <span class="laptop-frame__dot laptop-frame__dot--red"></span>
-                            <span class="laptop-frame__dot laptop-frame__dot--yellow"></span>
-                            <span class="laptop-frame__dot laptop-frame__dot--green"></span>
-                            <span class="laptop-frame__url">testlify.com</span>
-                        </div>
-                        <div class="laptop-frame__content">
-                            <img src="../img/case-studies/testlify-hero.png"
-                                alt="Testlify Employer Portal — Candidate Overview Dashboard showing assessment analytics, score distributions, and hiring pipeline">
-                        </div>
-                        <div class="laptop-frame__base"></div>
+                    <div class="banner-fader">
+                        <img src="../img/case-studies/Testlify-banner-1.png" alt="Testlify Banner 1">
+                        <img src="../img/case-studies/Testlify-banner-2.png" alt="Testlify Banner 2">
                     </div>
                 </div>
             </div>
@@ -338,51 +329,74 @@
                 </div>
             </section>
 
-            <!-- ── THE CHALLENGE ── -->
+            <!-- ── THE REAL CHALLENGE ── -->
             <section class="case-section reveal" aria-labelledby="section-challenge">
-                <h2 class="case-section__title" id="section-challenge">THE CHALLENGE</h2>
+                <h2 class="case-section__title" id="section-challenge">THE REAL CHALLENGE</h2>
                 <div class="case-section__content" style="max-width: 100%;">
-                    <p style="margin-bottom: var(--space-md); font-size: 1.05rem;">
-                        Testlify operates in a high-stakes environment where every design decision directly impacts
-                        hiring outcomes. A confusing interface could cost someone a job opportunity. A poorly designed
-                        test flow could lead to candidate drop-off. An unclear reporting system could result in wrong
-                        hiring decisions.
+                    <p style="margin-bottom: var(--space-lg); font-size: 1.05rem; font-style: italic;">
+                        Most case studies talk about building features. This is about <strong>building structure where
+                            none existed.</strong>
                     </p>
 
-                    <p style="margin-bottom: var(--space-sm); font-weight: 600; color: var(--text-primary);">The
-                        complexity came from three sources:</p>
-
                     <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: var(--space-xl);">
+
                         <div class="contribution-card" style="margin: 0;">
-                            <div class="card-label">01</div>
-                            <h3 class="card-section-title">Multiple User Contexts</h3>
+                            <div class="card-label">The Daily Reality</div>
                             <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
-                                Employers ranged from solo recruiters creating their first assessment to enterprise HR
-                                teams managing hundreds of candidates across different roles. Candidates varied from
-                                tech professionals taking coding tests to entry-level applicants completing personality
-                                assessments. Each group had different needs, technical literacy, and expectations.
+                                Founders provided high-level references: "Build something like this competitor feature."
+                                No PRDs. No structured documentation. Requirements came from sales calls, client
+                                requests, support tickets — often vague, half-defined, missing edge cases.
                             </p>
                         </div>
+
                         <div class="contribution-card" style="margin: 0;">
-                            <div class="card-label">02</div>
-                            <h3 class="card-section-title">AI &amp; Automation Complexity</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
-                                The platform introduced AI-powered features like resume parsing and conversational
-                                interviews. These created new design challenges: How do we show AI confidence scores?
-                                What happens when AI parsing fails? How do we let employers override AI decisions? These
-                                weren't just interface problems—they were trust problems.
-                            </p>
+                            <div class="card-label">My Actual Responsibilities</div>
+                            <ul
+                                style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
+                                <li><strong>Translate ambiguity into clarity:</strong> Convert "make resume screening
+                                    automatic" into structured flows with defined logic, edge cases, validation rules
+                                </li>
+                                <li><strong>Identify what breaks before development:</strong> Model edge cases, data
+                                    states, cross-module dependencies</li>
+                                <li><strong>Validate technical feasibility:</strong> Align with backend teams on
+                                    constraints, timelines, implementation approach</li>
+                                <li><strong>Structure undefined requirements:</strong> Create TUX tickets (design
+                                    proposals) → get approval → move to TF tickets (development-ready specs)</li>
+                                <li><strong>Perform rigorous UAT:</strong> Test across 4 environments, 5 browsers, 4
+                                    platforms before each release</li>
+                                <li><strong>Block releases until quality met:</strong> Hold tickets when UX didn't match
+                                    specs, when cross-browser issues appeared, when logic was broken</li>
+                            </ul>
                         </div>
+
                         <div class="contribution-card" style="margin: 0;">
-                            <div class="card-label">03</div>
-                            <h3 class="card-section-title">Cascading Dependencies</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
-                                Changes to question types affected test creation, candidate experience, scoring logic,
-                                and report generation simultaneously. A single design decision could cascade across
-                                multiple surfaces, requiring careful coordination with backend teams and consideration
-                                of edge cases.
+                            <div class="card-label">The Complexity</div>
+                            <p
+                                style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                                This wasn't building linear flows. One employer toggle could affect:
                             </p>
+                            <div
+                                style="display: flex; flex-direction: column; gap: 6px; padding-left: var(--space-md);">
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">→ Candidate status across
+                                    multiple assessments</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">→ Report output structure
+                                    and PDF generation</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">→ Shareable link
+                                    visibility and access controls</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">→ Historical data
+                                    consistency</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">→ Cross-platform behavior
+                                    (web, iOS, Android)</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">→ White-label branding
+                                    configurations</span>
+                            </div>
                         </div>
+
+                    </div>
+
+                    <div class="evidence-quote" style="margin-bottom: 0;">
+                        <strong>The Core Question:</strong> How do we preserve flexibility without introducing
+                        confusion, risk, or unintended consequences?
                     </div>
                 </div>
             </section>
@@ -889,6 +903,43 @@
                 </div>
             </section>
 
+            <!-- ── PARALLEL PROJECTS ── -->
+            <section class="case-section reveal" aria-labelledby="section-parallel">
+                <h2 class="case-section__title" id="section-parallel">PARALLEL PROJECTS: QUALITY UNDER VOLUME</h2>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">While leading Testlify's major
+                    features, I simultaneously delivered UI work across three additional projects — demonstrating
+                    execution speed and context-switching capability without compromising quality.</p>
+                <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 0;">
+                    <div class="contribution-card" style="margin: 0;">
+                        <div class="card-label">METANOTES — AI Notetaker Marketing Website</div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 4px;">
+                            <strong>Role:</strong> UI Designer (Solo) · WordPress</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">Built
+                            marketing website foundation from scratch for an AI notetaker product. Researched
+                            competitors, designed homepage, features, and pricing pages, handed off to dev. Pure UI work
+                            supporting product launch.</p>
+                    </div>
+                    <div class="contribution-card" style="margin: 0;">
+                        <div class="card-label">DYMON — Storage &amp; Moving Services Website</div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 4px;">
+                            <strong>Role:</strong> UI Designer · Web</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">Created
+                            new pages for a client website using existing styling and component library. Maintained
+                            brand consistency within a pre-defined design system. Pure UI execution delivered cleanly
+                            within constraints.</p>
+                    </div>
+                    <div class="contribution-card" style="margin: 0;">
+                        <div class="card-label">APPFOREST — Jira Marketplace Time Tracking</div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 4px;">
+                            <strong>Role:</strong> UI Designer · Jira Marketplace App</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                            Designed time tracking tool UI inside the Jira ecosystem. Referenced established tools
+                            (Tempo), matched Jira design system requirements, delivered a marketplace-ready interface.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
             <!-- ── OPERATING AT SCALE ── -->
             <section class="case-section reveal" aria-labelledby="section-scale">
                 <h2 class="case-section__title" id="section-scale">OPERATING AT SCALE</h2>
@@ -903,7 +954,7 @@
                     </div>
                     <div class="t-row">
                         <div class="t-col-1">Balancing Speed &amp; Safety</div>
-                        <div class="t-col-2">With 229 tickets over 2.5 years, velocity mattered—but not at the expense
+                        <div class="t-col-2">With 229 tickets over 1.7 years, velocity mattered—but not at the expense
                             of quality. I developed rapid validation techniques (AI stress-testing for edge cases,
                             developer collaboration on technical constraints) and prioritized ruthlessly. Revenue-driven
                             prioritization sometimes meant pausing strategic work for urgent client needs—I learned to
@@ -927,6 +978,41 @@
                             Parser), daily feature requests (Slack-to-Jira pipeline), bug fixes (interrupt-driven work),
                             and design system maintenance (ensuring pattern consistency). Learned to prioritize based on
                             business impact, not personal preference.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── DESIGN SYSTEM WORK ── -->
+            <section class="case-section reveal" aria-labelledby="section-design-system">
+                <h2 class="case-section__title" id="section-design-system">DESIGN SYSTEM WORK</h2>
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="contribution-card" style="margin: 0;">
+                        <h3 class="card-section-title">Pattern Maintenance Across 229 Tickets</h3>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            As the platform expanded, I maintained consistency across:</p>
+                        <ul
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
+                            <li>Status indicators (consistent color coding, iconography)</li>
+                            <li>Empty states (contextual messaging, clear CTAs)</li>
+                            <li>Error handling (user-friendly messages, recovery paths)</li>
+                            <li>Action buttons (primary, secondary, destructive patterns)</li>
+                            <li>Form validation (inline errors, success states)</li>
+                            <li>Loading states (skeletons, spinners, progress indicators)</li>
+                        </ul>
+                    </div>
+                    <div class="contribution-card" style="margin: 0;">
+                        <h3 class="card-section-title">Cross-Module Consistency</h3>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            Ensured patterns worked consistently across:</p>
+                        <ul
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
+                            <li>Employer Portal (complex, multi-step workflows)</li>
+                            <li>Candidate Portal (simple, guided flows)</li>
+                            <li>Mobile apps (touch-friendly, reduced density)</li>
+                            <li>White-label environments (theme flexibility without pattern deviation)</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -962,19 +1048,25 @@
                         </ul>
                     </div>
                     <div class="contribution-card" style="margin: 0;">
-                        <h3 class="card-section-title">Platform Growth</h3>
+                        <h3 class="card-section-title">Platform Impact</h3>
                         <ul>
                             <li>Designed for platform serving <strong>4,500+ job roles</strong> across <strong>50+
                                     industries</strong></li>
                             <li>Work supported <strong>100+ ATS integrations</strong></li>
-                            <li>Platform processed <strong>thousands of assessments daily</strong> at peak</li>
+                            <li>Platform achieved <strong>80% candidate completion rate</strong> (2–3× industry average)
+                            </li>
+                            <li>Companies reported <strong>82% reduction in time-to-hire</strong></li>
                         </ul>
-                        <h3 class="card-section-title" style="margin-top: var(--space-md);">Process Improvements</h3>
+                    </div>
+                    <div class="contribution-card" style="margin: 0;">
+                        <h3 class="card-section-title">Quality Contributions</h3>
                         <ul>
-                            <li>Established Slack-to-Jira request management process (reduced dropped requests)</li>
-                            <li>Created design system documentation (improved consistency across 229 tickets)</li>
-                            <li>Introduced AI validation techniques (caught edge cases before development)</li>
-                            <li>Built cross-functional collaboration rhythms (reduced back-and-forth with dev)</li>
+                            <li>Caught critical cross-platform bugs before production (iOS Safari video, Firefox
+                                dropdowns, mobile keyboard overlap)</li>
+                            <li>Identified logic gaps in ambiguous requirements before development</li>
+                            <li>Prevented automation risks through guardrail design</li>
+                            <li>Maintained system coherence during rapid feature expansion</li>
+                            <li>Established Slack-to-Jira request management workflow</li>
                         </ul>
                     </div>
                 </div>
@@ -985,40 +1077,39 @@
                 <h2 class="case-section__title" id="section-learned">WHAT I LEARNED</h2>
                 <div class="t-grid">
                     <div class="t-row">
-                        <div class="t-col-1">1. Designing in Ambiguity</div>
-                        <div class="t-col-2">Early-stage startups don't have playbooks. I learned to validate
-                            assumptions through rapid prototyping, make decisions with incomplete data, and adapt when
-                            direction changed. The Resume Parser project taught me to balance visionary thinking with
-                            practical constraints.</div>
+                        <div class="t-col-1">1. Translating Ambiguity Into Structure</div>
+                        <div class="t-col-2">Most features started vague: "Build something like competitor X." I learned
+                            to ask clarifying questions before designing, model edge cases and failure states, document
+                            assumptions and validate with stakeholders, and structure undefined requirements into
+                            actionable specs.</div>
                     </div>
                     <div class="t-row">
-                        <div class="t-col-1">2. Systems Thinking at Scale</div>
-                        <div class="t-col-2">229 tickets sounds like task execution, but it required deep systems
-                            thinking. Every design decision had cascading effects across surfaces, user types, and
-                            technical architecture. I learned to map dependencies before designing, anticipate edge
-                            cases, and collaborate closely with backend teams.</div>
+                        <div class="t-col-1">2. Designing for Cascading Dependencies</div>
+                        <div class="t-col-2">In complex B2B systems, nothing exists in isolation. One toggle affects
+                            multiple surfaces. Configuration changes impact historical data. Cross-platform behavior
+                            requires validation. I learned to map dependencies before designing solutions — not after
+                            problems appeared.</div>
                     </div>
                     <div class="t-row">
-                        <div class="t-col-1">3. Strategic Partnership Over Service Design</div>
-                        <div class="t-col-2">I evolved from "designer who makes things look good" to "design partner who
-                            shapes product direction." Founders trusted me to challenge requirements, propose
-                            alternatives, and push back when user needs conflicted with business wants. This required
-                            building credibility through consistent delivery.</div>
+                        <div class="t-col-1">3. Balancing Speed With Safety</div>
+                        <div class="t-col-2">Revenue-driven prioritization meant shipping under constraints. Sometimes I
+                            shipped knowing future polish was needed — I documented design debt, balanced urgency with
+                            minimum viable quality, and learned when to push back vs. when to adapt without compromising
+                            core UX principles.</div>
                     </div>
                     <div class="t-row">
-                        <div class="t-col-1">4. Balancing Trade-offs, Not Finding Perfect Solutions</div>
-                        <div class="t-col-2">AI automation vs. human control. Speed vs. thoroughness. Simplicity vs.
-                            power. Every project involved trade-offs. I learned to frame design decisions around "what
-                            we're optimizing for" rather than "what's the right answer." The Resume Parser's
-                            three-option exploration exemplified this—no perfect solution, just the best fit for
-                            context.</div>
+                        <div class="t-col-1">4. Proactive Quality Management</div>
+                        <div class="t-col-2">498 reported issues weren't just bugs found during QA — they were the
+                            result of proactively testing across browsers and platforms, identifying edge cases before
+                            they reached users, catching cross-module inconsistencies, and preventing downstream
+                            problems through rigorous validation.</div>
                     </div>
                     <div class="t-row">
-                        <div class="t-col-1">5. Quality at Velocity</div>
-                        <div class="t-col-2">Shipping 229 tickets in 2.5 years while maintaining design quality required
-                            ruthless efficiency: reusable components over bespoke solutions, documented patterns for
-                            team alignment, AI tools for validation at speed, and clear communication to reduce revision
-                            cycles. Velocity comes from smart systems, not just working faster.</div>
+                        <div class="t-col-1">5. Systems Thinking at Scale</div>
+                        <div class="t-col-2">229 tickets required deep systems thinking. Every decision had cascading
+                            effects. Patterns needed to scale across surfaces. Consistency was maintained through
+                            documentation. Team alignment required clear, proactive communication — not just delivery.
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1027,25 +1118,28 @@
             <div class="reflection reveal" aria-labelledby="section-reflection">
                 <h2 class="reflection__title" id="section-reflection">REFLECTION</h2>
                 <div class="reflection__text">
-                    <p>When I joined Testlify, I saw it as a feature execution role—take requirements, make them pretty,
-                        ship fast. By the time I left, I'd become a strategic design partner who shaped product
-                        direction, influenced roadmap priorities, and built systems that scaled beyond individual
-                        projects.</p>
+                    <p>Testlify wasn't about designing beautiful screens. It was about <strong
+                            class="reflection__highlight">building structure in ambiguity</strong> — where requirements
+                        were unclear, timelines were tight, and mistakes had real business consequences.</p>
 
-                    <p>The journey from 229 Jira tickets to a cohesive product experience taught me that <strong
-                            class="reflection__highlight">great design isn't about making individual features
-                            beautiful—it's about building systems that work consistently at scale.</strong> It's about
-                        making complex decisions transparent. It's about earning trust through delivery. And it's about
-                        balancing visionary thinking with the reality of startup constraints.</p>
+                    <p>I evolved from: <strong>Feature Execution → System Stewardship → Risk Reduction → Team
+                            Multiplier</strong></p>
 
-                    <p>If I could go back, I'd push for dedicated user research earlier (we relied too heavily on
-                        founder intuition), document edge cases more rigorously (would've prevented some late-cycle
-                        bugs), and invest in design system infrastructure sooner (consistency suffered under velocity
-                        pressure). But I wouldn't change the experience of learning to design in ambiguity, ship at
-                        speed, and partner strategically with leadership.</p>
+                    <p><strong class="reflection__highlight">What this experience taught me:</strong><br>
+                        Senior product design means structuring what the product should do when no one else has defined
+                        it. Great design isn't about individual features — it's about systems that work consistently at
+                        scale. Quality comes from proactive validation, not just responding to found bugs. Team impact
+                        extends beyond individual tickets into overall system coherence.</p>
 
-                    <p><strong class="reflection__highlight">That's the designer I became at Testlify—and the designer I
-                            bring to my next role.</strong></p>
+                    <p><strong class="reflection__highlight">What I bring to my next role:</strong><br>
+                        Proven ability to translate ambiguity into structured, scalable systems. Track record of
+                        delivering 229 tickets while maintaining quality. Deep systems thinking that prevents downstream
+                        problems. Proactive quality management (498 reported issues). Cross-functional collaboration in
+                        fast-moving environments. Mentorship capability for growing design teams.</p>
+
+                    <p>The platform served real hiring teams making real decisions about real people's careers. Every
+                        design choice carried weight. I'm proud of building scalable structure in genuine operational
+                        complexity — and I'm ready to bring that capability to a senior product design role.</p>
                 </div>
             </div>
 
