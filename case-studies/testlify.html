@@ -146,6 +146,21 @@
             }
         }
 
+        /* ── Reporting section: 3-col horizontal cards ── */
+        .reporting-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            align-items: stretch;
+            margin-bottom: var(--space-xl);
+        }
+
+        @media (max-width: 900px) {
+            .reporting-cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* ── Download PDF Reports Button ── */
         .btn-download {
             display: inline-flex;
@@ -723,94 +738,107 @@
                 <h3 style="color: var(--text-primary); font-size: var(--font-size-lg); margin-bottom: var(--space-lg);">
                     What I Designed</h3>
 
-                <!-- Card 1: Three New Reports -->
-                <div class="contribution-card reveal" style="margin-bottom: var(--space-md);">
-                    <div class="card-label">01 — Three New Psychometric Reports (From Scratch)</div>
-                    <p
-                        style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
-                        I designed these reports from the ground up—understanding assessment requirements, structuring
-                        how each data type should be presented, and creating interactive PDF formats:
-                    </p>
-                    <ul>
-                        <li><strong>Sales Profiler Report:</strong> Structured sales-specific competencies, behavioural
-                            indicators, and performance predictors</li>
-                        <li><strong>PicOcean Personality &amp; Cultural Fit:</strong> Designed data presentation for
-                            personality traits mapped to cultural alignment</li>
-                        <li><strong>360 Degree Feedback Report:</strong> Created comprehensive feedback visualisation
-                            from multiple evaluators (peers, managers, self-assessment)</li>
-                    </ul>
-                    <p
-                        style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.8; margin: 0; font-style: italic;">
-                        Each required: Understanding raw assessment data → Structuring information hierarchy → Designing
-                        visual representations → Creating actionable insights format
-                    </p>
-                    <button class="btn-download" onclick="downloadAllReports(this)" id="dl-btn-card1"
-                        aria-label="Download all psychometric PDF reports as ZIP">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                            <polyline points="7 10 12 15 17 10" />
-                            <line x1="12" y1="15" x2="12" y2="3" />
-                        </svg>
-                        Download PDF Reports
-                    </button>
-                </div>
+                <!-- What I Designed: 3-column horizontal grid -->
+                <div class="reporting-cards-grid">
 
-                <!-- Card 2: Seven Report Improvements -->
-                <div class="contribution-card reveal" style="margin-bottom: var(--space-md);">
-                    <div class="card-label">02 — Seven Report Improvements (UI Fixes &amp; Enhancements)</div>
-                    <p
-                        style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
-                        For existing reports, I identified issues and improved UI and structure:
-                    </p>
-                    <ul>
-                        <li><strong>Big Five Personality:</strong> Fixed layout issues, improved trait visualisation
-                        </li>
-                        <li><strong>16 PF (16 Personality Factors):</strong> Enhanced data hierarchy, clarified factor
-                            relationships</li>
-                        <li><strong>Leadership Assessment:</strong> Restructured competency display, improved scoring
-                            clarity</li>
-                        <li><strong>SMART Personality:</strong> Fixed UI inconsistencies, improved readability</li>
-                        <li><strong>DISC Personality:</strong> Enhanced 4-quadrant visualisation, improved behavioural
-                            descriptions</li>
-                        <li><strong>Enneagram:</strong> Fixed structural issues, improved type descriptions and score
-                            display</li>
-                        <li><strong>Motivational Traits:</strong> Restructured data presentation, improved actionability
-                        </li>
-                    </ul>
-                    <button class="btn-download" onclick="downloadAllReports(this)" id="dl-btn-card2"
-                        aria-label="Download all psychometric PDF reports as ZIP">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                            <polyline points="7 10 12 15 17 10" />
-                            <line x1="12" y1="15" x2="12" y2="3" />
-                        </svg>
-                        Download PDF Reports
-                    </button>
-                </div>
+                    <!-- Card 1: Three New Reports -->
+                    <div class="contribution-card reveal" style="margin: 0; display: flex; flex-direction: column;">
+                        <div class="card-label">01 — Three New Psychometric Reports (From Scratch)</div>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            I designed these reports from the ground up—understanding assessment requirements,
+                            structuring
+                            how each data type should be presented, and creating interactive PDF formats:
+                        </p>
+                        <ul>
+                            <li><strong>Sales Profiler Report:</strong> Structured sales-specific competencies,
+                                behavioural
+                                indicators, and performance predictors</li>
+                            <li><strong>PicOcean Personality &amp; Cultural Fit:</strong> Designed data presentation for
+                                personality traits mapped to cultural alignment</li>
+                            <li><strong>360 Degree Feedback Report:</strong> Created comprehensive feedback
+                                visualisation
+                                from multiple evaluators (peers, managers, self-assessment)</li>
+                        </ul>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.8; margin: 0 0 auto; font-style: italic;">
+                            Each required: Understanding raw assessment data → Structuring information hierarchy →
+                            Designing
+                            visual representations → Creating actionable insights format
+                        </p>
+                        <button class="btn-download" onclick="downloadAllReports(this)" id="dl-btn-card1"
+                            aria-label="Download all psychometric PDF reports as ZIP">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            Download PDF Reports
+                        </button>
+                    </div>
+
+                    <!-- Card 2: Seven Report Improvements -->
+                    <div class="contribution-card reveal" style="margin: 0; display: flex; flex-direction: column;">
+                        <div class="card-label">02 — Seven Report Improvements (UI Fixes &amp; Enhancements)</div>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            For existing reports, I identified issues and improved UI and structure:
+                        </p>
+                        <ul style="flex: 1;">
+                            <li><strong>Big Five Personality:</strong> Fixed layout issues, improved trait visualisation
+                            </li>
+                            <li><strong>16 PF (16 Personality Factors):</strong> Enhanced data hierarchy, clarified
+                                factor
+                                relationships</li>
+                            <li><strong>Leadership Assessment:</strong> Restructured competency display, improved
+                                scoring
+                                clarity</li>
+                            <li><strong>SMART Personality:</strong> Fixed UI inconsistencies, improved readability</li>
+                            <li><strong>DISC Personality:</strong> Enhanced 4-quadrant visualisation, improved
+                                behavioural
+                                descriptions</li>
+                            <li><strong>Enneagram:</strong> Fixed structural issues, improved type descriptions and
+                                score
+                                display</li>
+                            <li><strong>Motivational Traits:</strong> Restructured data presentation, improved
+                                actionability</li>
+                        </ul>
+                        <button class="btn-download" onclick="downloadAllReports(this)" id="dl-btn-card2"
+                            aria-label="Download all psychometric PDF reports as ZIP">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            Download PDF Reports
+                        </button>
+                    </div>
+
+                    <!-- Card 3: Export Architecture -->
+                    <div class="contribution-card reveal" style="margin: 0; display: flex; flex-direction: column;">
+                        <div class="card-label">03 — Export Architecture</div>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            Designed a one-click ZIP download system:
+                        </p>
+                        <ul>
+                            <li>All candidate reports bundled automatically</li>
+                            <li>Smart naming (candidate name + test type)</li>
+                            <li>Intelligent bundling — only completed tests included</li>
+                        </ul>
+                    </div>
+
+                </div><!-- /reporting-cards-grid -->
 
                 <!-- My Core Contribution callout -->
                 <div class="evidence-quote" style="margin-bottom: var(--space-xl);">
                     <strong>My Core Contribution:</strong> Understanding assessment requirements → Structuring complex
                     data into clear formats → Designing interactive, readable PDFs that translate raw scores into hiring
                     insights
-                </div>
-
-                <!-- Card 3: Export Architecture -->
-                <div class="contribution-card reveal" style="margin-bottom: var(--space-xl);">
-                    <div class="card-label">03 — Export Architecture</div>
-                    <p
-                        style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
-                        Designed a one-click ZIP download system:
-                    </p>
-                    <ul>
-                        <li>All candidate reports bundled automatically</li>
-                        <li>Smart naming (candidate name + test type)</li>
-                        <li>Intelligent bundling — only completed tests included</li>
-                    </ul>
                 </div>
 
                 <div class="impact-highlight">
