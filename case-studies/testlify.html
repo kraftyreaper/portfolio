@@ -264,6 +264,42 @@
                         <img src="../img/case-studies/Testlify-banner-2.png" alt="Testlify Banner 2">
                     </div>
                 </div>
+
+                <!-- ── Endorsements ── -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: var(--space-xl);"
+                    class="endorse-grid">
+                    <div
+                        style="background: linear-gradient(135deg, #1e3a5f 0%, #1a3a6e 100%); border-radius: 14px; padding: 28px 30px; position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.08);">
+                        <div
+                            style="font-size: 72px; line-height: 1; color: rgba(255,255,255,0.1); font-family: Georgia, serif; position: absolute; top: -10px; left: 18px; pointer-events: none;">
+                            &ldquo;</div>
+                        <blockquote
+                            style="font-size: 0.95rem; line-height: 1.7; color: #e2e8f0; position: relative; z-index: 1; margin: 0 0 14px; font-style: italic;">
+                            &ldquo;Proud of the growth you&rsquo;ve shown during your time with us. You consistently
+                            brought thoughtfulness to problems, cared deeply about users, and kept raising the quality
+                            bar. Wishing you an amazing next chapter.&rdquo;</blockquote>
+                        <cite style="font-size: 0.8rem; color: rgba(255,255,255,0.6); font-style: normal;"><strong
+                                style="color: #fff;">Abhishek Shah</strong> &mdash; Co-founder &amp; CEO, Testlify
+                            &nbsp;&middot;&nbsp; LinkedIn comment, Jan 2026</cite>
+                    </div>
+                    <div
+                        style="background: var(--bg-secondary, #1a1a2e); border-radius: 14px; padding: 28px 30px; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; justify-content: center;">
+                        <blockquote
+                            style="font-size: 0.9rem; line-height: 1.7; color: var(--text-secondary); margin: 0 0 12px; font-style: italic;">
+                            &ldquo;We&rsquo;re grateful for the energy, curiosity, and ownership you brought to the
+                            team. We&rsquo;ll be cheering you on.&rdquo;</blockquote>
+                        <cite style="font-size: 0.8rem; color: var(--text-muted, #64748b); font-style: normal;"><strong
+                                style="color: var(--text-secondary);">Testlify</strong> &mdash; Official company
+                            LinkedIn comment, Jan 2026</cite>
+                    </div>
+                </div>
+                <style>
+                    @media (max-width: 640px) {
+                        .endorse-grid {
+                            grid-template-columns: 1fr !important;
+                        }
+                    }
+                </style>
             </div>
 
             <!-- ── AT A GLANCE ── -->
@@ -389,6 +425,46 @@
 
                     </div>
 
+                    <!-- Decision responsibilities table -->
+                    <div class="contribution-card" style="margin: 0;">
+                        <div class="card-label">My Actual Decision Responsibilities</div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: var(--space-sm);">
+                            What looked like a simple ask was never simple. Here's what each request actually required:
+                        </p>
+                        <div class="t-grid">
+                            <div class="t-row t-header">
+                                <div class="t-col-1">The Surface-Level Ask</div>
+                                <div class="t-col-2">The Actual Decision Responsibility</div>
+                            </div>
+                            <div class="t-row">
+                                <div class="t-col-1">&ldquo;Make resume screening automatic&rdquo;</div>
+                                <div class="t-col-2">Apply 5-Why analysis &rarr; define logic, edge cases, validation
+                                    rules, and irreversibility risks &rarr; document trade-offs founders could act on
+                                </div>
+                            </div>
+                            <div class="t-row">
+                                <div class="t-col-1">New feature request via Slack</div>
+                                <div class="t-col-2">Map cascading dependencies &rarr; model what this breaks in ATS
+                                    sync, PDF generation, or white-label config before scoping any solution</div>
+                            </div>
+                            <div class="t-row">
+                                <div class="t-col-1">Competing founder vs. sales priorities</div>
+                                <div class="t-col-2">Mediate with documented rationale &rarr; prevent
+                                    design-by-committee drift &rarr; enable faster cross-functional alignment</div>
+                            </div>
+                            <div class="t-row">
+                                <div class="t-col-1">Technical feasibility unknown</div>
+                                <div class="t-col-2">Validate constraints with backend engineers before promising
+                                    solutions to any stakeholder</div>
+                            </div>
+                            <div class="t-row">
+                                <div class="t-col-1">Release pressure from founders</div>
+                                <div class="t-col-2">Block tickets until UX matched spec, cross-browser issues resolved,
+                                    and logic was sound &mdash; hold quality regardless of timeline pressure</div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="evidence-quote" style="margin-bottom: 0;">
                         <strong>The Core Question:</strong> How do we preserve flexibility without introducing
                         confusion, risk, or unintended consequences?
@@ -439,6 +515,57 @@
                             rapidly, maintain patterns: status indicators, action buttons, empty states, error handling,
                             sync visibility.</p>
                     </div>
+                </div>
+            </section>
+
+            <!-- ── WHERE AI HELPED — AND WHERE IT DIDN'T ── -->
+            <section class="case-section reveal" aria-labelledby="section-ai-judgment">
+                <h2 class="case-section__title" id="section-ai-judgment">HUMAN JUDGMENT IN AI-DRIVEN PRODUCTS</h2>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">Working on an AI hiring
+                    platform gave me direct experience of where AI genuinely helps — and where it fails in ways that
+                    hurt real people. I was deliberate about this line every day.</p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: var(--space-xl);"
+                    class="ai-judgment-grid">
+                    <div class="contribution-card" style="margin: 0; border-left: 3px solid #3b82f6;">
+                        <div class="card-label" style="color: #3b82f6;">AI Handled</div>
+                        <ul
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
+                            <li>Edge-case stress-testing and logic gap identification</li>
+                            <li>Suggesting candidate-matching criteria for screening rules</li>
+                            <li>Resume parsing and structured data extraction</li>
+                            <li>Confidence scoring on resume-to-role fit</li>
+                            <li>Surface-level, repeatable, time-consuming tasks</li>
+                        </ul>
+                    </div>
+                    <div class="contribution-card" style="margin: 0; border-left: 3px solid var(--accent);">
+                        <div class="card-label" style="color: var(--accent);">Human Judgment Required</div>
+                        <ul
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
+                            <li>Resolving founder vs. sales conflicts &mdash; requires empathy and political awareness
+                                no model has</li>
+                            <li>Designing irreversibility guardrails &mdash; requires metacognition about regret and
+                                consequence</li>
+                            <li>Framing psychometric data for HR teams &mdash; requires understanding organisational
+                                context AI cannot infer</li>
+                            <li>Handling sensitive candidate data that cannot be sent to external AI systems</li>
+                            <li>Reading the unspoken business risk in a &ldquo;simple&rdquo; feature request</li>
+                        </ul>
+                    </div>
+                </div>
+                <style>
+                    @media (max-width: 640px) {
+                        .ai-judgment-grid {
+                            grid-template-columns: 1fr !important;
+                        }
+                    }
+                </style>
+
+                <div class="evidence-quote" style="margin-bottom: 0;">
+                    <strong>The principle I designed by:</strong> Humans over-rely on AI when it removes friction from
+                    decisions they should be making themselves. I built that assumption into every AI-adjacent feature
+                    &mdash; specifically in the AI Resume Parser, where the goal was to ensure employers never became
+                    bystanders in their own hiring process.
                 </div>
             </section>
 
@@ -916,10 +1043,14 @@
                             style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
                             <li>Status indicators (consistent color coding, iconography)</li>
                             <li>Empty states (contextual messaging, clear CTAs)</li>
-                            <li>Error handling (user-friendly messages, recovery paths)</li>
+                            <li>Error &amp; validation handling (inline errors, success states, recovery paths)</li>
+                            <li>Destructive action guardrails (consistent warning language and confirmation patterns for
+                                all irreversible actions)</li>
                             <li>Action buttons (primary, secondary, destructive patterns)</li>
-                            <li>Form validation (inline errors, success states)</li>
-                            <li>Loading states (skeletons, spinners, progress indicators)</li>
+                            <li>Loading &amp; async states (skeletons, spinners, progress indicators matched to
+                                interaction context)</li>
+                            <li>White-label compatibility (pattern decisions accounted for theme flexibility across
+                                branded enterprise configurations)</li>
                         </ul>
                     </div>
                     <div class="contribution-card" style="margin: 0;">
@@ -1085,18 +1216,15 @@
                     </ul>
 
                     <p><strong class="reflection__highlight">What I Bring to My Next Role:</strong></p>
-                    <ul>
-                        <li>Proven ability to translate ambiguity into structured, scalable systems</li>
-                        <li>Track record of delivering 505 tickets while maintaining quality</li>
-                        <li>Deep systems thinking that prevents downstream problems</li>
-                        <li>Proactive quality management (498 reported issues)</li>
-                        <li>Cross-functional collaboration in fast-moving environments</li>
-                        <li>Mentorship capability for growing design teams</li>
-                    </ul>
+                    <p style="color: var(--text-secondary); line-height: 1.8;">The ability to translate ambiguity into
+                        structured decisions. The discipline to apply <strong>5-Why thinking before opening
+                            Figma</strong>. The judgment to know when automation helps and when it needs a human between
+                        it and a consequential outcome. The <strong>infrastructure instinct</strong> to build quality
+                        processes, not just quality deliverables. And the cross-functional credibility to align
+                        founders, engineers, and customers around the same decision.</p>
 
                     <p>The platform served real hiring teams making real decisions about real people's careers. Every
-                        design
-                        choice carried weight. I'm proud of building scalable structure in genuine operational
+                        design choice carried weight. I'm proud of building scalable structure in genuine operational
                         complexity—and I'm ready to bring that capability to a senior product design role.</p>
                 </div>
             </div>
