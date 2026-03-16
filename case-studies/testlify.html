@@ -604,37 +604,30 @@
 
             </section>
 
-            <!-- ── HUMAN JUDGMENT IN AI-DRIVEN PRODUCTS ── -->
+            <!-- ── WHERE I USED AI — AND WHERE I DIDN'T ── -->
             <section class="case-section reveal" aria-labelledby="section-ai-judgment">
-                <h2 class="case-section__title" id="section-ai-judgment">HUMAN JUDGMENT IN AI-DRIVEN PRODUCTS</h2>
-                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">Working on an AI hiring
-                    platform gave me direct experience of where AI genuinely helps &mdash; and where it fails in ways
-                    that hurt real people. I was deliberate about this line every day.</p>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: var(--space-xl);"
-                    class="ai-judgment-grid">
+                <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">HUMAN JUDGMENT IN AI-DRIVEN PRODUCTS</div>
+                <h2 class="case-section__title" id="section-ai-judgment">Where I used AI &mdash; and where I didn&rsquo;t</h2>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">Working on an AI hiring platform gave me first-hand clarity on where AI genuinely helps &mdash; and where it fails in ways that hurt real people. I was deliberate about this boundary at every feature decision.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: var(--space-xl);" class="ai-judgment-grid">
                     <div class="contribution-card" style="margin: 0; border-left: 3px solid #3b82f6;">
-                        <div class="card-label" style="color: #3b82f6;">AI Handled</div>
-                        <ul
-                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
-                            <li>Edge-case stress-testing and logic gap identification</li>
-                            <li>Suggesting candidate-matching criteria for screening rules</li>
-                            <li>Resume parsing and structured data extraction</li>
-                            <li>Confidence scoring on resume-to-role fit</li>
-                            <li>Surface-level, repeatable, time-consuming tasks</li>
+                        <div class="card-label" style="color: #3b82f6;">AI handled well</div>
+                        <ul style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
+                            <li>Edge-case stress testing and logic gap identification</li>
+                            <li>Generating suggested criteria for resume screening rules</li>
+                            <li>Structured data extraction from unformatted resumes</li>
+                            <li>Confidence scoring on resume-to-role match</li>
                         </ul>
                     </div>
                     <div class="contribution-card" style="margin: 0; border-left: 3px solid var(--accent);">
-                        <div class="card-label" style="color: var(--accent);">Human Judgment Required</div>
-                        <ul
-                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
-                            <li>Resolving founder vs. sales conflicts &mdash; requires empathy and political awareness
-                                no model has</li>
-                            <li>Designing irreversibility guardrails &mdash; requires metacognition about regret and
-                                consequence</li>
-                            <li>Framing psychometric data for HR teams &mdash; requires understanding organisational
-                                context AI cannot infer</li>
-                            <li>Handling sensitive candidate data that cannot be sent to external AI systems</li>
-                            <li>Reading the unspoken business risk in a &ldquo;simple&rdquo; feature request</li>
+                        <div class="card-label" style="color: var(--accent);">Human judgment was irreplaceable</div>
+                        <ul style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
+                            <li>Navigating founder vs. sales vs. user conflicts &mdash; requires empathy and political awareness no model has</li>
+                            <li>Designing irreversibility guardrails &mdash; requires metacognition about what users will regret under pressure</li>
+                            <li>Framing psychometric data for senior HR leadership &mdash; requires understanding unspoken organisational context</li>
+                            <li>Mapping cascading dependency risk &mdash; requires holding the entire system in working memory simultaneously</li>
+                            <li>Deciding when to push back on a &ldquo;simple&rdquo; request &mdash; requires reading unspoken business risk behind the ask</li>
+                            <li>Bridging context gaps when private enterprise hiring data cannot be shared with external AI tools</li>
                         </ul>
                     </div>
                 </div>
@@ -645,11 +638,8 @@
                         }
                     }
                 </style>
-                <div class="evidence-quote" style="margin-bottom: 0;">
-                    <strong>The principle I designed by:</strong> Humans over-rely on AI when it removes friction from
-                    decisions they should be making themselves. I built that assumption into every AI-adjacent feature
-                    &mdash; specifically in the AI Resume Parser, where the goal was to ensure employers never became
-                    bystanders in their own hiring process.
+                <div style="border-left: 4px solid #FEF3C7; background: rgba(254, 243, 199, 0.05); padding: 20px 24px; border-radius: 0 8px 8px 0; margin-bottom: 0;">
+                    <strong style="color: #FEF3C7;">The principle I designed by:</strong> AI can process. It cannot own a decision. The moment a consequence is irreversible &mdash; a candidate rejected, an employer's trust broken, a system's integrity compromised &mdash; a human must hold it. I built that assumption into every AI-adjacent feature on this platform.
                 </div>
             </section>
 
