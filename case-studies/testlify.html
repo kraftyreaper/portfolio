@@ -664,7 +664,7 @@
                         </p>
                     </div>
 
-                    <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1rem;">Three approaches &mdash; one decision</div>
+                    <div class="card-label" style="text-transform: uppercase; margin-bottom: 1.5rem; text-align: center;">Three approaches &mdash; one decision</div>
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: var(--space-xl);" class="options-grid">
                         <div class="contribution-card" style="margin: 0; opacity: 0.65;">
                             <div style="text-transform: uppercase; color: #ef4444; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">&#10005; REJECTED</div>
@@ -690,98 +690,67 @@
                         }
                     </style>
 
-                    <h3 class="card-section-title" style="margin-bottom: var(--space-md);">The Complete 6-Step Flow I
-                        Designed</h3>
-                    <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: var(--space-xl);">
-                        <div class="contribution-card"
-                            style="margin: 0; display: flex; gap: var(--space-md); align-items: flex-start;">
-                            <div
-                                style="min-width: 32px; height: 32px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0;">
-                                1</div>
-                            <div><strong style="display: block; margin-bottom: 4px;">ATS Integration Gate</strong>
-                                <p
-                                    style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.7; margin: 0;">
-                                    Designed contextual empty states for different system conditions (ATS not connected,
-                                    no jobs exist, no candidates available, job not configured). Prevented users from
-                                    entering broken flows.</p>
+                    <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-xl);">The complete flow &mdash; 6 decision points</div>
+                    
+                    <div style="position: relative; padding-left: 1rem;">
+                        <!-- Vertical connection line -->
+                        <div style="position: absolute; left: 25px; top: 16px; bottom: 16px; width: 2px; background: rgba(59, 130, 246, 0.2); z-index: 0;"></div>
+
+                        <!-- Step 1 -->
+                        <div style="position: relative; display: flex; gap: 2rem; margin-bottom: 2.5rem; z-index: 1;">
+                            <div style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; box-shadow: 0 0 0 4px var(--bg-primary);">1</div>
+                            <div style="padding-top: 4px;">
+                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">ATS Integration</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">Connect to 100+ ATS platforms (Greenhouse, Lever, Workable). Designed contextual empty states for each prerequisite blocker &mdash; ATS not connected, no jobs available, no candidates synced, job not configured &mdash; making each blocker actionable, not just an error.</p>
                             </div>
                         </div>
-                        <div class="contribution-card"
-                            style="margin: 0; display: flex; gap: var(--space-md); align-items: flex-start;">
-                            <div
-                                style="min-width: 32px; height: 32px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0;">
-                                2</div>
-                            <div><strong style="display: block; margin-bottom: 4px;">Job Selection &amp; Stage
-                                    Mapping</strong>
-                                <p
-                                    style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.7; margin: 0;">
-                                    Display ATS jobs in &ldquo;Not Setup&rdquo; state by default. Employer selects which
-                                    ATS stage to fetch candidates from. Connected external pipeline data with internal
-                                    screening logic.</p>
+
+                        <!-- Step 2 -->
+                        <div style="position: relative; display: flex; gap: 2rem; margin-bottom: 2.5rem; z-index: 1;">
+                            <div style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; box-shadow: 0 0 0 4px var(--bg-primary);">2</div>
+                            <div style="padding-top: 4px;">
+                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Job Stage Selection</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">Dynamic dropdown populated from the connected ATS's actual stage names &mdash; eliminating guessing across different ATS naming conventions. Required complex backend integration, but eliminated an entire class of user confusion.</p>
                             </div>
                         </div>
-                        <div class="contribution-card"
-                            style="margin: 0; display: flex; gap: var(--space-md); align-items: flex-start;">
-                            <div
-                                style="min-width: 32px; height: 32px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0;">
-                                3</div>
-                            <div><strong style="display: block; margin-bottom: 4px;">AI Criteria Suggestion</strong>
-                                <p
-                                    style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.7; margin: 0;">
-                                    Based on role name and job description, AI suggests 10 evaluation criteria. Employer
-                                    must select minimum 8. Option to create completely custom criteria from scratch.
-                                    <em>Why: Balanced AI assistance with recruiter judgment (Principle 2:
-                                        Transparency).</em>
-                                </p>
+
+                        <!-- Step 3 -->
+                        <div style="position: relative; display: flex; gap: 2rem; margin-bottom: 2.5rem; z-index: 1;">
+                            <div style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; box-shadow: 0 0 0 4px var(--bg-primary);">3</div>
+                            <div style="padding-top: 4px;">
+                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Screening Rules</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">AI suggests relevant criteria based on role; employers can add custom requirements or override defaults. The AI assists. The employer decides what matters for their specific hire.</p>
                             </div>
                         </div>
-                        <div class="contribution-card"
-                            style="margin: 0; display: flex; gap: var(--space-md); align-items: flex-start;">
-                            <div
-                                style="min-width: 32px; height: 32px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0;">
-                                4</div>
-                            <div><strong style="display: block; margin-bottom: 4px;">Score Threshold
-                                    Configuration</strong>
-                                <p
-                                    style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.7; margin: 0;">
-                                    Employer defines High/Medium/Low bands. Sets automation rules per band (e.g.,
-                                    &ldquo;Above 85% &rarr; auto-advance; Below 40% &rarr; auto-reject&rdquo;).
-                                    <strong>Key decision:</strong> Added clear warning &mdash; &ldquo;Auto-rejected
-                                    candidates cannot be recovered.&rdquo; Made automation consequences explicit
-                                    (Principle 4: Guardrails).
-                                </p>
+
+                        <!-- Step 4 -->
+                        <div style="position: relative; display: flex; gap: 2rem; margin-bottom: 2.5rem; z-index: 1;">
+                            <div style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; box-shadow: 0 0 0 4px var(--bg-primary);">4</div>
+                            <div style="padding-top: 4px;">
+                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Threshold Configuration</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">Slider with snap points at 50%, 70%, 90%. Colour-coded zones &mdash; red &lt;50%, yellow 50&ndash;70%, green &gt;70%. <strong>Trade-off:</strong> Simplified continuous AI scores into discrete buckets. Accepted because employers needed clear decision points, not statistical precision.</p>
                             </div>
                         </div>
-                        <div class="contribution-card"
-                            style="margin: 0; display: flex; gap: var(--space-md); align-items: flex-start;">
-                            <div
-                                style="min-width: 32px; height: 32px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0;">
-                                5</div>
-                            <div><strong style="display: block; margin-bottom: 4px;">Parsing Controls</strong>
-                                <p
-                                    style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.7; margin: 0;">
-                                    Default candidate processing limit: 20 per batch. Pause/resume capability during
-                                    active screening. Sync status visibility. Manual re-sync option as fallback.
-                                    <em>Why: Prevented bulk processing errors, allowed recovery from mistakes.</em>
-                                </p>
+
+                        <!-- Step 5 -->
+                        <div style="position: relative; display: flex; gap: 2rem; margin-bottom: 2.5rem; z-index: 1;">
+                            <div style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; box-shadow: 0 0 0 4px var(--bg-primary);">5</div>
+                            <div style="padding-top: 4px;">
+                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Batch Processing</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">Processes up to 500 resumes per run. Auto-advance toggle is <em>opt-in and off by default</em> &mdash; when disabled, all candidates queue for review. Added configuration complexity to give employers the control that high-stakes decisions demand.</p>
                             </div>
                         </div>
-                        <div class="contribution-card"
-                            style="margin: 0; display: flex; gap: var(--space-md); align-items: flex-start;">
-                            <div
-                                style="min-width: 32px; height: 32px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0;">
-                                6</div>
-                            <div><strong style="display: block; margin-bottom: 4px;">Candidate Evaluation
-                                    Interface</strong>
-                                <p
-                                    style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.7; margin: 0;">
-                                    Under each job, employers see High/Medium/Low badges and criteria-level scoring
-                                    breakdown. On candidate detail page: resume preview, basic info, manual action
-                                    controls (Reject, Move stage, Invite to assessment). <em>Why: Full transparency into
-                                        AI decisions while maintaining human control at all decision points.</em></p>
+
+                        <!-- Step 6 -->
+                        <div style="position: relative; display: flex; gap: 2rem; z-index: 1;">
+                            <div style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; box-shadow: 0 0 0 4px var(--bg-primary);">6</div>
+                            <div style="padding-top: 4px;">
+                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Review &amp; Override</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">Two rejection paths: Auto-reject (removes from ATS) or Keep for manual review. <strong>Critical guardrail:</strong> Auto-reject carries a persistent, unmissable warning &mdash; &ldquo;Auto-rejected candidates cannot be recovered.&rdquo; Desired by high-volume recruiters; required an irreversibility signal to prevent bulk rejections made under time pressure.</p>
                             </div>
                         </div>
                     </div>
+                </div>
 
                     <div class="contribution-card" style="margin-bottom: var(--space-lg);">
                         <div class="card-label">Critical Design Decision: Confidence Score Visualization</div>
