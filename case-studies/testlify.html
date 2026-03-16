@@ -643,52 +643,43 @@
                 </div>
             </section>
 
-            <!-- \u2500\u2500 DEEP DIVE: AI RESUME PARSER \u2500\u2500 -->
+            <!-- ── DEEP DIVE: AI RESUME PARSER ── -->
             <section class="lifecycle-section reveal" aria-labelledby="section-resume-parser">
-                <div class="section-heading" style="margin-bottom: var(--space-xl);">
-                    <div class="section-heading__line"></div>
-                    <h2 class="section-heading__text" id="section-resume-parser">DEEP DIVE: AI RESUME PARSER</h2>
-                    <div class="section-heading__line"></div>
+                <div style="text-align: center; margin-bottom: var(--space-xl);">
+                    <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Deep dive &mdash; flagship feature</div>
+                    <div class="section-heading" style="margin-bottom: 0;">
+                        <div class="section-heading__line"></div>
+                        <h2 class="section-heading__text" id="section-resume-parser">AI Resume Parser: high-stakes automation with human control</h2>
+                        <div class="section-heading__line"></div>
+                    </div>
                 </div>
-                <p
-                    style="color: var(--text-secondary); text-align: center; margin-bottom: var(--space-xl); font-style: italic;">
-                    Designing high-stakes automation with human control</p>
+
                 <div class="case-section__content" style="max-width: 100%; margin-bottom: var(--space-xl);">
-                    <div class="contribution-card" style="margin-bottom: var(--space-xl);">
-                        <div class="card-label">The Challenge</div>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
-                            Founders wanted automated resume screening integrated with ATS workflows. The risk:
-                            over-automation could silently reject qualified candidates, creating hiring mistakes, legal
-                            liability, and client churn.</p>
+                    <div style="margin-bottom: var(--space-xl);">
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem;">
+                            <strong>The ask:</strong> Build an AI-powered system that screens resumes, extracts candidate data, matches qualifications to job requirements, and routes qualified candidates into assessment workflows &mdash; reducing time-to-hire for companies processing hundreds of applications.
+                        </p>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin: 0;">
+                            <strong>The risk:</strong> AI making consequential hiring decisions without employer oversight could eject qualified candidates, introduce bias, and erode platform trust &mdash; with no way to recover.
+                        </p>
                     </div>
 
-                    <h3 class="card-section-title" style="margin-bottom: var(--space-md);">My Approach: Three Options
-                        Explored</h3>
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: var(--space-xl);"
-                        class="options-grid">
+                    <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1rem;">Three approaches &mdash; one decision</div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: var(--space-xl);" class="options-grid">
                         <div class="contribution-card" style="margin: 0; opacity: 0.65;">
-                            <div class="card-label" style="color: #ef4444;">&#10005; Rejected</div>
-                            <h4 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Fully Automatic</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">AI
-                                screens all resumes &rarr; auto-advances qualified candidates. Fast but removes human
-                                control &mdash; too risky for hiring decisions.</p>
+                            <div style="text-transform: uppercase; color: #ef4444; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">&#10005; REJECTED</div>
+                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Fully Automatic</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">AI screens all resumes and auto-advances candidates. Fast &mdash; but removes employer control entirely. Too risky for decisions that affect people's careers.</p>
                         </div>
                         <div class="contribution-card" style="margin: 0; opacity: 0.65;">
-                            <div class="card-label" style="color: #ef4444;">&#10005; Rejected</div>
-                            <h4 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Manual Review Required
-                            </h4>
-                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">AI
-                                extracts data &rarr; employers review every candidate. Safe but defeats automation
-                                purpose &mdash; doesn&rsquo;t save time.</p>
+                            <div style="text-transform: uppercase; color: #ef4444; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">&#10005; REJECTED</div>
+                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Manual Review Required</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">AI extracts data; employers review every candidate before advancing. Safe &mdash; but defeats the purpose of automation. Doesn't reduce time-to-hire at scale.</p>
                         </div>
-                        <div class="contribution-card" style="margin: 0; border-left: 3px solid var(--accent);">
-                            <div class="card-label" style="color: var(--accent);">&#10003; Chosen</div>
-                            <h4 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">AI-Assisted with
-                                Guardrails</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">AI
-                                parses and scores &rarr; employers set thresholds &rarr; manual override always
-                                available. Balanced automation with control &mdash; AI does heavy lifting, humans retain
-                                final authority.</p>
+                        <div class="contribution-card" style="margin: 0; border-left: 3px solid #3b82f6;">
+                            <div style="text-transform: uppercase; color: #3b82f6; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">&#10003; CHOSEN</div>
+                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">AI-Assisted with Guardrails</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">AI parses and scores resumes; employers set configurable thresholds and can review or override any decision. AI does the heavy lifting. Humans retain final authority.</p>
                         </div>
                     </div>
                     <style>
