@@ -1363,6 +1363,15 @@ a {
     border-radius: var(--radius-lg);
     padding: var(--space-2xl);
     margin-bottom: var(--space-lg);
+    text-decoration: none;
+    display: block;
+    transition: transform var(--transition-base), border-color var(--transition-base), background var(--transition-base);
+}
+
+.contribution-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    background: var(--bg-card-hover);
 }
 
 .contribution-card__number {
