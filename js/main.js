@@ -160,14 +160,27 @@ document.addEventListener('DOMContentLoaded', () => {
   (function() {
     const TG_TOKEN = '8718526798:AAFwmoebK66Cc0-IndVDpwsOM7Geuh66KzI';
     const TG_CHAT_ID = '7222053587';
+    const LEGACY_OFFSET = 627; // Baseline from GitHub Insights
     
     // Check if we've already notified for this session
-    if (sessionStorage.getItem('tg_notified')) return;
+    if (sessionStorage.getItem('tg_notified')) {
+      // Even if already notified, let's keep the footer updated with the offset
+      const checkFooter = setInterval(() => {
+        const countEl = document.getElementById('busuanzi_value_site_pv');
+        if (countEl && countEl.innerText !== '—') {
+          clearInterval(checkFooter);
+          const totalCount = parseInt(countEl.innerText) + LEGACY_OFFSET;
+          countEl.innerText = totalCount.toLocaleString();
+        }
+      }, 500);
+      return;
+    }
 
     // Function to send message
     const sendNotification = (count) => {
+      const totalCount = parseInt(count) + LEGACY_OFFSET;
       const pageTitle = document.title.split('—')[0].trim() || 'Home';
-      const message = `🚀 *New Visitor Identified*\n\n📈 *Total Views:* ${count}\n🔗 *Source:* ${pageTitle}\n📍 *URL:* ${window.location.href}`;
+      const message = `🚀 *New Visitor Identified*\n\n📈 *Total Views:* ${totalCount}\n🔗 *Source:* ${pageTitle}\n📍 *URL:* ${window.location.href}`;
       
       fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
         method: 'POST',
@@ -179,6 +192,9 @@ document.addEventListener('DOMContentLoaded', () => {
         })
       }).then(() => {
         sessionStorage.setItem('tg_notified', 'true');
+        // Update the visible footer count with the offset
+        const countEl = document.getElementById('busuanzi_value_site_pv');
+        if (countEl) countEl.innerText = totalCount.toLocaleString();
       }).catch(err => console.error('TG Notification failed:', err));
     };
 
@@ -188,13 +204,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const countEl = document.getElementById('busuanzi_value_site_pv');
       const count = countEl ? countEl.innerText : null;
       
-      // If count is found and is a number (not —)
       if (count && count !== '—') {
         clearInterval(checkBusuanzi);
         sendNotification(count);
       }
       
-      // Stop checking after 10 seconds to avoid infinite loop
       if (++attempts > 20) clearInterval(checkBusuanzi);
     }, 500);
   })();
