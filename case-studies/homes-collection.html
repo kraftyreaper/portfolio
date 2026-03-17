@@ -343,6 +343,11 @@
             <div class="site-footer__divider"></div>
 
             <div class="site-footer__row-bottom">
+                                <div class="site-footer__views">
+                    <svg class="site-footer__views-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    <span class="site-footer__views-count" id="busuanzi_value_site_pv">&#8212;</span>
+                    <span>portfolio views</span>
+                </div>
                 <div class="site-footer__copy">
                     &copy; 2026 Prashant Ahire. All rights reserved.
                 </div>
@@ -352,22 +357,7 @@
 
     <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
     <script src="../js/main.js"></script>
-    <script>
-        // Visitor counter — display only (increment happens on homepage)
-        (async function() {
-            try {
-                const res = await fetch('https://api.counterapi.dev/v1/kraftyreaper-portfolio/visits', { mode: 'cors' });
-                const data = await res.json();
-                const el = document.getElementById('visitor-count');
-                if (el && data && data.count !== undefined) {
-                    el.textContent = data.count.toLocaleString();
-                }
-            } catch(e) {
-                const el = document.getElementById('visitor-count');
-                if (el) el.textContent = '—';
-            }
-        })();
-    </script>
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 
 </html>
