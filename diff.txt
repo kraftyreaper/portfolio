@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Testlify Case Study — Designing an AI-Powered Hiring Platform at Scale. Product Designer Prashant Ahire led end-to-end design across 229 Jira tickets, delivering the AI Resume Parser, Reporting systems, and candidate experience across 3 core surfaces.">
+    <title>Designing an AI-Powered Hiring Platform at Scale — Testlify | Prashant Ahire</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        /* ── Fix: Prevent double-bullet on all ul lists ── */
+        .case-section__content ul,
+        .contribution-card ul,
+        .reflection__text ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: var(--space-md);
+        }
+
+        .case-section__content ul li,
+        .contribution-card ul li,
+        .reflection__text ul li {
+            padding-left: var(--space-md);
+            position: relative;
+            margin-bottom: var(--space-xs);
+            line-height: 1.7;
+        }
+
+        .case-section__content ul li::before,
+        .contribution-card ul li::before,
+        .reflection__text ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* ── Section sub-label: Used for card sub-headings (h3 inside cards under h2) ── */
+        .card-label {
+            font-size: var(--font-size-sm);
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: var(--space-xs);
+        }
+
+        /* ── Option card header ── */
+        .option-card h3 {
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .option-card--selected h3 {
+            color: var(--accent);
+        }
+
+        /* ── Contribution card h3 ── */
+        .contribution-card h3.card-section-title {
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-md);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        /* ── Stats grid label inside h3 fix ── */
+        .client-vision-stat h3 {
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        /* ── Impact highlight box ── */
+        .impact-highlight {
+            background: rgba(234, 255, 113, 0.04);
+            border: 1px solid var(--accent);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            margin-top: var(--space-md);
+        }
+
+        .impact-highlight h3 {
+            font-size: var(--font-size-sm);
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: var(--space-sm);
+        }
+
+        /* ── Quote / evidence block ── */
+        .evidence-quote {
+            border-left: 3px solid var(--accent);
+            padding-left: var(--space-md);
+            margin: var(--space-md) 0;
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: 1.7;
+        }
+
+        /* ── Request management flow ── */
+        .request-flow {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: var(--space-xs);
+            margin: var(--space-md) 0;
+            font-size: var(--font-size-sm);
+        }
+
+        .request-flow__step {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-sm);
+            padding: 6px 12px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .request-flow__arrow {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* ── Glance cards: single-column stacked ── */
+        .glance-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: var(--space-xl);
+        }
+
+        /* ── Reporting cards: single-column stacked ── */
+        .reporting-cards-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: var(--space-xl);
+        }
+
+        /* ── Download PDF Reports Button ── */
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: var(--space-lg);
+            white-space: nowrap;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-xl);
+            border: 1px solid #FFFFFF;
+            background: #FFFFFF;
+            color: #000000;
+            font-family: var(--font-family-heading);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            align-self: flex-start;
+        }
+
+        .btn-download::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: radial-gradient(ellipse at center, rgba(234, 255, 113, 0.08) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-download:hover {
+            border-color: var(--accent);
+            color: #000000;
+            box-shadow: 0 0 18px rgba(234, 255, 113, 0.2);
+            transform: scale(1.03);
+        }
+
+        .btn-download:hover::before {
+            opacity: 1;
+        }
+
+        .btn-download:disabled,
+        .btn-download.loading {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-download svg {
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+        }
+
+        .btn-download:hover svg {
+            transform: translateY(2px);
+        }
+
+        @media (max-width: 480px) {
+            .btn-download {
+                align-self: stretch;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ── Header ── -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="../index.html" class="header__name">Prashant Ahire</a>
+            <nav class="header__nav" id="nav">
+                <a href="https://www.linkedin.com/in/prashantuxuidesign/" target="_blank" rel="noopener noreferrer"
+                    class="header__link">
+                    LinkedIn
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="case-detail" id="main-content">
+        <div class="container">
+
+            <!-- ── Hero ── -->
+            <div class="case-detail__hero reveal">
+                <div class="case-detail__hero-meta">
+                    <div class="case-detail__hero-line"></div>
+                    <span class="case-detail__project">Testlify</span>
+                    <span class="case-detail__dot">·</span>
+                    <span class="case-detail__domain">HR Tech</span>
+                    <div class="case-detail__hero-line"></div>
+                </div>
+                <h1 class="case-detail__title">Designing an AI-powered hiring platform at scale</h1>
+                <p
+                    style="color: var(--text-secondary); font-size: var(--font-size-md); margin-bottom: var(--space-md); text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Product Designer &nbsp;·&nbsp; July 2024 – January 2026 (1.7 years) &nbsp;·&nbsp; AI-native skill
+                    assessments &amp; interviewing tool
+                </p>
+                <div class="case-detail__hero-image">
+                    <div class="banner-fader">
+                        <img src="../img/case-studies/Testlify-banner-1.png" alt="Testlify Banner 1">
+                        <img src="../img/case-studies/Testlify-banner-2.png" alt="Testlify Banner 2">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── AT A GLANCE ── -->
+            <section class="case-section reveal" aria-labelledby="section-at-a-glance">
+                <h2 class="case-section__title" id="section-at-a-glance">AT A GLANCE</h2>
+
+                <!-- What is Testlify + My Role + Scope -->
+                <div class="glance-cards">
+                    <div class="contribution-card" style="margin: 0;">
+                        <h3 class="card-section-title">What is Testlify?</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                            A B2B SaaS, AI-powered assessment platform that helps companies evaluate candidates through
+                            skill
+                            tests, psychometric assessments, and conversational AI interviews. The platform includes
+                            3,000+ pre-created tests, supports 45+ coding languages, and integrates with 100+ ATS
+                            systems.
+                        </p>
+                    </div>
+                    <div class="contribution-card" style="margin: 0;">
+                        <h3 class="card-section-title">My Role</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                            Design lead responsible for end-to-end product design across three core surfaces:
+                            <strong>Employer Portal</strong> (assessment creation, test management, reporting),
+                            <strong>Candidate Test Portal</strong> (test-taking experience), and <strong>AI Interview
+                                System</strong> (chat, video, audio simulations). I owned the complete design process
+                            from discovery through delivery, collaborated directly with founders on product strategy,
+                            and supported two junior designers.
+                        </p>
+                    </div>
+                    <div class="contribution-card" style="margin: 0;">
+                        <h3 class="card-section-title">Scope &amp; Scale</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                            Over 1.7 years, I delivered 229 Jira tickets comprising feature development, enhancements,
+                            client requests, and bug fixes. This included 12 strategic epics, 80 enhancement requests,
+                            and 21 client-driven improvements. I also managed real-time design requests from sales,
+                            marketing, and customer success teams via Slack.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Impact Numbers -->
+                <div class="client-vision-grid" style="margin-bottom: var(--space-xl);">
+                    <div class="client-vision-stat">
+                        <div class="client-vision-stat__value">229</div>
+                        <div class="client-vision-stat__label">Jira tickets delivered (193 tasks, 12 epics, 10
+                            improvements)</div>
+                    </div>
+                    <div class="client-vision-stat">
+                        <div class="client-vision-stat__value">111</div>
+                        <div class="client-vision-stat__label">Features shipped to production across 3 core surfaces
+                        </div>
+                    </div>
+                    <div class="client-vision-stat">
+                        <div class="client-vision-stat__value">4,500+</div>
+                        <div class="client-vision-stat__label">Job roles covered across 50+ industries on the platform
+                        </div>
+                    </div>
+                    <div class="client-vision-stat">
+                        <div class="client-vision-stat__value">80%</div>
+                        <div class="client-vision-stat__label">Candidate completion rate — 2–3× better than typical
+                            assessments</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── THE REAL CHALLENGE ── -->
+            <section class="case-section reveal" aria-labelledby="section-challenge">
+                <h2 class="case-section__title" id="section-challenge">THE REAL CHALLENGE</h2>
+                <div class="case-section__content" style="max-width: 100%;">
+                    <p style="margin-bottom: var(--space-lg); font-size: 1.05rem; font-style: italic;">
+                        Most case studies talk about building features. This is about <strong>building structure where
+                            none existed.</strong>
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: var(--space-xl);">
+
+                        <div class="contribution-card" style="margin: 0;">
+                            <div class="card-label">The Daily Reality</div>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                                Founders provided high-level references: "Build something like this competitor feature."
+                                No PRDs. No structured documentation. Requirements came from sales calls, client
+                                requests, support tickets — often vague, half-defined, missing edge cases.
+                            </p>
+                        </div>
+
+                        <div class="contribution-card" style="margin: 0;">
+                            <div class="card-label">My Actual Responsibilities</div>
+                            <ul
+                                style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
+                                <li><strong>Translate ambiguity into clarity:</strong> Convert "make resume screening
+                                    automatic" into structured flows with defined logic, edge cases, validation rules
+                                </li>
+                                <li><strong>Identify what breaks before development:</strong> Model edge cases, data
+                                    states, cross-module dependencies</li>
+                                <li><strong>Validate technical feasibility:</strong> Align with backend teams on
+                                    constraints, timelines, implementation approach</li>
+                                <li><strong>Structure undefined requirements:</strong> Create TUX tickets (design
+                                    proposals) → get approval → move to TF tickets (development-ready specs)</li>
+                                <li><strong>Perform rigorous UAT:</strong> Test across 4 environments, 5 browsers, 4
+                                    platforms before each release</li>
+                                <li><strong>Block releases until quality met:</strong> Hold tickets when UX didn't match
+                                    specs, when cross-browser issues appeared, when logic was broken</li>
+                            </ul>
+                        </div>
+
+                        <div class="contribution-card" style="margin: 0;">
+                            <div class="card-label">The Complexity</div>
+                            <p
+                                style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                                This wasn't building linear flows. One employer toggle could affect:
+                            </p>
+                            <div
+                                style="display: flex; flex-direction: column; gap: 6px; padding-left: var(--space-md);">
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">→ Candidate status across
+                                    multiple assessments</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">→ Report output structure
+                                    and PDF generation</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">→ Shareable link
+                                    visibility and access controls</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">→ Historical data
+                                    consistency</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">→ Cross-platform behavior
+                                    (web, iOS, Android)</span>
+                                <span style="color: var(--text-secondary); font-size: 0.9rem;">→ White-label branding
+                                    configurations</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="evidence-quote" style="margin-bottom: 0;">
+                        <strong>The Core Question:</strong> How do we preserve flexibility without introducing
+                        confusion, risk, or unintended consequences?
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── MY APPROACH ── -->
+            <section class="case-section reveal" aria-labelledby="section-approach">
+                <h2 class="case-section__title" id="section-approach">MY APPROACH</h2>
+                <div class="case-section__content" style="max-width: 100%;">
+                    <p style="margin-bottom: var(--space-lg);">I structured my work across two layers that operated
+                        simultaneously:</p>
+
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: var(--space-xl);">
+                        <div class="contribution-card" style="margin: 0;">
+                            <div class="card-label">Strategic Layer</div>
+                            <h3 class="card-section-title">Product Thinking</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                                I partnered with founders to shape product direction, conducted user research to
+                                validate assumptions, designed solutions that balanced business needs with user
+                                experience, and created design systems to maintain consistency at scale.
+                            </p>
+                        </div>
+                        <div class="contribution-card" style="margin: 0;">
+                            <div class="card-label">Execution Layer</div>
+                            <h3 class="card-section-title">Delivery at Velocity</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                                I designed 229 tickets across features, enhancements, and fixes, managed real-time
+                                requests from sales/CS/marketing via Slack, proactively identified and resolved UI/UX
+                                bugs, and maintained quality through rapid iteration cycles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contribution-card" style="margin-bottom: var(--space-md);">
+                        <h3 class="card-section-title">Request Management Process</h3>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            When teams posted requests on Slack, I'd take ownership, understand the business need,
+                            create a Jira ticket with clear scope, propose design solutions, validate with founders,
+                            coordinate with dev teams through QA, and inform stakeholders of outcomes. Some requests
+                            were rejected due to technical constraints or business priorities—I learned to push back
+                            constructively while maintaining team relationships.
+                        </p>
+                        <div class="request-flow" aria-label="Request management flow">
+                            <span class="request-flow__step">Slack Request</span>
+                            <span class="request-flow__arrow" aria-hidden="true">→</span>
+                            <span class="request-flow__step">Assess Feasibility</span>
+                            <span class="request-flow__arrow" aria-hidden="true">→</span>
+                            <span class="request-flow__step">Jira Ticket</span>
+                            <span class="request-flow__arrow" aria-hidden="true">→</span>
+                            <span class="request-flow__step">Design Solution</span>
+                            <span class="request-flow__arrow" aria-hidden="true">→</span>
+                            <span class="request-flow__step">Founder Validation</span>
+                            <span class="request-flow__arrow" aria-hidden="true">→</span>
+                            <span class="request-flow__step">Dev QA</span>
+                            <span class="request-flow__arrow" aria-hidden="true">→</span>
+                            <span class="request-flow__step">Stakeholder Update</span>
+                        </div>
+                    </div>
+
+                    <div class="contribution-card" style="margin-bottom: 0;">
+                        <h3 class="card-section-title">Reality Check</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                            I operated without a dedicated design manager or senior reviewer. To maintain quality, I
+                            used AI tools to stress-test logic and simulate edge cases, collaborated closely with
+                            developers to validate technical feasibility, and learned to balance speed with craft under
+                            revenue-driven prioritization.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── DESIGN PRINCIPLES ── -->
+            <section class="case-section reveal" aria-labelledby="section-principles">
+                <h2 class="case-section__title" id="section-principles">DESIGN PRINCIPLES</h2>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">These principles guided every
+                    decision across 229 tickets:</p>
+                <div class="client-vision-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+                    <div class="client-vision-stat" style="text-align: left; padding: var(--space-lg);">
+                        <h3 style="color: var(--accent); margin-bottom: 8px; font-size: 0.9rem;">1. Control Over
+                            Automation</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">AI should augment, not
+                            replace, human judgment. Employers always have final say over AI recommendations.</p>
+                    </div>
+                    <div class="client-vision-stat" style="text-align: left; padding: var(--space-lg);">
+                        <h3 style="color: var(--accent); margin-bottom: 8px; font-size: 0.9rem;">2. Transparency in
+                            Complexity</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">When systems make
+                            decisions (AI scoring, test logic, candidate filtering), show users why and how.</p>
+                    </div>
+                    <div class="client-vision-stat" style="text-align: left; padding: var(--space-lg);">
+                        <h3 style="color: var(--accent); margin-bottom: 8px; font-size: 0.9rem;">3. Progressive
+                            Disclosure</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Reveal complexity
+                            gradually. Show essential information first, advanced controls on demand.</p>
+                    </div>
+                    <div class="client-vision-stat" style="text-align: left; padding: var(--space-lg);">
+                        <h3 style="color: var(--accent); margin-bottom: 8px; font-size: 0.9rem;">4. Guardrails, Not
+                            Gates</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Prevent errors through
+                            smart defaults and validation, not by blocking user actions.</p>
+                    </div>
+                    <div class="client-vision-stat" style="text-align: left; padding: var(--space-lg);">
+                        <h3 style="color: var(--accent); margin-bottom: 8px; font-size: 0.9rem;">5. Consistency Across
+                            Chaos</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">With 229 tickets
+                            spanning multiple surfaces, maintaining pattern consistency was non-negotiable.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── DEEP DIVE: AI RESUME PARSER ── -->
+            <section class="lifecycle-section reveal" aria-labelledby="section-resume-parser">
+                <div class="section-heading" style="margin-bottom: var(--space-xl);">
+                    <div class="section-heading__line"></div>
+                    <h2 class="section-heading__text" id="section-resume-parser">DEEP DIVE: AI RESUME PARSER</h2>
+                    <div class="section-heading__line"></div>
+                </div>
+                <p
+                    style="color: var(--text-secondary); text-align: center; margin-bottom: var(--space-xl); font-style: italic;">
+                    Designing high-stakes automation with human control</p>
+
+                <div class="case-section__content" style="max-width: 100%; margin-bottom: var(--space-xl);">
+
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: var(--space-xl);">
+                        <div class="contribution-card" style="margin: 0;">
+                            <div class="card-label">The Ask</div>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                                Build an AI-powered system that automatically screens resumes, extracts candidate
+                                information, matches qualifications to job requirements, and feeds qualified candidates
+                                into assessment workflows—reducing time-to-hire for companies processing hundreds of
+                                applications.
+                            </p>
+                        </div>
+                        <div class="contribution-card" style="margin: 0;">
+                            <div class="card-label">The Risk</div>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                                AI making high-stakes hiring decisions without employer oversight could lead to
+                                qualified candidates being rejected, bias creeping into automated screening, and loss of
+                                trust if the system felt like a "black box."
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3
+                        style="color: var(--text-primary); font-size: var(--font-size-md); margin-bottom: var(--space-md);">
+                        Design Exploration: Three Approaches</h3>
+                    <div class="option-grid">
+                        <div class="option-card">
+                            <h3>Option 1: Fully Automatic</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">AI screens all
+                                resumes and auto-advances candidates to assessments.<br><br><strong
+                                    style="color: var(--text-secondary);">✗ Trade-off:</strong> Fast but removes human
+                                control—too risky for hiring decisions.</p>
+                        </div>
+                        <div class="option-card">
+                            <h3>Option 2: Manual Review Required</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">AI extracts data;
+                                employers review every candidate before advancing.<br><br><strong
+                                    style="color: var(--text-secondary);">✗ Trade-off:</strong> Safe but defeats the
+                                purpose of automation—doesn't save time.</p>
+                        </div>
+                        <div class="option-card option-card--selected">
+                            <h3>Option 3: AI-Assisted with Guardrails ✓</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">AI parses and scores
+                                resumes; employers set acceptance thresholds and can review/override any
+                                decision.<br><br><strong style="color: var(--accent);">✓ Chosen because:</strong>
+                                Balanced automation with control—AI does heavy lifting, humans retain final authority.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--text-primary); font-size: var(--font-size-lg); margin-bottom: var(--space-lg);">
+                    Complete Flow (6 Steps)</h3>
+                <div class="lifecycle-steps" style="margin-bottom: var(--space-xl);">
+                    <div class="lifecycle-step reveal" style="grid-template-columns: 1fr;">
+                        <div class="lifecycle-step__content">
+                            <h3 class="lifecycle-step__title">1. ATS Integration</h3>
+                            <p style="color: var(--text-secondary); margin: 0;">Connect to 100+ ATS platforms
+                                (Greenhouse, Lever, Workable). Designed contextual empty states for each prerequisite —
+                                ATS not connected, no jobs available, no candidates synced, job not configured — making
+                                each blocker actionable rather than confusing.</p>
+                        </div>
+                    </div>
+                    <div class="lifecycle-step reveal" style="grid-template-columns: 1fr;">
+                        <div class="lifecycle-step__content">
+                            <h3 class="lifecycle-step__title">2. Job Stage Selection</h3>
+                            <p style="color: var(--text-secondary); margin: 0;">Choose which ATS stage to screen from
+                                (e.g., "Resume Review"). Dynamic dropdown populated from connected ATS's actual stage
+                                names—no guessing across different naming conventions. Required complex backend
+                                integration but eliminated user confusion.</p>
+                        </div>
+                    </div>
+                    <div class="lifecycle-step reveal" style="grid-template-columns: 1fr;">
+                        <div class="lifecycle-step__content">
+                            <h3 class="lifecycle-step__title">3. Screening Rules</h3>
+                            <p style="color: var(--text-secondary); margin: 0;">Set resume parsing criteria (skills,
+                                experience, education). AI suggests relevant criteria based on role; employers can add
+                                custom requirements or override defaults.</p>
+                        </div>
+                    </div>
+                    <div class="lifecycle-step reveal" style="grid-template-columns: 1fr;">
+                        <div class="lifecycle-step__content">
+                            <h3 class="lifecycle-step__title">4. Threshold Configuration</h3>
+                            <p style="color: var(--text-secondary); margin: 0;">Define cut-off scores (e.g., 70% match =
+                                auto-advance). Slider with snap points at 50%, 70%, 90%. Color-coded zones — red
+                                &lt;50%, yellow 50–70%, green &gt;70%. Makes abstract AI confidence scores tangible and
+                                actionable. Trade-off: Simplified continuous scores into discrete buckets—acceptable
+                                because employers needed clear decision points, not granular precision.</p>
+                        </div>
+                    </div>
+                    <div class="lifecycle-step reveal" style="grid-template-columns: 1fr;">
+                        <div class="lifecycle-step__content">
+                            <h3 class="lifecycle-step__title">5. Batch Processing</h3>
+                            <p style="color: var(--text-secondary); margin: 0;">AI screens up to 500 resumes per run.
+                                Opt-in toggle: "Auto-advance candidates above threshold"—when disabled, all candidates
+                                wait in a review queue. Added configuration complexity but gave employers the control
+                                they needed for high-stakes decisions.</p>
+                        </div>
+                    </div>
+                    <div class="lifecycle-step reveal" style="grid-template-columns: 1fr;">
+                        <div class="lifecycle-step__content">
+                            <h3 class="lifecycle-step__title">6. Review &amp; Override</h3>
+                            <p style="color: var(--text-secondary); margin: 0;">Employers see AI decisions, can manually
+                                approve/reject. Two rejection paths: Auto-reject (removes from ATS) or Keep for manual
+                                review (candidate stays in system). Auto-reject is risky but desired by high-volume
+                                recruiters — <strong>we added a clear warning: "Auto-rejected candidates cannot be
+                                    recovered."</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--text-primary); font-size: var(--font-size-lg); margin-bottom: var(--space-md);">
+                    Key Design Decisions</h3>
+                <div class="t-grid" style="margin-bottom: var(--space-xl);">
+                    <div class="t-row t-header">
+                        <div class="t-col-1">Decision</div>
+                        <div class="t-col-2">Rationale &amp; Trade-off</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Confidence Score Visualization</div>
+                        <div class="t-col-2">Slider with snap points at 50%, 70%, 90% and color-coded zones. Simplified
+                            continuous scores into discrete actionable buckets. Trade-off: Employers needed clear
+                            decision points, not granular precision.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Auto-Advance Toggle</div>
+                        <div class="t-col-2">Opt-in toggle — off by default. When disabled, all candidates wait in
+                            review queue. Added configuration complexity but gave employers control for high-stakes
+                            decisions.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Rejection Handling</div>
+                        <div class="t-col-2">Two paths: Auto-reject (removes from ATS) or Keep for manual review. Clear
+                            warning: "Auto-rejected candidates cannot be recovered." Auto-reject desired by high-volume
+                            recruiters but carries irreversible risk.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">ATS Stage Mapping</div>
+                        <div class="t-col-2">Dynamic dropdown from connected ATS's actual stage names. Trade-off:
+                            Required complex backend integration but eliminated user confusion across ATS naming
+                            conventions.</div>
+                    </div>
+                </div>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 0;">
+                    <div class="contribution-card" style="margin: 0; border-color: rgba(255,255,255,0.1);">
+                        <div class="card-label">Validation Approach</div>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                            Since this feature was under development when I left, we validated through: founder demos
+                            with prospective clients (recorded feedback on trust, control, clarity), internal
+                            stress-testing with sample resumes (identified edge cases like PDFs with non-standard
+                            formatting), and developer review of technical feasibility (confirmed ATS integrations were
+                            possible).
+                        </p>
+                    </div>
+                    <div class="contribution-card"
+                        style="margin: 0; border-color: var(--accent); background: rgba(234,255,113,0.03);">
+                        <div class="card-label">Expected Impact</div>
+                        <ul>
+                            <li>Reduce time-to-hire by automating initial resume screening</li>
+                            <li>Process 500+ resumes in minutes vs. hours of manual review</li>
+                            <li>Maintain employer control through configurable thresholds and override capabilities</li>
+                            <li>Provide transparency into AI decision-making via confidence scores</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── DEEP DIVE: REPORTING AS A PRODUCT ── -->
+            <section class="lifecycle-section reveal" aria-labelledby="section-reporting">
+                <div class="section-heading" style="margin-bottom: var(--space-xl);">
+                    <div class="section-heading__line"></div>
+                    <h2 class="section-heading__text" id="section-reporting">DEEP DIVE: REPORTING AS A PRODUCT</h2>
+                    <div class="section-heading__line"></div>
+                </div>
+                <p
+                    style="color: var(--text-secondary); text-align: center; margin-bottom: var(--space-xl); font-style: italic;">
+                    Structuring complex psychometric data into clear, actionable insights</p>
+
+                <div class="case-section__content" style="max-width: 100%; margin-bottom: var(--space-xl);">
+                    <div class="contribution-card" style="margin-bottom: var(--space-xl);">
+                        <div class="card-label">The Problem I Identified</div>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            Employers needed to evaluate candidates quickly, but our reporting was fragmented:
+                        </p>
+                        <ul>
+                            <li>Basic reports lacked depth</li>
+                            <li>Psychometric reports weren't branded or had UI inconsistencies</li>
+                            <li>No unified export—users downloaded multiple PDFs per candidate</li>
+                            <li>Inconsistent visual language across report types</li>
+                            <li>Some reports had structural issues that made data hard to interpret</li>
+                        </ul>
+                    </div>
+
+                    <h3
+                        style="color: var(--text-primary); font-size: var(--font-size-md); margin-bottom: var(--space-md);">
+                        Design Exploration: Three Approaches</h3>
+                    <div class="option-grid">
+                        <div class="option-card">
+                            <h3>Option 1: Basic Template Redesign</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Clean up existing
+                                reports; keep separate PDFs.<br><br><strong style="color: var(--text-secondary);">✗
+                                    Rejected:</strong> Quick fix but doesn't
+                                solve fragmentation or structural issues.</p>
+                        </div>
+                        <div class="option-card">
+                            <h3>Option 2: Unified Report Builder</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Let employers
+                                customize sections, choose tests, design layouts.<br><br><strong
+                                    style="color: var(--text-secondary);">✗ Rejected:</strong>
+                                Too complex for most users—over-engineered.</p>
+                        </div>
+                        <div class="option-card option-card--selected">
+                            <h3>Option 3: Curated Report System ✓</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Design new reports
+                                from scratch where needed; fix and improve existing reports; build smart
+                                export.<br><br><strong style="color: var(--accent);">✓ Selected:</strong>
+                                Professional output through structured data presentation without configuration
+                                overhead.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--text-primary); font-size: var(--font-size-lg); margin-bottom: var(--space-lg);">
+                    What I Designed</h3>
+
+                <!-- What I Designed: 3-column horizontal grid -->
+                <div class="reporting-cards-grid">
+
+                    <!-- Card 1: Three New Reports -->
+                    <div class="contribution-card reveal" style="margin: 0; display: flex; flex-direction: column;">
+                        <div class="card-label">01 — Three New Psychometric Reports (From Scratch)</div>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            I designed these reports from the ground up—understanding assessment requirements,
+                            structuring
+                            how each data type should be presented, and creating interactive PDF formats:
+                        </p>
+                        <ul>
+                            <li><strong>Sales Profiler Report:</strong> Structured sales-specific competencies,
+                                behavioural
+                                indicators, and performance predictors</li>
+                            <li><strong>PicOcean Personality &amp; Cultural Fit:</strong> Designed data presentation for
+                                personality traits mapped to cultural alignment</li>
+                            <li><strong>360 Degree Feedback Report:</strong> Created comprehensive feedback
+                                visualisation
+                                from multiple evaluators (peers, managers, self-assessment)</li>
+                        </ul>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.8; margin: 0 0 auto; font-style: italic;">
+                            Each required: Understanding raw assessment data → Structuring information hierarchy →
+                            Designing
+                            visual representations → Creating actionable insights format
+                        </p>
+                        <button class="btn-download" onclick="downloadAllReports(this)" id="dl-btn-card1"
+                            aria-label="Download all psychometric PDF reports as ZIP">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            Download PDF Reports
+                        </button>
+                    </div>
+
+                    <!-- Card 2: Seven Report Improvements -->
+                    <div class="contribution-card reveal" style="margin: 0; display: flex; flex-direction: column;">
+                        <div class="card-label">02 — Seven Report Improvements (UI Fixes &amp; Enhancements)</div>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            For existing reports, I identified issues and improved UI and structure:
+                        </p>
+                        <ul style="flex: 1;">
+                            <li><strong>Big Five Personality:</strong> Fixed layout issues, improved trait visualisation
+                            </li>
+                            <li><strong>16 PF (16 Personality Factors):</strong> Enhanced data hierarchy, clarified
+                                factor
+                                relationships</li>
+                            <li><strong>Leadership Assessment:</strong> Restructured competency display, improved
+                                scoring
+                                clarity</li>
+                            <li><strong>SMART Personality:</strong> Fixed UI inconsistencies, improved readability</li>
+                            <li><strong>DISC Personality:</strong> Enhanced 4-quadrant visualisation, improved
+                                behavioural
+                                descriptions</li>
+                            <li><strong>Enneagram:</strong> Fixed structural issues, improved type descriptions and
+                                score
+                                display</li>
+                            <li><strong>Motivational Traits:</strong> Restructured data presentation, improved
+                                actionability</li>
+                        </ul>
+                        <button class="btn-download" onclick="downloadAllReports(this)" id="dl-btn-card2"
+                            aria-label="Download all psychometric PDF reports as ZIP">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="7 10 12 15 17 10" />
+                                <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            Download PDF Reports
+                        </button>
+                    </div>
+
+                    <!-- Card 3: Export Architecture -->
+                    <div class="contribution-card reveal" style="margin: 0; display: flex; flex-direction: column;">
+                        <div class="card-label">03 — Export Architecture</div>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            Designed a one-click ZIP download system:
+                        </p>
+                        <ul>
+                            <li>All candidate reports bundled automatically</li>
+                            <li>Smart naming (candidate name + test type)</li>
+                            <li>Intelligent bundling — only completed tests included</li>
+                        </ul>
+                    </div>
+
+                </div><!-- /reporting-cards-grid -->
+
+                <!-- My Core Contribution callout -->
+                <div class="evidence-quote" style="margin-bottom: var(--space-xl);">
+                    <strong>My Core Contribution:</strong> Understanding assessment requirements → Structuring complex
+                    data into clear formats → Designing interactive, readable PDFs that translate raw scores into hiring
+                    insights
+                </div>
+
+                <div class="impact-highlight">
+                    <h3>Impact</h3>
+                    <ul>
+                        <li>Designed <strong>3 reports from scratch</strong>, improved <strong>7 existing
+                                reports</strong> (10 total psychometric reports)</li>
+                        <li>Reduced time-to-decision by consolidating fragmented reports</li>
+                        <li>Eliminated manual PDF collection — one-click export vs. 5–10 separate downloads</li>
+                        <li>Professional output improved perceived platform quality</li>
+                        <li>Clear data structure made complex psychometric insights accessible to non-specialist HR
+                            teams
+                        </li>
+                        <li>Psychometric reports became a sales demo differentiator</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ── OTHER KEY CONTRIBUTIONS ── -->
+            <section class="case-section reveal" aria-labelledby="section-other">
+                <h2 class="case-section__title" id="section-other">OTHER KEY CONTRIBUTIONS</h2>
+                <div class="t-grid">
+                    <div class="t-row t-header">
+                        <div class="t-col-1">Contribution</div>
+                        <div class="t-col-2">Problem Solved &amp; Outcome</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Decision Visibility in Test Libraries</div>
+                        <div class="t-col-2">When employers browse 3,000+ pre-created tests, they needed clarity on test
+                            structure before adding to assessments. Designed an expandable preview showing question
+                            types, time estimates, and difficulty levels—reduced "wrong test added" support tickets.
+                        </div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Enterprise Infrastructure</div>
+                        <div class="t-col-2">For enterprise clients, designed configuration interfaces for SAML single
+                            sign-on, usage-based billing dashboards, custom email domains, and admin role management.
+                            Made complex technical features accessible to non-technical HR teams.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Cross-Platform Validation</div>
+                        <div class="t-col-2">Ensured design consistency across Employer Portal, Candidate Portal, and
+                            mobile experiences. Caught platform-specific bugs (e.g., video recording issues on iOS
+                            Safari) and pushed fixes before user impact.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── PARALLEL PROJECTS ── -->
+            <section class="case-section reveal" aria-labelledby="section-parallel">
+                <h2 class="case-section__title" id="section-parallel">PARALLEL PROJECTS: QUALITY UNDER VOLUME</h2>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">While leading Testlify's major
+                    features, I simultaneously delivered UI work across three additional projects — demonstrating
+                    execution speed and context-switching capability without compromising quality.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+                    <div class="contribution-card" style="margin: 0;">
+                        <div class="card-label">METANOTES — AI Notetaker</div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: var(--space-sm);">
+                            <strong>Role:</strong> UI Designer (Solo) · WordPress
+                        </p>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            Built marketing website from scratch for an AI
+                            notetaker product. Researched competitors, designed homepage, features, and pricing pages,
+                            handed off to dev.</p>
+                        <a href="https://metanotes.ai/" target="_blank" rel="noopener noreferrer"
+                            style="color: var(--accent); text-decoration: none; font-size: 0.85rem;">metanotes.ai ↗</a>
+                    </div>
+
+                    <div class="contribution-card" style="margin: 0;">
+                        <div class="card-label">DYMON — Storage &amp; Moving</div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: var(--space-sm);">
+                            <strong>Role:</strong> UI Designer · Web
+                        </p>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            Created new pages using existing styling and
+                            component library. Maintained brand consistency within a pre-defined design system.
+                            Pure UI execution within constraints.</p>
+                        <a href="https://dymon.ca/" target="_blank" rel="noopener noreferrer"
+                            style="color: var(--accent); text-decoration: none; font-size: 0.85rem;">dymon.ca ↗</a>
+                    </div>
+
+                    <div class="contribution-card" style="margin: 0;">
+                        <div class="card-label">APPFOREST — Jira Time Tracking</div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: var(--space-sm);">
+                            <strong>Role:</strong> UI Designer · Jira Marketplace App
+                        </p>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            Designed a time tracking tool that lets teams log
+                            time directly from Jira tickets — live on the Jira marketplace. Matched Jira design system
+                            requirements; similar to Tempo Timesheets.</p>
+                        <a href="https://appforest.io/" target="_blank" rel="noopener noreferrer"
+                            style="color: var(--accent); text-decoration: none; font-size: 0.85rem;">appforest.io ↗</a>
+                    </div>
+
+                    <div class="contribution-card" style="margin: 0;">
+                        <div class="card-label">TESTLIFY — Marketing Website</div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: var(--space-sm);">
+                            <strong>Role:</strong> UI Designer · Web
+                        </p>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            Improved information hierarchy for complex features, designed referral landing page, and
+                            integrated enterprise trust signals (SOC 2, GDPR). Ensured AI capabilities were positioned
+                            clearly to avoid overpromising.</p>
+                        <a href="https://testlify.com/" target="_blank" rel="noopener noreferrer"
+                            style="color: var(--accent); text-decoration: none; font-size: 0.85rem;">testlify.com ↗</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ── OPERATING AT SCALE ── -->
+            <section class="case-section reveal" aria-labelledby="section-scale">
+                <h2 class="case-section__title" id="section-scale">OPERATING AT SCALE</h2>
+                <div class="t-grid">
+                    <div class="t-row">
+                        <div class="t-col-1">Managing Incoming Requests</div>
+                        <div class="t-col-2">Sales, marketing, and customer success teams posted client requests on
+                            Slack. I monitored the channel, took ownership of relevant requests, assessed technical
+                            feasibility, created Jira tickets with defined scope, designed solutions, validated with
+                            founders, coordinated with dev through QA, and informed stakeholders of outcomes (including
+                            rejections when technically infeasible).</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Balancing Speed &amp; Safety</div>
+                        <div class="t-col-2">With 229 tickets over 1.7 years, velocity mattered—but not at the expense
+                            of quality. I developed rapid validation techniques (AI stress-testing for edge cases,
+                            developer collaboration on technical constraints) and prioritized ruthlessly. Revenue-driven
+                            prioritization sometimes meant pausing strategic work for urgent client needs—I learned to
+                            adapt without compromising core UX principles.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Bug Identification &amp; Resolution</div>
+                        <div class="t-col-2">Beyond feature work, I proactively identified UI/UX bugs reported by
+                            clients, internal teams, and through my own QA. Created tickets, defined fixes, and ensured
+                            resolution—contributed to platform stability and user trust.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Supporting Junior Designers</div>
+                        <div class="t-col-2">Mentored two junior designers, reviewed their work, provided feedback on
+                            interaction patterns and visual hierarchy, and helped them navigate ambiguous requirements.
+                            Invested in their growth because it improved overall team output.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Context Switching</div>
+                        <div class="t-col-2">Juggled simultaneously: strategic epics (multi-week initiatives like Resume
+                            Parser), daily feature requests (Slack-to-Jira pipeline), bug fixes (interrupt-driven work),
+                            and design system maintenance (ensuring pattern consistency). Learned to prioritize based on
+                            business impact, not personal preference.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── DESIGN SYSTEM WORK ── -->
+            <section class="case-section reveal" aria-labelledby="section-design-system">
+                <h2 class="case-section__title" id="section-design-system">DESIGN SYSTEM WORK</h2>
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="contribution-card" style="margin: 0;">
+                        <h3 class="card-section-title">Pattern Maintenance Across 229 Tickets</h3>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            As the platform expanded, I maintained consistency across:</p>
+                        <ul
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
+                            <li>Status indicators (consistent color coding, iconography)</li>
+                            <li>Empty states (contextual messaging, clear CTAs)</li>
+                            <li>Error handling (user-friendly messages, recovery paths)</li>
+                            <li>Action buttons (primary, secondary, destructive patterns)</li>
+                            <li>Form validation (inline errors, success states)</li>
+                            <li>Loading states (skeletons, spinners, progress indicators)</li>
+                        </ul>
+                    </div>
+                    <div class="contribution-card" style="margin: 0;">
+                        <h3 class="card-section-title">Cross-Module Consistency</h3>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: var(--space-sm);">
+                            Ensured patterns worked consistently across:</p>
+                        <ul
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
+                            <li>Employer Portal (complex, multi-step workflows)</li>
+                            <li>Candidate Portal (simple, guided flows)</li>
+                            <li>Mobile apps (touch-friendly, reduced density)</li>
+                            <li>White-label environments (theme flexibility without pattern deviation)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── IMPACT ── -->
+            <section class="case-section reveal" aria-labelledby="section-impact">
+                <h2 class="case-section__title" id="section-impact">IMPACT</h2>
+
+                <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: var(--space-md);">
+
+                    <div class="contribution-card" style="margin: 0;">
+                        <h3 class="card-section-title">Delivery Metrics</h3>
+                        <ul>
+                            <li><strong>229 Jira tickets</strong> delivered over 1.7 years</li>
+                            <li><strong>498 issues reported</strong> (proactive quality management)</li>
+                            <li>Validated across <strong>4 environments</strong>, <strong>5 browsers</strong>, <strong>4
+                                    platforms</strong></li>
+                        </ul>
+                    </div>
+                    <div class="contribution-card" style="margin: 0;">
+                        <h3 class="card-section-title">Platform Impact</h3>
+                        <ul>
+                            <li>Designed for platform serving <strong>4,500+ job roles</strong> across <strong>50+
+                                    industries</strong></li>
+                            <li>Work supported <strong>100+ ATS integrations</strong></li>
+                            <li>Platform achieved <strong>80% candidate completion rate</strong> (2–3× industry average)
+                            </li>
+                            <li>Companies reported <strong>82% reduction in time-to-hire</strong></li>
+                        </ul>
+                    </div>
+                    <div class="contribution-card" style="margin: 0;">
+                        <h3 class="card-section-title">Process Improvements</h3>
+                        <ul>
+                            <li>Established Slack-to-Jira request management workflow</li>
+                            <li>Created structured UAT process across 4 environments</li>
+                            <li>Implemented cross-browser validation protocol</li>
+                            <li>Built design review process for junior designers</li>
+                            <li>Documented pattern library for team alignment</li>
+                        </ul>
+                    </div>
+                    <div class="contribution-card" style="margin: 0;">
+                        <h3 class="card-section-title">Quality Contributions</h3>
+                        <ul>
+                            <li>Caught critical cross-platform bugs before production</li>
+                            <li>Identified logic gaps in ambiguous requirements</li>
+                            <li>Prevented automation risks through guardrail design</li>
+                            <li>Maintained system coherence during rapid expansion</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── WHAT I LEARNED ── -->
+            <section class="case-section reveal" aria-labelledby="section-learned">
+                <h2 class="case-section__title" id="section-learned">WHAT I LEARNED</h2>
+                <div class="t-grid">
+                    <div class="t-row">
+                        <div class="t-col-1">1. Translating Ambiguity Into Structure</div>
+                        <div class="t-col-2">Most features started vague: "Build something like competitor X." I learned
+                            to ask clarifying questions before designing, model edge cases and failure states, document
+                            assumptions and validate with stakeholders, and structure undefined requirements into
+                            actionable specs.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">2. Designing for Cascading Dependencies</div>
+                        <div class="t-col-2">In complex B2B systems, nothing exists in isolation. One toggle affects
+                            multiple surfaces. Configuration changes impact historical data. Cross-platform behavior
+                            requires validation. I learned to map dependencies before designing solutions — not after
+                            problems appeared.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">3. Balancing Speed With Safety</div>
+                        <div class="t-col-2">Revenue-driven prioritization meant shipping under constraints. Sometimes I
+                            shipped knowing future polish was needed — I documented design debt, balanced urgency with
+                            minimum viable quality, and learned when to push back vs. when to adapt without compromising
+                            core UX principles.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">4. Proactive Quality Management</div>
+                        <div class="t-col-2">498 reported issues weren't just bugs found during QA — they were the
+                            result of proactively testing across browsers and platforms, identifying edge cases before
+                            they reached users, catching cross-module inconsistencies, and preventing downstream
+                            problems through rigorous validation.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">5. Systems Thinking at Scale</div>
+                        <div class="t-col-2">229 tickets required deep systems thinking. Every decision had cascading
+                            effects. Patterns needed to scale across surfaces. Consistency was maintained through
+                            documentation. Team alignment required clear, proactive communication — not just delivery.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── REFLECTION ── -->
+            <div class="reflection reveal" aria-labelledby="section-reflection">
+                <h2 class="reflection__title" id="section-reflection">REFLECTION</h2>
+                <div class="reflection__text">
+                    <p>Testlify wasn't about designing beautiful screens. It was about <strong
+                            class="reflection__highlight">building structure in ambiguity</strong> — where requirements
+                        were unclear, timelines were tight, and mistakes had real business consequences.</p>
+
+                    <p>I evolved from: <strong>Feature Execution → System Stewardship → Risk Reduction → Team
+                            Multiplier</strong></p>
+
+                    <p><strong class="reflection__highlight">What this experience taught me:</strong><br>
+                        Senior product design means structuring what the product should do when no one else has defined
+                        it. Great design isn't about individual features — it's about systems that work consistently at
+                        scale. Quality comes from proactive validation, not just responding to found bugs. Team impact
+                        extends beyond individual tickets into overall system coherence.</p>
+
+                    <p><strong class="reflection__highlight">What I bring to my next role:</strong><br>
+                        Proven ability to translate ambiguity into structured, scalable systems. Track record of
+                        delivering 229 tickets while maintaining quality. Deep systems thinking that prevents downstream
+                        problems. Proactive quality management (498 reported issues). Cross-functional collaboration in
+                        fast-moving environments. Mentorship capability for growing design teams.</p>
+
+                    <p>The platform served real hiring teams making real decisions about real people's careers. Every
+                        design choice carried weight. I'm proud of building scalable structure in genuine operational
+                        complexity — and I'm ready to bring that capability to a senior product design role.</p>
+                </div>
+            </div>
+
+            <!-- ── Next Project ── -->
+            <div class="next-project reveal">
+                <p class="next-project__label">Next Project</p>
+                <a href="homes-collection.html" class="next-project__card">
+                    <span class="next-project__category">Real Estate</span>
+                    <h3 class="next-project__title">Homes Collection — Fractional ownership platform for real estate
+                        investment</h3>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer class="site-footer reveal">
+        <div class="container">
+            <div class="site-footer__row-top">
+                <div class="site-footer__content-left">
+                    <h2 class="site-footer__title">Let's build something great.</h2>
+                    <p class="site-footer__text">I'm currently looking for new opportunities. Whether you have a
+                        question or just want to say hi, I'll try my best to get back to you!</p>
+                </div>
+                <div class="site-footer__action-right">
+                    <a href="https://www.linkedin.com/in/prashantuxuidesign/" target="_blank" rel="noopener noreferrer"
+                        class="site-footer__link">
+                        Say Hello
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="site-footer__divider"></div>
+            <div class="site-footer__row-bottom">
+                <div class="site-footer__copy">
+                    &copy; 2026 Prashant Ahire. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script>
+        const REPORT_FILES = [
+            'Prashant Ahire - 16 Personality Trait.pdf',
+            'Prashant Ahire - Assessment level report.pdf',
+            'Prashant Ahire - Big Five Personality.pdf',
+            'Prashant Ahire - Cultural Fit.pdf',
+            'Prashant Ahire - DISC Personality Assessment.pdf',
+            'Prashant Ahire - Enneagram Personality.pdf',
+            'Prashant Ahire - Grit.pdf',
+            'Prashant Ahire - Leadership Style.pdf',
+            'Prashant Ahire - Motivational Traits.pdf',
+            'Prashant Ahire - PicOCEAN Personality.pdf',
+            'Prashant Ahire - SMART - Personality.pdf',
+            'Prashant Ahire - Sales Profiler.pdf',
+            'Prashant Ahire - Test level report (covers all type of question).pdf'
+        ];
+
+        async function downloadAllReports(btn) {
+            if (btn.disabled) return;
+
+            const originalHTML = btn.innerHTML;
+            btn.disabled = true;
+            btn.classList.add('loading');
+            btn.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 1s linear infinite;" aria-hidden="true">
+                    <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+                </svg>
+                Preparing ZIP…
+            `;
+
+            try {
+                const zip = new JSZip();
+                const basePath = '../assets/reports/';
+
+                await Promise.all(
+                    REPORT_FILES.map(async (filename) => {
+                        const res = await fetch(basePath + encodeURIComponent(filename));
+                        if (!res.ok) throw new Error(`Could not load: ${filename}`);
+                        const blob = await res.blob();
+                        zip.file(filename, blob);
+                    })
+                );
+
+                const content = await zip.generateAsync({ type: 'blob', compression: 'DEFLATE' });
+                saveAs(content, 'Prashant Ahire - PDF Reports.zip');
+            } catch (err) {
+                console.error('Download error:', err);
+                alert('One or more files could not be loaded. Please try again.');
+            } finally {
+                btn.innerHTML = originalHTML;
+                btn.disabled = false;
+                btn.classList.remove('loading');
+            }
+        }
+    </script>
+    <style>
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

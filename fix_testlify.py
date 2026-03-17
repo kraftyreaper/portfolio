@@ -1,0 +1,301 @@
+import codecs
+import os
+
+file_path = r"c:\Users\prash\.gemini\antigravity\scratch\portfolio\case-studies\testlify.html"
+
+with codecs.open(file_path, "r", "utf-8") as f:
+    text = f.read()
+
+# We only want the content from the start until '<main class="case-detail">'
+# AND we only want the content from '<!-- ── Footer ── -->' until the end
+
+prefix = text[:text.find('<main class="case-detail">')]
+suffix = text[text.rfind('<!-- ── Footer ── -->'):]
+
+html_content = """<main class="case-detail">
+        <div class="container">
+
+            <!-- Hero -->
+            <div class="case-detail__hero reveal">
+                <div class="case-detail__hero-meta">
+                    <div class="case-detail__hero-line"></div>
+                    <span class="case-detail__project">Testlify</span>
+                    <span class="case-detail__dot">·</span>
+                    <span class="case-detail__domain">AI-native skill assessments & interviewing tool</span>
+                    <div class="case-detail__hero-line"></div>
+                </div>
+                <h1 class="case-detail__title">Designing an AI-Powered Hiring Platform at Scale</h1>
+                <p style="color: var(--text-secondary); font-size: var(--font-size-md); margin-bottom: var(--space-md); text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Role: Product Designer | Duration: June 2023 – January 2026 (2.5 years)
+                </p>
+                <div class="case-detail__hero-image">
+                    <div class="laptop-frame">
+                        <div class="laptop-frame__browser-bar">
+                            <span class="laptop-frame__dot laptop-frame__dot--red"></span>
+                            <span class="laptop-frame__dot laptop-frame__dot--yellow"></span>
+                            <span class="laptop-frame__dot laptop-frame__dot--green"></span>
+                            <span class="laptop-frame__url">testlify.com</span>
+                        </div>
+                        <div class="laptop-frame__content" style="background-image: url('../img/case-studies/testlify-hero.png');">
+                            <img src="../img/case-studies/testlify-hero.png" alt="Testlify Platform Overview">
+                        </div>
+                        <div class="laptop-frame__base"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- At a Glance -->
+            <section class="case-section reveal">
+                <div class="at-a-glance">
+                    <div class="at-a-glance__row">
+                        <div class="at-a-glance__label">What is Testlify?</div>
+                        <div class="at-a-glance__value">
+                            <p>An AI-powered assessment platform that helps companies evaluate candidates through skill tests, psychometric assessments, and conversational AI interviews. The platform includes 3,000+ pre-created tests, supports 45+ coding languages, and integrates with 100+ ATS systems.</p>
+                        </div>
+                    </div>
+                    <div class="at-a-glance__row">
+                        <div class="at-a-glance__label">My Role</div>
+                        <div class="at-a-glance__value">
+                            <p>Design lead responsible for end-to-end product design across Employer Portal, Candidate Test Portal, and AI Interview System. Owned the complete design process from discovery through delivery, collaborated directly with founders, and supported two junior designers.</p>
+                        </div>
+                    </div>
+                    <div class="at-a-glance__row">
+                        <div class="at-a-glance__label">Scope &amp; Impact</div>
+                        <div class="at-a-glance__value">
+                            <ul class="case-carousel__list list--single" style="margin-top: 0; margin-bottom: 0;">
+                                <li><strong>229 Jira tickets delivered</strong> over 2.5 years (193 tasks, 12 epics, 10 improvements).</li>
+                                <li>111 features shipped to production across 3 core surfaces.</li>
+                                <li>Platform serves 4,500+ job roles across 50+ industries.</li>
+                                <li>Achieved 80% candidate completion rate (2-3x industry average).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Challenge -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">The Challenge</h2>
+                <div class="case-section__content" style="max-width: 100%;">
+                    <p>Testlify operates in a high-stakes environment where every design decision directly impacts hiring outcomes. A confusing interface could cost someone a job opportunity. A poorly designed test flow could lead to candidate drop-off. An unclear reporting system could result in wrong hiring decisions.</p>
+                    
+                    <strong style="color: var(--text-primary); display:block; margin: var(--space-lg) 0 var(--space-sm);">The complexity came from three sources:</strong>
+                    
+                    <ul class="impact-list" style="margin-bottom: var(--space-xl); background: var(--bg-card); border: 1px solid var(--border-card); padding: var(--space-lg); border-radius: var(--radius-md);">
+                        <li class="impact-list__item" style="align-items:flex-start;">
+                            <span class="impact-list__icon" style="color: var(--accent);">1</span>
+                            <div>
+                                <strong style="color: var(--text-primary);">Multiple User Contexts:</strong> Employers ranged from solo recruiters to enterprise HR teams. Candidates varied from tech professionals taking coding tests to entry-level applicants completing personality assessments. Each group had different technical literacy and expectations.
+                            </div>
+                        </li>
+                        <li class="impact-list__item" style="align-items:flex-start;">
+                            <span class="impact-list__icon" style="color: var(--accent);">2</span>
+                            <div>
+                                <strong style="color: var(--text-primary);">AI & Automation Complexity:</strong> AI-powered features like resume parsing and conversational interviews introduced new challenges. We needed to map AI confidence scores, handle AI parsing failures, and empower employers to override AI easily—solving interface and user trust problems simultaneously.
+                            </div>
+                        </li>
+                        <li class="impact-list__item" style="align-items:flex-start;">
+                            <span class="impact-list__icon" style="color: var(--accent);">3</span>
+                            <div>
+                                <strong style="color: var(--text-primary);">Cascading Dependencies:</strong> A single decision altered question types, test creation, checking logic, and report generation simultaneously. Changes cascaded across multiple surfaces natively requiring strict QA coordination.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- My Approach -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">My Approach</h2>
+                <p class="case-section__content" style="margin-bottom: var(--space-md);">I structured my work across two layers that operated simultaneously:</p>
+
+                <div class="t-grid">
+                    <div class="t-row t-header">
+                        <div class="t-col-1">Layer</div>
+                        <div class="t-col-2">Responsibilities</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Strategic Layer – Product Thinking</div>
+                        <div class="t-col-2">Partnered with founders to shape product direction, conducted user research to validate assumptions, designed solutions that balanced business needs with user experience, and created design systems to maintain consistency at scale.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Execution Layer – Delivery at Velocity</div>
+                        <div class="t-col-2">Designed 229 tickets directly across features, enhancements, and fixes. Managed real-time requests from sales/CS/marketing via Slack (assessing feasibility, creating tickets, defining scope, delivering solutions), proactively identified and resolved UI/UX bugs.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Design Principles -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">Design Principles</h2>
+                <div class="client-vision-grid" style="grid-template-columns: 1fr;">
+                    <div class="client-vision-stat">
+                        <div class="client-vision-stat__value" style="font-size: 1.25rem; font-weight: 600; font-family: var(--font-family-base);">1. Control Over Automation</div>
+                        <div class="client-vision-stat__label">AI should augment, not replace, human judgment. Employers always have final say over AI recommendations.</div>
+                    </div>
+                    <div class="client-vision-stat">
+                        <div class="client-vision-stat__value" style="font-size: 1.25rem; font-weight: 600; font-family: var(--font-family-base);">2. Transparency in Complexity</div>
+                        <div class="client-vision-stat__label">When systems make decisions (AI scoring, test logic, candidate filtering), show users exactly why and how.</div>
+                    </div>
+                    <div class="client-vision-stat">
+                        <div class="client-vision-stat__value" style="font-size: 1.25rem; font-weight: 600; font-family: var(--font-family-base);">3. Progressive Disclosure</div>
+                        <div class="client-vision-stat__label">Reveal complexity gradually. Show essential information first, advanced controls on demand.</div>
+                    </div>
+                    <div class="client-vision-stat">
+                        <div class="client-vision-stat__value" style="font-size: 1.25rem; font-weight: 600; font-family: var(--font-family-base);">4. Guardrails, Not Gates</div>
+                        <div class="client-vision-stat__label">Prevent errors through smart defaults and validation, not by blocking user actions.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEEP DIVE: AI Resume Parser -->
+            <section class="lifecycle-section reveal">
+                <div class="section-heading" style="margin-bottom: var(--space-xl);">
+                    <div class="section-heading__line"></div>
+                    <h2 class="section-heading__text">Deep Dive: AI Resume Parser</h2>
+                    <div class="section-heading__line"></div>
+                </div>
+
+                <div class="case-section__content" style="max-width: 100%; margin-bottom: var(--space-xl);">
+                    <p><strong>The Ask:</strong> Build an AI-powered system that automatically screens resumes, extracts candidate data, matches qualifications, and maps candidates to workflows—reducing time-to-hire.</p>
+                    <p><strong>The Risk:</strong> Pure algorithmic decisions could blind-reject qualified talent, cause systemic hiring bias, and shatter employer trust if it felt like a "black box".</p>
+                </div>
+
+                <h3 style="color: var(--text-primary); font-size: var(--font-size-lg); margin-bottom: var(--space-md);">Design Exploration</h3>
+                <div class="option-grid">
+                    <div class="option-card">
+                        <h4 style="color: var(--text-primary); margin-bottom: 8px;">Option 1: Fully Automatic</h4>
+                        <p style="font-size: var(--font-size-xs); color: var(--text-secondary); margin-bottom: 12px;">AI screens naturally and drops them into ATS buckets.</p>
+                        <p style="font-size: var(--font-size-xs);"><strong style="color: #ff6b6b;">✗ Rejected:</strong> Fast, but removes essential human oversight. Too risky.</p>
+                    </div>
+                    <div class="option-card">
+                        <h4 style="color: var(--text-primary); margin-bottom: 8px;">Option 2: Manual Review</h4>
+                        <p style="font-size: var(--font-size-xs); color: var(--text-secondary); margin-bottom: 12px;">AI pre-fetches data, HR manually reads every submission.</p>
+                        <p style="font-size: var(--font-size-xs);"><strong style="color: #ff6b6b;">✗ Rejected:</strong> Replaces manual parsing with manual reading. Doesn't save time.</p>
+                    </div>
+                    <div class="option-card option-card--selected">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <h4 style="color: var(--accent); margin: 0;">Option 3: AI-Assisted Guarded</h4>
+                            <span style="font-size: 10px; background: var(--accent); color: #000; padding: 2px 6px; border-radius: 4px; font-weight: bold;">CHOSEN</span>
+                        </div>
+                        <p style="font-size: var(--font-size-xs); color: var(--text-secondary); margin-bottom: 12px;">AI extracts &amp; scores. Employers establish thresholds and retain final manual override capabilities.</p>
+                        <p style="font-size: var(--font-size-xs);"><strong style="color: var(--accent);">✓ Winner:</strong> Perfect balance of automation velocity + robust protective human judgment.</p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--text-primary); margin-top: var(--space-xl); font-size: var(--font-size-lg); margin-bottom: var(--space-md);">Key Design Decisions</h3>
+                <div class="lifecycle-steps" style="margin-bottom: var(--space-3xl);">
+                    <div class="lifecycle-step reveal">
+                        <div class="lifecycle-step__content">
+                            <h3 class="lifecycle-step__title">Confidence Score Visualization</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-xs);">Used a slider with snap points (50%, 70%, 90%) and color-coded zones (red &lt;50%, yellow 50-70%, green &gt;70%). This made abstract confidence scores tangible and actionable, simplifying continuous scores into discrete decision buckets.</p>
+                        </div>
+                        <div class="lifecycle-step__media placeholder-image" style="background: #111;">
+                            <span class="placeholder-image__icon">📊</span>
+                            <span class="placeholder-image__label">Categoric Sliders UI</span>
+                        </div>
+                    </div>
+
+                    <div class="lifecycle-step reveal">
+                        <div class="lifecycle-step__content">
+                            <h3 class="lifecycle-step__title">Auto-Advance &amp; Rejection Toggles</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-xs);">Created an opt-in toggle: "Auto-advance candidates above threshold". Rejected candidates face explicit prompts like: “Auto-rejected candidates cannot be recovered”, to enforce risk-awareness among high-volume recruiters.</p>
+                        </div>
+                        <div class="lifecycle-step__media placeholder-image" style="background: #111;">
+                            <span class="placeholder-image__icon">⚙️</span>
+                            <span class="placeholder-image__label">Review Queue States</span>
+                        </div>
+                    </div>
+
+                    <div class="lifecycle-step reveal">
+                        <div class="lifecycle-step__content">
+                            <h3 class="lifecycle-step__title">ATS Stage Mapping</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: var(--space-xs);">Rather than using generic terminology, designed a dynamic dropdown populated directly from connected ATS's actual stage names ("Screening" vs "Resume Review"). Eliminated user confusion through tighter backend adherence.</p>
+                        </div>
+                        <div class="lifecycle-step__media placeholder-image" style="background: #111;">
+                            <span class="placeholder-image__icon">🔌</span>
+                            <span class="placeholder-image__label">ATS Synchronization Control</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEEP DIVE: Reporting -->
+            <section class="lifecycle-section reveal">
+                <div class="section-heading" style="margin-bottom: var(--space-xl);">
+                    <div class="section-heading__line"></div>
+                    <h2 class="section-heading__text">Deep Dive: Reporting as a Product</h2>
+                    <div class="section-heading__line"></div>
+                </div>
+
+                <div class="case-section__content" style="max-width: 100%; margin-bottom: var(--space-xl);">
+                    <p><strong>The Problem:</strong> Our report framework was chaotic. Employers evaluated candidates quickly, but the reporting system was fragmented: basic reports lacked depth, psychometric layouts weren't branded, and there was no unified export system.</p>
+                </div>
+
+                <div class="t-grid">
+                    <div class="t-row t-header">
+                        <div class="t-col-1">Architectural Approach</div>
+                        <div class="t-col-2">Implementation</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Core Report Redesign</div>
+                        <div class="t-col-2">Rebuilt primary assessment with color-coded performance indicators, granular time metrics (per-question completion patterns), and comparison views directly against Job Requirements.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">8 Psychometric PDFs</div>
+                        <div class="t-col-2">Created highly tailored branded templates for DISC, Big Five, Enneagram, Work styles, and problem approaches incorporating explicit charts &amp; narrative interpretations.</div>
+                    </div>
+                    <div class="t-row">
+                        <div class="t-col-1">Mass Export Architecture</div>
+                        <div class="t-col-2">Replaced fragmented downloads with a 1-click intelligent extraction bundler, automatically generating ZIP files. Reports auto-named with candidate name and test type.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other Key Contributions & Scale -->
+            <section class="case-section reveal">
+                <h2 class="case-section__title">Operating at Scale</h2>
+                
+                <div class="contribution-card">
+                    <h3 class="contribution-card__title">Decision Visibility Across Libraries</h3>
+                    <p class="contribution-card__problem-text" style="color: var(--text-secondary); margin-bottom: var(--space-xs);">Employers browsing 3,000+ tests needed structural clarity before integration. I designed expandable previews showing explicit question types, time limits, and exact difficulty levels, drastically reducing user-error support tickets.</p>
+                </div>
+
+                <div class="contribution-card">
+                    <h3 class="contribution-card__title">Enterprise Infrastructure</h3>
+                    <p class="contribution-card__problem-text" style="color: var(--text-secondary); margin-bottom: var(--space-xs);">Designed comprehensive configuration interfaces for enterprise SAML SSO setup, custom email domains, admin roles management, and billing dashboards—making complex setups approachable to standard HR staff.</p>
+                </div>
+                
+                <div class="contribution-card">
+                    <h3 class="contribution-card__title">Managing Client Pressures vs QA</h3>
+                    <p class="contribution-card__problem-text" style="color: var(--text-secondary); margin-bottom: var(--space-xs);">Commanded daily Slack pipelines tracking Sales &amp; Customer Success requests. Assessed technical feasibility instantly, scoped Jira frameworks, mentored two junior designers throughout ambiguous executions, and frequently flagged unfeasible projects constructively.</p>
+                </div>
+            </section>
+
+            <!-- Reflection -->
+            <div class="reflection reveal">
+                <h2 class="reflection__title">What I Learned &amp; Reflection</h2>
+                <div class="reflection__text">
+                    <p>Building in ambiguity inherently defines early-stage startups. You learn to validate assumptions through rapid prototyping, make decisions using incomplete data, and adapt when direction immediately redirects. 229 Jira tasks required deep systems thinking—understanding how designing a reporting graph altered candidate-side navigation limits entirely.</p>
+                    <p>Over 2.5 years, my role evolved heavily from basic feature execution to functioning as a deeply proactive strategic design partner. Real speed didn't come from functioning faster; rather, quality at velocity surfaced via deploying smart systems: rigorous edge-case checklists, standardized patterns, AI-validation procedures, and pushing explicitly for clear development requirements before building. I learned design here isn't about making single features strictly pretty—it's establishing scaling systematic trust.</p>
+                </div>
+            </div>
+
+            <!-- Next Project -->
+            <div class="next-project reveal">
+                <p class="next-project__label">Next Project</p>
+                <a href="homes-collection.html" class="next-project__card">
+                    <span class="next-project__category">Real Estate</span>
+                    <h3 class="next-project__title">Homes Collection - Fractional ownership platform for real estate investment</h3>
+                </a>
+            </div>
+
+        </div>
+    </main>\n\n    """
+
+new_text = prefix + html_content + suffix
+
+with codecs.open(file_path, "w", "utf-8") as f:
+    f.write(new_text)
+
+print("testlify.html updated cleanly without duplication.")

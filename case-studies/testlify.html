@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -1803,6 +1803,22 @@
         }
     </style>
     <script src="../js/main.js"></script>
+    <script>
+        // Visitor counter — display only (increment happens on homepage)
+        (async function() {
+            try {
+                const res = await fetch('https://api.counterapi.dev/v1/kraftyreaper-portfolio/visits', { mode: 'cors' });
+                const data = await res.json();
+                const el = document.getElementById('visitor-count');
+                if (el && data && data.count !== undefined) {
+                    el.textContent = data.count.toLocaleString();
+                }
+            } catch(e) {
+                const el = document.getElementById('visitor-count');
+                if (el) el.textContent = '—';
+            }
+        })();
+    </script>
 </body>
 
 </html>

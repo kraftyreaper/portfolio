@@ -1854,7 +1854,9 @@ a {
 }
 
 .site-footer__row-bottom {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding-top: var(--space-lg);
 }
 
@@ -1862,6 +1864,24 @@ a {
     margin: 0;
     font-size: var(--font-size-sm);
     color: var(--text-tertiary);
+    text-align: right;
+}
+
+.site-footer__views {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--font-size-sm);
+    color: var(--text-tertiary);
+}
+
+.site-footer__views-icon {
+    opacity: 0.6;
+}
+
+.site-footer__views-count {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
 }
 
 /* ── Custom Cursor ── */
