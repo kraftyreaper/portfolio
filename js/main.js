@@ -161,38 +161,55 @@ document.addEventListener('DOMContentLoaded', () => {
     const TG_TOKEN = '8718526798:AAFwmoebK66Cc0-IndVDpwsOM7Geuh66KzI';
     const TG_CHAT_ID = '7222053587';
     
-    // Check if we've already notified for this session
     if (sessionStorage.getItem('tg_notified')) return;
 
-    // Function to send message
-    const sendNotification = (count) => {
-      const pageTitle = document.title.split('—')[0].trim() || 'Home';
-      const message = `🚀 *New Visitor Identified*\n\n📈 *Total Views:* ${count}\n🔗 *Source:* ${pageTitle}\n📍 *URL:* ${window.location.href}`;
-      
-      fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: TG_CHAT_ID,
-          text: message,
-          parse_mode: 'Markdown'
-        })
-      }).then(() => {
+    const sendNotification = async (count) => {
+      try {
+        // 1. Get Location & IP (Free, Fast)
+        const geoRes = await fetch('https://ipapi.co/json/');
+        const geo = await geoRes.json();
+        
+        // 2. Capture Referral Source
+        const referrer = document.referrer ? new URL(document.referrer).hostname : 'Direct / Private';
+        
+        // 3. Check for Custom Tracking (e.g., ?src=linkedin)
+        const urlParams = new URLSearchParams(window.location.search);
+        const customSrc = urlParams.get('src') || urlParams.get('utm_source') || 'None';
+
+        const pageTitle = document.title.split('—')[0].trim() || 'Home';
+        
+        const message = `🚀 *New Visitor Identified*
+        
+📈 *Total Views:* ${count}
+📍 *Location:* ${geo.city}, ${geo.country_name} (${geo.ip})
+🔗 *Referrer:* ${referrer}
+🏷 *Campaign:* ${customSrc}
+📄 *Landed On:* ${pageTitle}`;
+        
+        await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: TG_CHAT_ID,
+            text: message,
+            parse_mode: 'Markdown'
+          })
+        });
+        
         sessionStorage.setItem('tg_notified', 'true');
-      }).catch(err => console.error('TG Notification failed:', err));
+      } catch (err) {
+        console.error('Analytics failed:', err);
+      }
     };
 
-    // Wait for Busuanzi to populate the count
     let attempts = 0;
     const checkBusuanzi = setInterval(() => {
       const countEl = document.getElementById('busuanzi_value_site_pv');
       const count = countEl ? countEl.innerText : null;
-      
       if (count && count !== '—') {
         clearInterval(checkBusuanzi);
         sendNotification(count);
       }
-      
       if (++attempts > 20) clearInterval(checkBusuanzi);
     }, 500);
   })();
