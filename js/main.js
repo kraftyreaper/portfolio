@@ -165,25 +165,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const sendNotification = async (count) => {
       try {
-        // 1. Get Location & IP (Free, Fast)
+        // 1. Get Location (Free, Fast)
         const geoRes = await fetch('https://ipapi.co/json/');
         const geo = await geoRes.json();
         
-        // 2. Capture Referral Source
-        const referrer = document.referrer ? new URL(document.referrer).hostname : 'Direct / Private';
-        
-        // 3. Check for Custom Tracking (e.g., ?src=linkedin)
-        const urlParams = new URLSearchParams(window.location.search);
-        const customSrc = urlParams.get('src') || urlParams.get('utm_source') || 'None';
-
         const pageTitle = document.title.split('—')[0].trim() || 'Home';
         
+        // 2. Format simplified message
         const message = `🚀 *New Visitor Identified*
         
 📈 *Total Views:* ${count}
-📍 *Location:* ${geo.city}, ${geo.country_name} (${geo.ip})
-🔗 *Referrer:* ${referrer}
-🏷 *Campaign:* ${customSrc}
+📍 *Location:* ${geo.city}, ${geo.region}, ${geo.country_name}
 📄 *Landed On:* ${pageTitle}`;
         
         await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
