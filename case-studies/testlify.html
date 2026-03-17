@@ -308,16 +308,24 @@
 
             <!-- ── IMPACT AT A GLANCE ── -->
             <section class="case-section reveal" aria-labelledby="section-at-a-glance">
-                <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">EXECUTIVE SUMMARY</div>
+                <div
+                    style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                    EXECUTIVE SUMMARY</div>
                 <h2 class="case-section__title" id="section-at-a-glance">IMPACT AT A GLANCE</h2>
 
                 <div style="margin-bottom: 1.5rem;">
                     <div class="contribution-card" style="margin: 0; text-align: left; padding: 2rem;">
                         <div class="card-label" style="text-transform: uppercase;">WHAT IS TESTLIFY?</div>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: 1.5rem;">B2B SaaS AI-powered assessment platform &mdash; 3,000+ tests, 45+ coding languages, 100+ ATS integrations</p>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                            B2B SaaS AI-powered assessment platform &mdash; 3,000+ tests, 45+ coding languages, 100+ ATS
+                            integrations</p>
 
                         <div class="card-label" style="text-transform: uppercase;">Scope &amp; Complexity</div>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">Employer Portal (assessment creation, test management, reporting), Candidate Portal (Web, Android, iOS test-taking experience), White-label &amp; Reseller configurations, PDF Reports</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0;">
+                            Employer Portal (assessment creation, test management, reporting), Candidate Portal (Web,
+                            Android, iOS test-taking experience), White-label &amp; Reseller configurations, PDF Reports
+                        </p>
                     </div>
                 </div>
 
@@ -328,7 +336,8 @@
                         <div
                             style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 8px; line-height: 1;">
                             505</div>
-                        <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">UX tickets worked across 1.7 years at Testlify across 4 pre-production environments</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">UX
+                            tickets worked across 1.7 years at Testlify across 4 pre-production environments</p>
                     </div>
                     <div class="contribution-card" style="margin: 0; text-align: left; padding: 2rem;">
                         <div class="card-label" style="text-transform: uppercase;">Total features shipped</div>
@@ -383,15 +392,18 @@
                     No PRDs. No structured documentation. Requirements arrived through Slack, sales calls, and client
                     tickets &mdash; vague, half-defined, and missing edge cases.</p>
 
-                <div style="border-left: 4px solid #FEF3C7; background: rgba(254, 243, 199, 0.05); padding: 20px 24px; border-radius: 0 8px 8px 0; margin-bottom: var(--space-xl);">
-                    <strong style="color: #FEF3C7;">The core complexity:</strong> One employer toggle could ripple simultaneously into candidate
+                <div
+                    style="border-left: 4px solid #FEF3C7; background: rgba(254, 243, 199, 0.05); padding: 20px 24px; border-radius: 0 8px 8px 0; margin-bottom: var(--space-xl);">
+                    <strong style="color: #FEF3C7;">The core complexity:</strong> One employer toggle could ripple
+                    simultaneously into candidate
                     status across multiple assessments, PDF output structure, ATS sync behaviour, shareable link access
                     controls, historical data consistency, and cross-platform differences across web, iOS, and Android.
                     Nothing existed in isolation.
                 </div>
 
                 <div style="margin-bottom: var(--space-xl);">
-                    <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-sm);">My actual responsibility</div>
+                    <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-sm);">My actual
+                        responsibility</div>
                     <p
                         style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.5rem;">
                         This wasn't designing flows. It was acting as the product's decision layer &mdash; applying a
@@ -471,123 +483,242 @@
                     CONSTRAINTS</div>
                 <h2 class="case-section__title" id="section-constraints">WHAT I WAS DESIGNING WITHIN</h2>
 
-                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: 2rem;">Every decision on this platform was shaped by a specific set of constraints. Understanding them is necessary to understand why the design choices were made the way they were.</p>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: 2rem;">
+                    Every decision on this platform was shaped by a specific set of constraints. Understanding them is
+                    necessary to understand why the design choices were made the way they were.</p>
 
-                <div style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; margin-bottom: var(--space-xl);">
+                <div
+                    style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; margin-bottom: var(--space-xl);">
                     <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
                         <thead>
-                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
-                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 200px;">Constraint</th>
-                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600;">How it shaped my work</th>
+                            <tr
+                                style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
+                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 200px;">
+                                    Constraint</th>
+                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600;">How it shaped my
+                                    work</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">No design manager</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">I had no senior designer to escalate to when stuck. When I hit a blocker, I went directly to the source: senior engineers for technical constraints, the founder for business constraints, and AI to stress-test alignment across all three. This made me faster at triangulating decisions independently &mdash; but it also meant every call was mine to own</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    No design manager</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    I had no senior designer to escalate to when stuck. When I hit a blocker, I went
+                                    directly to the source: senior engineers for technical constraints, the founder for
+                                    business constraints, and AI to stress-test alignment across all three. This made me
+                                    faster at triangulating decisions independently &mdash; but it also meant every call
+                                    was mine to own</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Revenue-driven prioritisation</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">There was a standing instruction: revenue-impacting tasks come first. This meant my existing plate was constantly re-stacked. A strategic epic could be paused mid-flow because a client-facing fix needed to ship that sprint. I learned to design for interruptibility &mdash; keeping work at a state where it could be picked back up without losing context. When the volume of urgent requests threatened quality, I learned to frame pushback not as a capacity issue but as a business risk: &ldquo;Shipping this now creates a support burden&rdquo; landed differently &mdash; and more effectively &mdash; than &ldquo;I need more time&rdquo;</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Revenue-driven prioritisation</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    There was a standing instruction: revenue-impacting tasks come first. This meant my
+                                    existing plate was constantly re-stacked. A strategic epic could be paused mid-flow
+                                    because a client-facing fix needed to ship that sprint. I learned to design for
+                                    interruptibility &mdash; keeping work at a state where it could be picked back up
+                                    without losing context. When the volume of urgent requests threatened quality, I
+                                    learned to frame pushback not as a capacity issue but as a business risk:
+                                    &ldquo;Shipping this now creates a support burden&rdquo; landed differently &mdash;
+                                    and more effectively &mdash; than &ldquo;I need more time&rdquo;</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Technical constraints from engineers directly</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">There was no PM translating technical feasibility to me. I went directly to senior engineers to understand what was and wasn&rsquo;t buildable before committing to a design direction. This eliminated the common gap between what design proposes and what engineering can actually deliver</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Technical constraints from engineers directly</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    There was no PM translating technical feasibility to me. I went directly to senior
+                                    engineers to understand what was and wasn&rsquo;t buildable before committing to a
+                                    design direction. This eliminated the common gap between what design proposes and
+                                    what engineering can actually deliver</td>
                             </tr>
                             <tr>
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Proactive issue resolution before handoff</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">If I encountered an issue or edge case during the design phase &mdash; a logic gap, a missing state, an unhandled error &mdash; I resolved it and included the solution in the handoff. Problems were never passed downstream to be discovered in dev or QA</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Proactive issue resolution before handoff</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    If I encountered an issue or edge case during the design phase &mdash; a logic gap,
+                                    a missing state, an unhandled error &mdash; I resolved it and included the solution
+                                    in the handoff. Problems were never passed downstream to be discovered in dev or QA
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            
+
             <!-- RESEARCH AND INSIGHTS -->
             <section class="case-section reveal" aria-labelledby="section-research">
-                <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">RESEARCH &amp; INSIGHTS</div>
+                <div
+                    style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                    RESEARCH &amp; INSIGHTS</div>
                 <h2 class="case-section__title" id="section-research">HOW I KNEW WHAT TO DESIGN</h2>
-                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: var(--space-xl);">There were no formal research sessions or dedicated UX researchers on this team. Insight came from being embedded in the product process and treating every touchpoint as a source of signal.</p>
-                <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-sm);">Where insights came from</div>
-                <div style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; margin-bottom: var(--space-xl);">
+                <p
+                    style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: var(--space-xl);">
+                    There were no formal research sessions or dedicated UX researchers on this team. Insight came from
+                    being embedded in the product process and treating every touchpoint as a source of signal.</p>
+                <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-sm);">Where
+                    insights came from</div>
+                <div
+                    style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; margin-bottom: var(--space-xl);">
                     <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
                         <thead>
-                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
-                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 200px;">Source</th>
+                            <tr
+                                style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
+                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 200px;">
+                                    Source</th>
                                 <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600;">What it gave me</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Founders</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Business direction, product vision, and priority framing. The founder was my primary lens for understanding what problems actually mattered to the business &mdash; and the final decision-maker on every design solution I proposed</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Founders</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Business direction, product vision, and priority framing. The founder was my primary
+                                    lens for understanding what problems actually mattered to the business &mdash; and
+                                    the final decision-maker on every design solution I proposed</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Sales &amp; marketing team</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Real-world signal on what clients asked about, what confused them in demos, and what competitors were doing. Sales feedback shaped how features were positioned and which gaps were most visible to prospects</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Sales &amp; marketing team</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Real-world signal on what clients asked about, what confused them in demos, and what
+                                    competitors were doing. Sales feedback shaped how features were positioned and which
+                                    gaps were most visible to prospects</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">UAT across pre-production</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">My primary discovery layer. Testing every feature across 4 environments, 5 browsers, and 4 platforms before release &mdash; I personally identified UX gaps that no one had flagged, proposed solutions with documented reasoning, and got them approved and built before the release shipped</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    UAT across pre-production</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    My primary discovery layer. Testing every feature across 4 environments, 5 browsers,
+                                    and 4 platforms before release &mdash; I personally identified UX gaps that no one
+                                    had flagged, proposed solutions with documented reasoning, and got them approved and
+                                    built before the release shipped</td>
                             </tr>
                             <tr>
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Monthly sprint demos</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Developers demonstrated completed features to the entire Testlify team including sales and marketing. Feedback from these sessions was collected, taken ownership of by designers, validated across pre-production environments, and pushed to production once verified. Designers then closed the loop &mdash; informing the relevant POC (internal or client-facing) that the feature was live</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Monthly sprint demos</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Developers demonstrated completed features to the entire Testlify team including
+                                    sales and marketing. Feedback from these sessions was collected, taken ownership of
+                                    by designers, validated across pre-production environments, and pushed to production
+                                    once verified. Designers then closed the loop &mdash; informing the relevant POC
+                                    (internal or client-facing) that the feature was live</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-sm);">How I turned insight into approved solutions</div>
-                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: var(--space-xl);">Every solution I brought to the founder was accompanied by clear reasoning: what the problem was, why the proposed solution addressed it, and what the trade-off was if we chose differently. This wasn&rsquo;t a pitch &mdash; it was structured decision support. The outcome: every solution I proposed with clear reasoning was approved by the founder. That consistency wasn&rsquo;t luck &mdash; it was the result of doing the constraint triangulation and dependency mapping before the conversation, not during it.</p>
+                <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-sm);">How I turned
+                    insight into approved solutions</div>
+                <p
+                    style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: var(--space-xl);">
+                    Every solution I brought to the founder was accompanied by clear reasoning: what the problem was,
+                    why the proposed solution addressed it, and what the trade-off was if we chose differently. This
+                    wasn&rsquo;t a pitch &mdash; it was structured decision support. The outcome: every solution I
+                    proposed with clear reasoning was approved by the founder. That consistency wasn&rsquo;t luck
+                    &mdash; it was the result of doing the constraint triangulation and dependency mapping before the
+                    conversation, not during it.</p>
 
-                <div style="border-left: 4px solid #FEF3C7; background: rgba(254, 243, 199, 0.05); padding: 20px 24px; border-radius: 0 8px 8px 0; margin-bottom: var(--space-xl);">
-                    <strong style="color: #FEF3C7;">What this signals:</strong> Founder-level approval on every design proposal &mdash; consistently, across 1.7 years &mdash; is evidence of alignment quality, not just execution speed. It means the reasoning behind each design held up against business, technical, and user constraints simultaneously.
+                <div
+                    style="border-left: 4px solid #FEF3C7; background: rgba(254, 243, 199, 0.05); padding: 20px 24px; border-radius: 0 8px 8px 0; margin-bottom: var(--space-xl);">
+                    <strong style="color: #FEF3C7;">What this signals:</strong> Founder-level approval on every design
+                    proposal &mdash; consistently, across 1.7 years &mdash; is evidence of alignment quality, not just
+                    execution speed. It means the reasoning behind each design held up against business, technical, and
+                    user constraints simultaneously.
                 </div>
             </section>
 
             <!-- ── FIVE PRINCIPLES ── -->
             <section class="case-section reveal" aria-labelledby="section-principles">
-                <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">DECISION-MAKING FRAMEWORK</div>
+                <div
+                    style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                    DECISION-MAKING FRAMEWORK</div>
                 <h2 class="case-section__title" id="section-principles">FIVE PRINCIPLES THAT GOVERNED EVERY TICKET</h2>
-                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">With 505 tickets spanning multiple surfaces, ad-hoc decisions compound into inconsistency. These weren&rsquo;t aspirational values &mdash; they were working constraints I enforced on every decision:</p>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">With 505 tickets spanning
+                    multiple surfaces, ad-hoc decisions compound into inconsistency. These weren&rsquo;t aspirational
+                    values &mdash; they were working constraints I enforced on every decision:</p>
 
                 <!-- Row 1: 3 cards -->
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;" class="principles-row-1">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;"
+                    class="principles-row-1">
                     <div class="contribution-card" style="margin: 0; padding: var(--space-lg);">
-                        <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 0.5rem;">01</div>
-                        <h3 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Control over automation</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.7;">AI augments, never replaces, human judgment. Employers retain final authority over every AI recommendation.</p>
+                        <div
+                            style="font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                            01</div>
+                        <h3 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Control
+                            over automation</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.7;">AI
+                            augments, never replaces, human judgment. Employers retain final authority over every AI
+                            recommendation.</p>
                     </div>
                     <div class="contribution-card" style="margin: 0; padding: var(--space-lg);">
-                        <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 0.5rem;">02</div>
-                        <h3 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Transparency in complexity</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.7;">When the system makes decisions &mdash; AI scoring, test logic, candidate filtering &mdash; show users why and how.</p>
+                        <div
+                            style="font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                            02</div>
+                        <h3 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">
+                            Transparency in complexity</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.7;">When
+                            the system makes decisions &mdash; AI scoring, test logic, candidate filtering &mdash; show
+                            users why and how.</p>
                     </div>
                     <div class="contribution-card" style="margin: 0; padding: var(--space-lg);">
-                        <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 0.5rem;">03</div>
-                        <h3 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Progressive disclosure</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.7;">Reveal complexity gradually. Essential information first, advanced controls on demand.</p>
+                        <div
+                            style="font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                            03</div>
+                        <h3 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">
+                            Progressive disclosure</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.7;">Reveal
+                            complexity gradually. Essential information first, advanced controls on demand.</p>
                     </div>
                 </div>
 
                 <!-- Row 2: 2 cards -->
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: var(--space-xl);" class="principles-row-2">
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: var(--space-xl);"
+                    class="principles-row-2">
                     <div class="contribution-card" style="margin: 0; padding: var(--space-lg);">
-                        <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 0.5rem;">04</div>
-                        <h3 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Guardrails, not gates</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.7;">Prevent errors through smart defaults and validation &mdash; not by blocking user actions outright.</p>
+                        <div
+                            style="font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                            04</div>
+                        <h3 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">
+                            Guardrails, not gates</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.7;">
+                            Prevent errors through smart defaults and validation &mdash; not by blocking user actions
+                            outright.</p>
                     </div>
                     <div class="contribution-card" style="margin: 0; padding: var(--space-lg);">
-                        <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 0.5rem;">05</div>
-                        <h3 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Consistency across chaos</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.7;">Patterns must hold when the platform is expanding at velocity. Documented and enforced, not assumed.</p>
+                        <div
+                            style="font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+                            05</div>
+                        <h3 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">
+                            Consistency across chaos</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.7;">
+                            Patterns must hold when the platform is expanding at velocity. Documented and enforced, not
+                            assumed.</p>
                     </div>
                 </div>
 
                 <style>
                     @media (max-width: 640px) {
-                        .principles-row-1, .principles-row-2 {
+
+                        .principles-row-1,
+                        .principles-row-2 {
                             grid-template-columns: 1fr !important;
                         }
                     }
@@ -598,13 +729,20 @@
 
             <!-- ── WHERE I USED AI — AND WHERE I DIDN'T ── -->
             <section class="case-section reveal" aria-labelledby="section-ai-judgment">
-                <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">HUMAN JUDGMENT IN AI-DRIVEN PRODUCTS</div>
-                <h2 class="case-section__title" id="section-ai-judgment">WHERE I USED AI &mdash; AND WHERE I DIDN&rsquo;T</h2>
-                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">Working on an AI hiring platform gave me first-hand clarity on where AI genuinely helps &mdash; and where it fails in ways that hurt real people. I was deliberate about this boundary at every feature decision.</p>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: var(--space-xl);" class="ai-judgment-grid">
+                <div
+                    style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                    HUMAN JUDGMENT IN AI-DRIVEN PRODUCTS</div>
+                <h2 class="case-section__title" id="section-ai-judgment">WHERE I USED AI &mdash; AND WHERE I
+                    DIDN&rsquo;T</h2>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">Working on an AI hiring
+                    platform gave me first-hand clarity on where AI genuinely helps &mdash; and where it fails in ways
+                    that hurt real people. I was deliberate about this boundary at every feature decision.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: var(--space-xl);"
+                    class="ai-judgment-grid">
                     <div class="contribution-card" style="margin: 0; border-left: 3px solid #3b82f6;">
                         <div class="card-label" style="color: #3b82f6;">AI handled well</div>
-                        <ul style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
+                        <ul
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
                             <li>Edge-case stress testing and logic gap identification</li>
                             <li>Generating suggested criteria for resume screening rules</li>
                             <li>Structured data extraction from unformatted resumes</li>
@@ -613,13 +751,20 @@
                     </div>
                     <div class="contribution-card" style="margin: 0; border-left: 3px solid var(--accent);">
                         <div class="card-label" style="color: var(--accent);">Human judgment was irreplaceable</div>
-                        <ul style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
-                            <li>Navigating founder vs. sales vs. user conflicts &mdash; requires empathy and political awareness no model has</li>
-                            <li>Designing irreversibility guardrails &mdash; requires metacognition about what users will regret under pressure</li>
-                            <li>Framing psychometric data for senior HR leadership &mdash; requires understanding unspoken organisational context</li>
-                            <li>Mapping cascading dependency risk &mdash; requires holding the entire system in working memory simultaneously</li>
-                            <li>Deciding when to push back on a &ldquo;simple&rdquo; request &mdash; requires reading unspoken business risk behind the ask</li>
-                            <li>Bridging context gaps when private enterprise hiring data cannot be shared with external AI tools</li>
+                        <ul
+                            style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin: 0; padding-left: var(--space-lg);">
+                            <li>Navigating founder vs. sales vs. user conflicts &mdash; requires empathy and political
+                                awareness no model has</li>
+                            <li>Designing irreversibility guardrails &mdash; requires metacognition about what users
+                                will regret under pressure</li>
+                            <li>Framing psychometric data for senior HR leadership &mdash; requires understanding
+                                unspoken organisational context</li>
+                            <li>Mapping cascading dependency risk &mdash; requires holding the entire system in working
+                                memory simultaneously</li>
+                            <li>Deciding when to push back on a &ldquo;simple&rdquo; request &mdash; requires reading
+                                unspoken business risk behind the ask</li>
+                            <li>Bridging context gaps when private enterprise hiring data cannot be shared with external
+                                AI tools</li>
                         </ul>
                     </div>
                 </div>
@@ -630,48 +775,79 @@
                         }
                     }
                 </style>
-                <div style="border-left: 4px solid #FEF3C7; background: rgba(254, 243, 199, 0.05); padding: 20px 24px; border-radius: 0 8px 8px 0; margin-bottom: 0;">
-                    <strong style="color: #FEF3C7;">The principle I designed by:</strong> AI can process. It cannot own a decision. The moment a consequence is irreversible &mdash; a candidate rejected, an employer's trust broken, a system's integrity compromised &mdash; a human must hold it. I built that assumption into every AI-adjacent feature on this platform.
+                <div
+                    style="border-left: 4px solid #FEF3C7; background: rgba(254, 243, 199, 0.05); padding: 20px 24px; border-radius: 0 8px 8px 0; margin-bottom: 0;">
+                    <strong style="color: #FEF3C7;">The principle I designed by:</strong> AI can process. It cannot own
+                    a decision. The moment a consequence is irreversible &mdash; a candidate rejected, an employer's
+                    trust broken, a system's integrity compromised &mdash; a human must hold it. I built that assumption
+                    into every AI-adjacent feature on this platform.
                 </div>
             </section>
 
             <!-- ── DEEP DIVE: AI RESUME PARSER ── -->
             <section class="lifecycle-section reveal" aria-labelledby="section-resume-parser">
                 <div style="text-align: center; margin-bottom: var(--space-xl);">
-                    <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">DEEP DIVE &mdash; FLAGSHIP FEATURE</div>
+                    <div
+                        style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                        DEEP DIVE &mdash; FLAGSHIP FEATURE</div>
                     <div class="section-heading" style="margin-bottom: 0;">
                         <div class="section-heading__line"></div>
-                        <h2 class="section-heading__text" id="section-resume-parser" style="text-transform: uppercase;">AI RESUME PARSER: HIGH-STAKES AUTOMATION WITH HUMAN CONTROL</h2>
+                        <h2 class="section-heading__text" id="section-resume-parser" style="text-transform: uppercase;">
+                            AI RESUME PARSER: HIGH-STAKES AUTOMATION WITH HUMAN CONTROL</h2>
                         <div class="section-heading__line"></div>
                     </div>
                 </div>
 
                 <div class="case-section__content" style="max-width: 100%; margin-bottom: var(--space-xl);">
                     <div style="margin-bottom: var(--space-xl);">
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem;">
-                            <strong>The ask:</strong> Build an AI-powered system that screens resumes, extracts candidate data, matches qualifications to job requirements, and routes qualified candidates into assessment workflows &mdash; reducing time-to-hire for companies processing hundreds of applications.
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem;">
+                            <strong>The ask:</strong> Build an AI-powered system that screens resumes, extracts
+                            candidate data, matches qualifications to job requirements, and routes qualified candidates
+                            into assessment workflows &mdash; reducing time-to-hire for companies processing hundreds of
+                            applications.
                         </p>
                         <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin: 0;">
-                            <strong>The risk:</strong> AI making consequential hiring decisions without employer oversight could eject qualified candidates, introduce bias, and erode platform trust &mdash; with no way to recover.
+                            <strong>The risk:</strong> AI making consequential hiring decisions without employer
+                            oversight could eject qualified candidates, introduce bias, and erode platform trust &mdash;
+                            with no way to recover.
                         </p>
                     </div>
 
-                    <div class="card-label" style="text-transform: uppercase; margin-bottom: 1.5rem; text-align: center;">Three approaches &mdash; one decision</div>
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: var(--space-xl);" class="options-grid">
+                    <div class="card-label"
+                        style="text-transform: uppercase; margin-bottom: 1.5rem; text-align: center;">Three approaches
+                        &mdash; one decision</div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: var(--space-xl);"
+                        class="options-grid">
                         <div class="contribution-card" style="margin: 0; opacity: 0.65;">
-                            <div style="text-transform: uppercase; color: #ef4444; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">&#10005; REJECTED</div>
-                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Fully Automatic</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">AI screens all resumes and auto-advances candidates. Fast &mdash; but removes employer control entirely. Too risky for decisions that affect people's careers.</p>
+                            <div
+                                style="text-transform: uppercase; color: #ef4444; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                                &#10005; REJECTED</div>
+                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Fully
+                                Automatic</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">AI
+                                screens all resumes and auto-advances candidates. Fast &mdash; but removes employer
+                                control entirely. Too risky for decisions that affect people's careers.</p>
                         </div>
                         <div class="contribution-card" style="margin: 0; opacity: 0.65;">
-                            <div style="text-transform: uppercase; color: #ef4444; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">&#10005; REJECTED</div>
-                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Manual Review Required</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">AI extracts data; employers review every candidate before advancing. Safe &mdash; but defeats the purpose of automation. Doesn't reduce time-to-hire at scale.</p>
+                            <div
+                                style="text-transform: uppercase; color: #ef4444; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                                &#10005; REJECTED</div>
+                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                Manual Review Required</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">AI
+                                extracts data; employers review every candidate before advancing. Safe &mdash; but
+                                defeats the purpose of automation. Doesn't reduce time-to-hire at scale.</p>
                         </div>
                         <div class="contribution-card" style="margin: 0; border-left: 3px solid #3b82f6;">
-                            <div style="text-transform: uppercase; color: #3b82f6; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">&#10003; CHOSEN</div>
-                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">AI-Assisted with Guardrails</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">AI parses and scores resumes; employers set configurable thresholds and can review or override any decision. AI does the heavy lifting. Humans retain final authority.</p>
+                            <div
+                                style="text-transform: uppercase; color: #3b82f6; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                                &#10003; CHOSEN</div>
+                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                AI-Assisted with Guardrails</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">AI
+                                parses and scores resumes; employers set configurable thresholds and can review or
+                                override any decision. AI does the heavy lifting. Humans retain final authority.</p>
                         </div>
                     </div>
                     <style>
@@ -682,141 +858,251 @@
                         }
                     </style>
 
-                    <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-xl);">The complete flow &mdash; 6 decision points</div>
-                    
+                    <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-xl);">The
+                        complete flow &mdash; 6 decision points</div>
+
                     <div style="padding-left: 1rem; position: relative;">
                         <!-- Vertical connection line -->
-                        <div style="position: absolute; left: 31px; top: 16px; bottom: 16px; width: 2px; background: rgba(59, 130, 246, 0.2); z-index: 0;"></div>
+                        <div
+                            style="position: absolute; left: 31px; top: 16px; bottom: 16px; width: 2px; background: rgba(59, 130, 246, 0.2); z-index: 0;">
+                        </div>
 
                         <!-- Step 1 -->
                         <div style="position: relative; display: flex; gap: 2rem; margin-bottom: 2.5rem; z-index: 1;">
-                            <div style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; position: relative; z-index: 1;">1</div>
+                            <div
+                                style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; position: relative; z-index: 1;">
+                                1</div>
                             <div style="padding-top: 4px;">
-                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">ATS Integration</h4>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">Connect to 100+ ATS platforms (Greenhouse, Lever, Workable). Designed contextual empty states for each prerequisite blocker &mdash; ATS not connected, no jobs available, no candidates synced, job not configured &mdash; making each blocker actionable, not just an error.</p>
+                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">ATS
+                                    Integration</h4>
+                                <p
+                                    style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                                    Connect to 100+ ATS platforms (Greenhouse, Lever, Workable). Designed contextual
+                                    empty states for each prerequisite blocker &mdash; ATS not connected, no jobs
+                                    available, no candidates synced, job not configured &mdash; making each blocker
+                                    actionable, not just an error.</p>
                             </div>
                         </div>
 
                         <!-- Step 2 -->
                         <div style="position: relative; display: flex; gap: 2rem; margin-bottom: 2.5rem; z-index: 1;">
-                            <div style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; position: relative; z-index: 1;">2</div>
+                            <div
+                                style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; position: relative; z-index: 1;">
+                                2</div>
                             <div style="padding-top: 4px;">
-                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Job Stage Selection</h4>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">Dynamic dropdown populated from the connected ATS's actual stage names &mdash; eliminating guessing across different ATS naming conventions. Required complex backend integration, but eliminated an entire class of user confusion.</p>
+                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Job
+                                    Stage Selection</h4>
+                                <p
+                                    style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                                    Dynamic dropdown populated from the connected ATS's actual stage names &mdash;
+                                    eliminating guessing across different ATS naming conventions. Required complex
+                                    backend integration, but eliminated an entire class of user confusion.</p>
                             </div>
                         </div>
 
                         <!-- Step 3 -->
                         <div style="position: relative; display: flex; gap: 2rem; margin-bottom: 2.5rem; z-index: 1;">
-                            <div style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; position: relative; z-index: 1;">3</div>
+                            <div
+                                style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; position: relative; z-index: 1;">
+                                3</div>
                             <div style="padding-top: 4px;">
-                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Screening Rules</h4>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">AI suggests relevant criteria based on role; employers can add custom requirements or override defaults. The AI assists. The employer decides what matters for their specific hire.</p>
+                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                    Screening Rules</h4>
+                                <p
+                                    style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                                    AI suggests relevant criteria based on role; employers can add custom requirements
+                                    or override defaults. The AI assists. The employer decides what matters for their
+                                    specific hire.</p>
                             </div>
                         </div>
 
                         <!-- Step 4 -->
                         <div style="position: relative; display: flex; gap: 2rem; margin-bottom: 2.5rem; z-index: 1;">
-                            <div style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; position: relative; z-index: 1;">4</div>
+                            <div
+                                style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; position: relative; z-index: 1;">
+                                4</div>
                             <div style="padding-top: 4px;">
-                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Threshold Configuration</h4>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">Slider with snap points at 50%, 70%, 90%. Colour-coded zones &mdash; red &lt;50%, yellow 50&ndash;70%, green &gt;70%. <strong>Trade-off:</strong> Simplified continuous AI scores into discrete buckets. Accepted because employers needed clear decision points, not statistical precision.</p>
+                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                    Threshold Configuration</h4>
+                                <p
+                                    style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                                    Slider with snap points at 50%, 70%, 90%. Colour-coded zones &mdash; red &lt;50%,
+                                    yellow 50&ndash;70%, green &gt;70%. <strong>Trade-off:</strong> Simplified
+                                    continuous AI scores into discrete buckets. Accepted because employers needed clear
+                                    decision points, not statistical precision.</p>
                             </div>
                         </div>
 
                         <!-- Step 5 -->
                         <div style="position: relative; display: flex; gap: 2rem; margin-bottom: 2.5rem; z-index: 1;">
-                            <div style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; position: relative; z-index: 1;">5</div>
+                            <div
+                                style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; position: relative; z-index: 1;">
+                                5</div>
                             <div style="padding-top: 4px;">
-                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Batch Processing</h4>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">Processes up to 500 resumes per run. Auto-advance toggle is <em>opt-in and off by default</em> &mdash; when disabled, all candidates queue for review. Added configuration complexity to give employers the control that high-stakes decisions demand.</p>
+                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                    Batch Processing</h4>
+                                <p
+                                    style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                                    Processes up to 500 resumes per run. Auto-advance toggle is <em>opt-in and off by
+                                        default</em> &mdash; when disabled, all candidates queue for review. Added
+                                    configuration complexity to give employers the control that high-stakes decisions
+                                    demand.</p>
                             </div>
                         </div>
 
                         <!-- Step 6 -->
                         <div style="position: relative; display: flex; gap: 2rem; z-index: 1;">
-                            <div style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; position: relative; z-index: 1;">6</div>
+                            <div
+                                style="width: 32px; height: 32px; background: #3b82f6; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; position: relative; z-index: 1;">
+                                6</div>
                             <div style="padding-top: 4px;">
-                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">Review &amp; Override</h4>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">Two rejection paths: Auto-reject (removes from ATS) or Keep for manual review. <strong>Critical guardrail:</strong> Auto-reject carries a persistent, unmissable warning &mdash; &ldquo;Auto-rejected candidates cannot be recovered.&rdquo; Desired by high-volume recruiters; required an irreversibility signal to prevent bulk rejections made under time pressure.</p>
+                                <h4 style="color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                    Review &amp; Override</h4>
+                                <p
+                                    style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0;">
+                                    Two rejection paths: Auto-reject (removes from ATS) or Keep for manual review.
+                                    <strong>Critical guardrail:</strong> Auto-reject carries a persistent, unmissable
+                                    warning &mdash; &ldquo;Auto-rejected candidates cannot be recovered.&rdquo; Desired
+                                    by high-volume recruiters; required an irreversibility signal to prevent bulk
+                                    rejections made under time pressure.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div style="border-left: 4px solid #FEF3C7; background: rgba(254, 243, 199, 0.05); padding: 20px 24px; border-radius: 0 8px 8px 0; margin-top: var(--space-xl); margin-bottom: 0;">
-                        <strong style="color: #FEF3C7;">Honest Outcome:</strong> Feature went live during my tenure but had implementation gaps. I identified 15+ issues (edge cases, validation logic, error handling), created a resolution roadmap with design solutions, and handed off to development. This was my biggest, most complex feature &mdash; demonstrating founders&rsquo; trust in strategic work.
+                    <div
+                        style="border-left: 4px solid #FEF3C7; background: rgba(254, 243, 199, 0.05); padding: 20px 24px; border-radius: 0 8px 8px 0; margin-top: var(--space-xl); margin-bottom: 0;">
+                        <strong style="color: #FEF3C7;">Honest Outcome:</strong> Feature went live during my tenure but
+                        had implementation gaps. I identified 15+ issues (edge cases, validation logic, error handling),
+                        created a resolution roadmap with design solutions, and handed off to development. This was my
+                        biggest, most complex feature &mdash; demonstrating founders&rsquo; trust in strategic work.
                     </div>
                 </div>
             </section>
 
             <!-- ── DEEP DIVE: REPORTING SYSTEM ── -->
             <section class="lifecycle-section reveal" aria-labelledby="section-reporting">
-                <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">DEEP DIVE &mdash; REPORTING SYSTEM</div>
+                <div
+                    style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                    DEEP DIVE &mdash; REPORTING SYSTEM</div>
                 <h2 class="case-section__title" id="section-reporting">PSYCHOMETRIC REPORTS AS A PRODUCT DECISION</h2>
 
                 <div class="case-section__content" style="max-width: 100%; margin-bottom: var(--space-xl);">
                     <div style="margin-bottom: var(--space-xl);">
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem;">
-                            The problem wasn't just visual inconsistency. The reports weren't functioning as a product &mdash; they were an output with no strategic position in the hiring workflow.
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem;">
+                            The problem wasn't just visual inconsistency. The reports weren't functioning as a product
+                            &mdash; they were an output with no strategic position in the hiring workflow.
                         </p>
                         <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin: 0;">
-                            I identified that enterprise HR teams needed documents credible with senior leadership &mdash; not just technically accurate. The design question: how do you translate raw psychometric data into something a Chief People Officer trusts on sight?
+                            I identified that enterprise HR teams needed documents credible with senior leadership
+                            &mdash; not just technically accurate. The design question: how do you translate raw
+                            psychometric data into something a Chief People Officer trusts on sight?
                         </p>
                     </div>
 
-                    <div class="card-label" style="text-transform: uppercase; margin-bottom: 1.5rem;">Three approaches &mdash; one decision</div>
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: var(--space-xl);" class="options-grid">
+                    <div class="card-label" style="text-transform: uppercase; margin-bottom: 1.5rem;">Three approaches
+                        &mdash; one decision</div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: var(--space-xl);"
+                        class="options-grid">
                         <div class="contribution-card" style="margin: 0; opacity: 0.65;">
-                            <div style="text-transform: uppercase; color: #ef4444; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">&#10005; REJECTED</div>
-                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Basic Template Redesign</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">Clean up existing reports; keep separate PDFs. Quick fix, but doesn't solve fragmentation or the underlying structural issues.</p>
+                            <div
+                                style="text-transform: uppercase; color: #ef4444; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                                &#10005; REJECTED</div>
+                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Basic
+                                Template Redesign</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">
+                                Clean up existing reports; keep separate PDFs. Quick fix, but doesn't solve
+                                fragmentation or the underlying structural issues.</p>
                         </div>
                         <div class="contribution-card" style="margin: 0; opacity: 0.65;">
-                            <div style="text-transform: uppercase; color: #ef4444; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">&#10005; REJECTED</div>
-                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Unified Report Builder</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">Let employers customise sections and layouts. Over-engineered for most users &mdash; configuration overhead defeats the purpose.</p>
+                            <div
+                                style="text-transform: uppercase; color: #ef4444; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                                &#10005; REJECTED</div>
+                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                Unified Report Builder</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">
+                                Let employers customise sections and layouts. Over-engineered for most users &mdash;
+                                configuration overhead defeats the purpose.</p>
                         </div>
                         <div class="contribution-card" style="margin: 0; border-left: 3px solid #3b82f6;">
-                            <div style="text-transform: uppercase; color: #3b82f6; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">&#10003; CHOSEN</div>
-                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Curated Report System</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">Design new reports from scratch where needed; fix and improve existing ones; build smart export. Professional output through structure &mdash; no configuration overhead.</p>
+                            <div
+                                style="text-transform: uppercase; color: #3b82f6; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                                &#10003; CHOSEN</div>
+                            <h4 style="color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">
+                                Curated Report System</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">
+                                Design new reports from scratch where needed; fix and improve existing ones; build smart
+                                export. Professional output through structure &mdash; no configuration overhead.</p>
                         </div>
                     </div>
 
-                    <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-sm);">What I designed</div>
-                    <div style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px;">
+                    <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-sm);">What I
+                        designed</div>
+                    <div
+                        style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px;">
                         <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
                             <thead>
-                                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
-                                    <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 200px;">Deliverable</th>
+                                <tr
+                                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
+                                    <th
+                                        style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 200px;">
+                                        Deliverable</th>
                                     <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600;">My decision</th>
                                     <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600;">Outcome</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                    <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">3 new reports from scratch</td>
-                                    <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Sales Profiler, PicOcean Personality &amp; Cultural Fit, 360-Degree Feedback &mdash; structured from raw data models, defining information hierarchy before any visual design</td>
-                                    <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Complex psychometric outputs became readable for non-specialist HR leadership</td>
+                                    <td
+                                        style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                        3 new reports from scratch</td>
+                                    <td
+                                        style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                        Sales Profiler, PicOcean Personality &amp; Cultural Fit, 360-Degree Feedback
+                                        &mdash; structured from raw data models, defining information hierarchy before
+                                        any visual design</td>
+                                    <td
+                                        style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                        Complex psychometric outputs became readable for non-specialist HR leadership
+                                    </td>
                                 </tr>
                                 <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                    <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">7 report improvements</td>
-                                    <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Identified structural and hierarchy issues &mdash; not just visual ones &mdash; in Big Five, 16 PF, Leadership Assessment, SMART Personality, DISC Personality, Enneagram, and Motivational Traits reports</td>
-                                    <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Unified visual language and data structure across all 10 psychometric reports</td>
+                                    <td
+                                        style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                        7 report improvements</td>
+                                    <td
+                                        style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                        Identified structural and hierarchy issues &mdash; not just visual ones &mdash;
+                                        in Big Five, 16 PF, Leadership Assessment, SMART Personality, DISC Personality,
+                                        Enneagram, and Motivational Traits reports</td>
+                                    <td
+                                        style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                        Unified visual language and data structure across all 10 psychometric reports
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">ZIP export architecture</td>
-                                    <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">One-click bulk download with smart naming (candidate name + test type) and intelligent bundling &mdash; only completed tests included</td>
-                                    <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Replaced 5&ndash;10 separate manual downloads with a single export action</td>
+                                    <td
+                                        style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                        ZIP export architecture</td>
+                                    <td
+                                        style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                        One-click bulk download with smart naming (candidate name + test type) and
+                                        intelligent bundling &mdash; only completed tests included</td>
+                                    <td
+                                        style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                        Replaced 5&ndash;10 separate manual downloads with a single export action</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    
+
                     <div style="display: flex; justify-content: center; margin-top: var(--space-lg);">
-                        <button onclick="downloadAllReports(this)" class="site-footer__link" style="border: none; font-family: var(--font-family-heading); cursor: pointer;">
+                        <button onclick="downloadAllReports(this)" class="site-footer__link"
+                            style="border: none; font-family: var(--font-family-heading); cursor: pointer; padding: 0.8rem 1.75rem; font-size: 0.9rem;">
                             Download all PDFs
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" style="margin-left: 8px;" aria-hidden="true">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                                 <polyline points="7 10 12 15 17 10"></polyline>
                                 <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -828,33 +1114,69 @@
 
             <!-- ── BEYOND THE FLAGSHIP FEATURES ── -->
             <section class="case-section reveal" aria-labelledby="section-other">
-                <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">OTHER KEY CONTRIBUTIONS</div>
+                <div
+                    style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                    OTHER KEY CONTRIBUTIONS</div>
                 <h2 class="case-section__title" id="section-other">BEYOND THE FLAGSHIP FEATURES</h2>
-                
-                <div style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px;">
+
+                <div
+                    style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px;">
                     <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
                         <thead>
-                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
-                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 200px;">Contribution</th>
-                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600;">Problem solved &amp; decision made</th>
+                            <tr
+                                style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
+                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 200px;">
+                                    Contribution</th>
+                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600;">Problem solved &amp;
+                                    decision made</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Decision visibility in test libraries</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">When employers browse 3,000+ pre-created tests, they lacked clarity on structure before adding to assessments. Designed an expandable preview showing question types, time estimates, and difficulty levels &mdash; reducing the &ldquo;wrong test added&rdquo; support ticket category</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Decision visibility in test libraries</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    When employers browse 3,000+ pre-created tests, they lacked clarity on structure
+                                    before adding to assessments. Designed an expandable preview showing question types,
+                                    time estimates, and difficulty levels &mdash; reducing the &ldquo;wrong test
+                                    added&rdquo; support ticket category</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Enterprise infrastructure design</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Designed configuration interfaces for SAML SSO, usage-based billing dashboards, custom email domain setup, and admin role management &mdash; making complex technical features accessible to non-technical HR teams without oversimplifying enterprise controls</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Enterprise infrastructure design</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Designed configuration interfaces for SAML SSO, usage-based billing dashboards,
+                                    custom email domain setup, and admin role management &mdash; making complex
+                                    technical features accessible to non-technical HR teams without oversimplifying
+                                    enterprise controls</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Monetisation-aware design thinking</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Positioned the &ldquo;Request New Integration&rdquo; button top-right in the Resume Parser &mdash; a deliberate placement decision based on visibility and business intent. When the decision was questioned internally, the founder stepped in to defend it: integration requests were a monetisation lever, so placement directly affected revenue. This was the clearest signal that design decisions on this platform had business model consequences &mdash; and that I was thinking at that level</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Monetisation-aware design thinking</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Positioned the &ldquo;Request New Integration&rdquo; button top-right in the Resume
+                                    Parser &mdash; a deliberate placement decision based on visibility and business
+                                    intent. When the decision was questioned internally, the founder stepped in to
+                                    defend it: integration requests were a monetisation lever, so placement directly
+                                    affected revenue. This was the clearest signal that design decisions on this
+                                    platform had business model consequences &mdash; and that I was thinking at that
+                                    level</td>
                             </tr>
                             <tr>
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Cross-platform quality validation</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Enforced design consistency across Employer Portal, Candidate Portal, and mobile experiences &mdash; caught platform-specific issues (e.g. video recording failures on iOS Safari) and blocked releases until resolved, before any user exposure</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Cross-platform quality validation</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Enforced design consistency across Employer Portal, Candidate Portal, and mobile
+                                    experiences &mdash; caught platform-specific issues (e.g. video recording failures
+                                    on iOS Safari) and blocked releases until resolved, before any user exposure</td>
                             </tr>
                         </tbody>
                     </table>
@@ -863,83 +1185,167 @@
 
             <!-- ── PATTERN MAINTENANCE ACROSS 505 TICKETS ── -->
             <section class="case-section reveal" aria-labelledby="section-scale">
-                <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">DESIGN SYSTEM</div>
+                <div
+                    style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                    DESIGN SYSTEM</div>
                 <h2 class="case-section__title" id="section-scale">PATTERN MAINTENANCE ACROSS 505 TICKETS</h2>
-                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">Shipping 505 tickets without pattern governance is how inconsistency compounds. As the platform expanded across surfaces, I maintained system coherence across:</p>
-                
-                <div style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; margin-bottom: var(--space-xl);">
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">Shipping 505 tickets without
+                    pattern governance is how inconsistency compounds. As the platform expanded across surfaces, I
+                    maintained system coherence across:</p>
+
+                <div
+                    style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; margin-bottom: var(--space-xl);">
                     <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
                         <thead>
-                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
-                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 200px;">Pattern category</th>
-                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600;">What I maintained</th>
+                            <tr
+                                style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
+                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 200px;">
+                                    Pattern category</th>
+                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600;">What I maintained
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Status &amp; feedback</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Consistent colour coding and iconography across status indicators on employer and candidate surfaces</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Status &amp; feedback</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Consistent colour coding and iconography across status indicators on employer and
+                                    candidate surfaces</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Empty states</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Contextual messaging with clear CTAs &mdash; every empty state actionable, not decorative</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Empty states</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Contextual messaging with clear CTAs &mdash; every empty state actionable, not
+                                    decorative</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Error handling</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">User-friendly messages with explicit recovery paths &mdash; no dead ends in any flow</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Error handling</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    User-friendly messages with explicit recovery paths &mdash; no dead ends in any flow
+                                </td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Form validation</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Inline errors and success states consistent across multi-step workflows</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Form validation</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Inline errors and success states consistent across multi-step workflows</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Loading states</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Skeletons, spinners, and progress indicators matched to interaction weight</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Loading states</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Skeletons, spinners, and progress indicators matched to interaction weight</td>
                             </tr>
                             <tr>
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Cross-surface consistency</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Patterns enforced across Employer Portal (complex multi-step), Candidate Portal (simple guided flows), mobile apps (touch-first, reduced density), and white-label configurations (theme flexibility without pattern deviation)</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Cross-surface consistency</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Patterns enforced across Employer Portal (complex multi-step), Candidate Portal
+                                    (simple guided flows), mobile apps (touch-first, reduced density), and white-label
+                                    configurations (theme flexibility without pattern deviation)</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
             </section>
-            
+
             <!-- ── HOW I STRUCTURED QUALITY UNDER VELOCITY ── -->
             <section class="case-section reveal" aria-labelledby="section-quality-structure">
-                <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">OPERATING AT SCALE</div>
-                <h2 class="case-section__title" id="section-quality-structure">HOW I STRUCTURED QUALITY UNDER VELOCITY</h2>
-                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">505 tickets across 1.7 years isn&rsquo;t a volume metric &mdash; it&rsquo;s a systems problem. Quality degrades at that cadence unless you build infrastructure around the work itself.</p>
-                
-                <div style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px;">
+                <div
+                    style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                    OPERATING AT SCALE</div>
+                <h2 class="case-section__title" id="section-quality-structure">HOW I STRUCTURED QUALITY UNDER VELOCITY
+                </h2>
+                <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">505 tickets across 1.7 years
+                    isn&rsquo;t a volume metric &mdash; it&rsquo;s a systems problem. Quality degrades at that cadence
+                    unless you build infrastructure around the work itself.</p>
+
+                <div
+                    style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px;">
                     <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
                         <thead>
-                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
-                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 200px;">CHALLENGE</th>
-                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600;">HOW I RESOLVED IT</th>
+                            <tr
+                                style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
+                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 200px;">
+                                    CHALLENGE</th>
+                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600;">HOW I RESOLVED IT
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Unstructured Slack requests</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Built Slack-to-Jira triage pipeline: assess feasibility &rarr; scope ticket &rarr; design &rarr; founder validation &rarr; dev QA &rarr; stakeholder update. When requests were rejected due to technical constraints or business priorities, I communicated that clearly &mdash; not with silence</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Unstructured Slack requests</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Built Slack-to-Jira triage pipeline: assess feasibility &rarr; scope ticket &rarr;
+                                    design &rarr; founder validation &rarr; dev QA &rarr; stakeholder update. When
+                                    requests were rejected due to technical constraints or business priorities, I
+                                    communicated that clearly &mdash; not with silence</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">No senior design reviewer</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Used AI for logic stress-testing and edge-case simulation; collaborated with developers to validate technical feasibility before committing to solutions. Self-reviewed at system level, not just screen level</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    No senior design reviewer</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Used AI for logic stress-testing and edge-case simulation; collaborated with
+                                    developers to validate technical feasibility before committing to solutions.
+                                    Self-reviewed at system level, not just screen level</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Cross-platform regressions</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">UAT protocol across 4 pre-production environments, 5 browsers (Chrome, Safari, Edge, Firefox, Brave), iOS, Android, and web &mdash; proactively reported 498 issues before user impact</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Cross-platform regressions</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    UAT protocol across 4 pre-production environments, 5 browsers (Chrome, Safari, Edge,
+                                    Firefox, Brave), iOS, Android, and web &mdash; proactively reported 498 issues
+                                    before user impact</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Junior designer consistency</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Mentored 2 junior designers through complex flow reviews and system-wide consistency enforcement; built shared pattern documentation and introduced the Bugs / Improvements / Ideas epic structure as a framework they adopted for managing their own work</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Junior designer consistency</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Mentored 2 junior designers through complex flow reviews and system-wide consistency
+                                    enforcement; built shared pattern documentation and introduced the Bugs /
+                                    Improvements / Ideas epic structure as a framework they adopted for managing their
+                                    own work</td>
                             </tr>
                             <tr>
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Self-created work organisation system</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">With no categorisation structure in place, I created a three-epic system in Jira &mdash; Bugs (issues found during UAT), Improvements (enhancements to existing flows with proposed solutions), and Ideas (proactive product suggestions beyond the immediate brief). One idea from the Ideas epic &mdash; showing Expected vs. Candidate Response on the employer&rsquo;s candidate detail page per question type, making it faster to assess large candidate volumes &mdash; was proposed with clear reasoning, approved by the founder, and shipped to the platform. The Bugs / Improvements / Ideas structure was later adopted by the two junior designers I mentored as their own framework for managing work under velocity</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Self-created work organisation system</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    With no categorisation structure in place, I created a three-epic system in Jira
+                                    &mdash; Bugs (issues found during UAT), Improvements (enhancements to existing flows
+                                    with proposed solutions), and Ideas (proactive product suggestions beyond the
+                                    immediate brief). One idea from the Ideas epic &mdash; showing Expected vs.
+                                    Candidate Response on the employer&rsquo;s candidate detail page per question type,
+                                    making it faster to assess large candidate volumes &mdash; was proposed with clear
+                                    reasoning, approved by the founder, and shipped to the platform. The Bugs /
+                                    Improvements / Ideas structure was later adopted by the two junior designers I
+                                    mentored as their own framework for managing work under velocity</td>
                             </tr>
                         </tbody>
                     </table>
@@ -950,7 +1356,9 @@
 
             <!-- ── PARALLEL WORK ── -->
             <section class="case-section reveal" aria-labelledby="section-parallel">
-                <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">PARALLEL WORK</div>
+                <div
+                    style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                    PARALLEL WORK</div>
                 <h2 class="case-section__title" id="section-parallel">SIMULTANEOUS DELIVERY ACROSS FOUR PRODUCTS</h2>
                 <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">While leading Testlify&rsquo;s
                     major feature decisions, I delivered UI work across three additional products &mdash;
@@ -963,7 +1371,8 @@
                     }
                 </style>
                 <div class="parallel-projects-grid" style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
-                    <a href="https://metanotes.ai/" target="_blank" rel="noopener noreferrer" class="contribution-card contribution-card--link" style="margin: 0;">
+                    <a href="https://metanotes.ai/" target="_blank" rel="noopener noreferrer"
+                        class="contribution-card contribution-card--link" style="margin: 0;">
                         <div class="card-label">METANOTES &mdash; AI Notetaker</div>
                         <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: var(--space-sm);">
                             <strong>Role:</strong> UI Designer (Solo) &middot; WordPress
@@ -973,7 +1382,8 @@
                             Built marketing website from scratch for an AI notetaker product. Researched competitors,
                             designed homepage, features, and pricing pages, handed off to dev.</p>
                     </a>
-                    <a href="https://dymon.ca/" target="_blank" rel="noopener noreferrer" class="contribution-card contribution-card--link" style="margin: 0;">
+                    <a href="https://dymon.ca/" target="_blank" rel="noopener noreferrer"
+                        class="contribution-card contribution-card--link" style="margin: 0;">
                         <div class="card-label">DYMON &mdash; Storage &amp; Moving</div>
                         <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: var(--space-sm);">
                             <strong>Role:</strong> UI Designer &middot; Web
@@ -983,7 +1393,8 @@
                             Created new pages using existing styling and component library. Maintained brand consistency
                             within a pre-defined design system. Pure UI execution within constraints.</p>
                     </a>
-                    <a href="https://appforest.io/" target="_blank" rel="noopener noreferrer" class="contribution-card contribution-card--link" style="margin: 0;">
+                    <a href="https://appforest.io/" target="_blank" rel="noopener noreferrer"
+                        class="contribution-card contribution-card--link" style="margin: 0;">
                         <div class="card-label">APPFOREST &mdash; Jira Time Tracking</div>
                         <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: var(--space-sm);">
                             <strong>Role:</strong> UI Designer &middot; Jira Marketplace App
@@ -994,7 +1405,8 @@
                             live on the Jira marketplace. Matched Jira design system requirements; similar to Tempo
                             Timesheets.</p>
                     </a>
-                    <a href="https://testlify.com/" target="_blank" rel="noopener noreferrer" class="contribution-card contribution-card--link" style="margin: 0;">
+                    <a href="https://testlify.com/" target="_blank" rel="noopener noreferrer"
+                        class="contribution-card contribution-card--link" style="margin: 0;">
                         <div class="card-label">TESTLIFY &mdash; Marketing Website</div>
                         <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: var(--space-sm);">
                             <strong>Role:</strong> UI Designer &middot; Web
@@ -1010,81 +1422,149 @@
 
             <!-- ── IMPACT ── -->
             <section class="case-section reveal" aria-labelledby="section-impact">
-                <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">IMPACT</div>
+                <div
+                    style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                    IMPACT</div>
                 <h2 class="case-section__title" id="section-impact">OUTCOMES I CAN PERSONALLY CLAIM</h2>
-                
+
                 <!-- Delivery Sub-section -->
-                <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-md);">Delivery</div>
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: var(--space-xl);" class="impact-grid-4">
+                <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-md);">Delivery
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: var(--space-xl);"
+                    class="impact-grid-4">
                     <div class="contribution-card" style="margin: 0; text-align: left; padding: 2rem;">
-                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 8px; line-height: 1;">505</div>
-                        <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">Jira tickets delivered across 1.7 years of Agile sprints</p>
+                        <div
+                            style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 8px; line-height: 1;">
+                            505</div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">Jira
+                            tickets delivered across 1.7 years of Agile sprints</p>
                     </div>
                     <div class="contribution-card" style="margin: 0; text-align: left; padding: 2rem;">
-                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 8px; line-height: 1;">111</div>
-                        <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">Features shipped to production across 3 core surfaces</p>
+                        <div
+                            style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 8px; line-height: 1;">
+                            111</div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">
+                            Features shipped to production across 3 core surfaces</p>
                     </div>
                     <div class="contribution-card" style="margin: 0; text-align: left; padding: 2rem;">
-                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 8px; line-height: 1;">10</div>
-                        <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">Enterprise psychometric reports &mdash; 3 from scratch, 7 improved</p>
+                        <div
+                            style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 8px; line-height: 1;">
+                            10</div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">
+                            Enterprise psychometric reports &mdash; 3 from scratch, 7 improved</p>
                     </div>
                     <div class="contribution-card" style="margin: 0; text-align: left; padding: 2rem;">
-                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 8px; line-height: 1;">498</div>
-                        <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">Issues proactively surfaced before reaching users</p>
+                        <div
+                            style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 8px; line-height: 1;">
+                            498</div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin: 0;">Issues
+                            proactively surfaced before reaching users</p>
                     </div>
                 </div>
 
                 <!-- Efficiency & adoption signals Sub-section -->
-                <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-md);">Efficiency &amp; adoption signals</div>
-                <div style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; margin-bottom: var(--space-xl);">
+                <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-md);">Efficiency
+                    &amp; adoption signals</div>
+                <div
+                    style="width: 100%; overflow-x: auto; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; margin-bottom: var(--space-xl);">
                     <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
                         <thead>
-                            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
-                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 150px;">Signal type</th>
+                            <tr
+                                style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.03);">
+                                <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600; min-width: 150px;">
+                                    Signal type</th>
                                 <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600;">What changed</th>
                                 <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 600;">Evidence</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Process efficiency</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Candidate report collection reduced from 5&ndash;10 separate manual PDF downloads to a single ZIP export per candidate</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Designed the one-click ZIP export architecture with smart naming and intelligent bundling &mdash; only completed tests included</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Process efficiency</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Candidate report collection reduced from 5&ndash;10 separate manual PDF downloads to
+                                    a single ZIP export per candidate</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Designed the one-click ZIP export architecture with smart naming and intelligent
+                                    bundling &mdash; only completed tests included</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Scale of automation</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">AI Resume Parser capable of processing up to 500 resumes per run &mdash; replacing a manual review queue of equivalent volume</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Configurable batch processing with opt-in auto-advance and per-candidate override built into the flow</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Scale of automation</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    AI Resume Parser capable of processing up to 500 resumes per run &mdash; replacing a
+                                    manual review queue of equivalent volume</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Configurable batch processing with opt-in auto-advance and per-candidate override
+                                    built into the flow</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Support load reduction</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Test library preview targeted the &ldquo;wrong test added&rdquo; support ticket category &mdash; reducing avoidable employer errors at the point of assessment creation</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Designed expandable preview showing question types, time estimates, and difficulty levels before a test is added</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Support load reduction</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Test library preview targeted the &ldquo;wrong test added&rdquo; support ticket
+                                    category &mdash; reducing avoidable employer errors at the point of assessment
+                                    creation</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Designed expandable preview showing question types, time estimates, and difficulty
+                                    levels before a test is added</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Enterprise readiness</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">SAML SSO, custom email domains, and admin role management moved complex technical onboarding from support-assisted to self-serve for enterprise HR teams</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">Configuration interfaces designed specifically for non-technical HR administrators</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Enterprise readiness</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    SAML SSO, custom email domains, and admin role management moved complex technical
+                                    onboarding from support-assisted to self-serve for enterprise HR teams</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    Configuration interfaces designed specifically for non-technical HR administrators
+                                </td>
                             </tr>
                             <tr>
-                                <td style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">Quality cost avoidance</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">498 issues caught before production &mdash; each one a prevented support ticket, bug report, or user-facing failure</td>
-                                <td style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">UAT protocol across 4 environments, 5 browsers, 4 platforms run proactively on every release</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 500; vertical-align: top;">
+                                    Quality cost avoidance</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    498 issues caught before production &mdash; each one a prevented support ticket, bug
+                                    report, or user-facing failure</td>
+                                <td
+                                    style="padding: 1.25rem 1.5rem; color: var(--text-secondary); line-height: 1.6; vertical-align: top;">
+                                    UAT protocol across 4 environments, 5 browsers, 4 platforms run proactively on every
+                                    release</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div style="border-left: 4px solid #FEF3C7; background: rgba(254, 243, 199, 0.05); padding: 20px 24px; border-radius: 0 8px 8px 0;">
-                    <strong style="color: #FEF3C7;">A note on metrics:</strong> Platform-wide figures like the 80% candidate completion rate reflect the entire Testlify team&rsquo;s effort &mdash; not any single feature or person. I&rsquo;ve chosen not to claim them as personal impact. The efficiency signals above are scoped specifically to features and systems I designed and owned.
+                <div
+                    style="border-left: 4px solid #FEF3C7; background: rgba(254, 243, 199, 0.05); padding: 20px 24px; border-radius: 0 8px 8px 0;">
+                    <strong style="color: #FEF3C7;">A note on metrics:</strong> Platform-wide figures like the 80%
+                    candidate completion rate reflect the entire Testlify team&rsquo;s effort &mdash; not any single
+                    feature or person. I&rsquo;ve chosen not to claim them as personal impact. The efficiency signals
+                    above are scoped specifically to features and systems I designed and owned.
                 </div>
             </section>
 
             <!-- ── STRATEGIC INFLUENCE & WHAT I LEARNED ── -->
             <section class="case-section reveal" aria-labelledby="section-learned">
-                <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">BEYOND INTERFACES</div>
+                <div
+                    style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                    BEYOND INTERFACES</div>
                 <h2 class="case-section__title" id="section-learned">STRATEGIC INFLUENCE &amp; WHAT I LEARNED</h2>
-                <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-md);">How I Shaped Product Direction</div>
+                <div class="card-label" style="text-transform: uppercase; margin-bottom: var(--space-md);">How I Shaped
+                    Product Direction</div>
                 <div class="t-grid" style="margin-bottom: var(--space-xl);">
                     <div class="t-row">
                         <div class="t-col-1">Monetisation Thinking</div>
@@ -1115,14 +1595,16 @@
                         <div class="t-col-2"><strong>Reality:</strong> I accepted ambiguous requirements and figured
                             things out myself. <br><strong>Impact:</strong> Some features solved wrong problems. Library
                             preview addressed &ldquo;choice paralysis&rdquo; when real issue was &ldquo;unclear test
-                            quality indicators.&rdquo; <br><strong>Learning:</strong> In next role, I&rsquo;ll advocate for
+                            quality indicators.&rdquo; <br><strong>Learning:</strong> In next role, I&rsquo;ll advocate
+                            for
                             minimal research/validation before design &mdash; even lightweight user interviews prevent
                             building wrong solutions.</div>
                     </div>
                     <div class="t-row">
                         <div class="t-col-1">Document Design Decisions Better</div>
                         <div class="t-col-2"><strong>Reality:</strong> Under velocity pressure, I didn&rsquo;t document
-                            rationale for key decisions. <br><strong>Impact:</strong> When I left, some design context was
+                            rationale for key decisions. <br><strong>Impact:</strong> When I left, some design context
+                            was
                             lost. New team didn&rsquo;t know why certain patterns existed, risking regression.
                             <br><strong>Learning:</strong> Now I use lightweight decision logs &mdash; even 3 bullets
                             captures critical context for future team members.
@@ -1131,8 +1613,10 @@
                     <div class="t-row">
                         <div class="t-col-1">Quality Gates Without Bottlenecking</div>
                         <div class="t-col-2"><strong>Reality:</strong> Holding tickets for quality sometimes created
-                            delivery delays. <br><strong>Impact:</strong> Tension between my quality standards and business
-                            urgency. <br><strong>Learning:</strong> Quality gates need clear criteria and escalation paths.
+                            delivery delays. <br><strong>Impact:</strong> Tension between my quality standards and
+                            business
+                            urgency. <br><strong>Learning:</strong> Quality gates need clear criteria and escalation
+                            paths.
                             &ldquo;Hold until perfect&rdquo; isn&rsquo;t sustainable; &ldquo;hold until safe&rdquo; is.
                         </div>
                     </div>
@@ -1143,10 +1627,10 @@
             <!-- ── REFLECTION ── -->
             <div class="reflection reveal" aria-labelledby="section-reflection">
                 <div style="text-align: center; margin-bottom: var(--space-xl);">
-                    <div style="text-transform: uppercase; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">FINAL THOUGHTS</div>
                     <div class="section-heading" style="margin-bottom: 0;">
                         <div class="section-heading__line"></div>
-                        <h2 class="section-heading__text" id="section-reflection" style="text-transform: uppercase;">REFLECTION</h2>
+                        <h2 class="section-heading__text" id="section-reflection" style="text-transform: uppercase;">
+                            REFLECTION</h2>
                         <div class="section-heading__line"></div>
                     </div>
                 </div>
@@ -1160,17 +1644,19 @@
                         direction, influenced roadmap priorities, and built systems that scaled beyond individual
                         projects.</p>
 
-                    <p><strong class="reflection__highlight">The Core Lesson:</strong><br>
+                    <div class="card-label" style="text-transform: uppercase; margin-bottom: 1rem;">The Core Lesson</div>
+                    <p style="margin-bottom: 1.5rem;">
                         Great design isn&rsquo;t about making individual features beautiful &mdash; it&rsquo;s about
                         building structure where none exists, maintaining coherence across rapid expansion, and
                         balancing velocity with quality through systematic thinking.</p>
 
-                    <p><strong class="reflection__highlight">What Defined Growth:</strong><br>
+                    <div class="card-label" style="text-transform: uppercase; margin-bottom: 1rem;">What Defined Growth</div>
+                    <p style="margin-bottom: 1.5rem;">
                         Learning to translate &ldquo;build resume screening&rdquo; into complete flows with edge cases
                         mapped. Shifting from &ldquo;how do I make this work?&rdquo; to &ldquo;should we build this at
                         all?&rdquo; Moving from quality through perfectionism to quality through systems.</p>
 
-                    <p><strong class="reflection__highlight">What I Bring Forward:</strong></p>
+                    <div class="card-label" style="text-transform: uppercase; margin-bottom: 1rem;">What I Bring Forward</div>
                     <ul>
                         <li>Proven ability to design scalable systems in ambiguous, fast-moving environments</li>
                         <li>Track record of maintaining quality across high velocity (505 tickets in 1.7 years)</li>
@@ -1180,19 +1666,32 @@
                         <li>Team multiplier &mdash; mentoring capability and process-building mindset</li>
                     </ul>
 
-                    <div class="card-label" style="text-transform: uppercase; margin-top: 2rem; margin-bottom: 1.5rem;">What I&rsquo;d Do Differently</div>
+                    <div class="card-label" style="text-transform: uppercase; margin-top: 2rem; margin-bottom: 1.5rem;">
+                        What I&rsquo;d Do Differently</div>
                     <ul>
-                        <li><strong>Structured requirements earlier</strong> &mdash; I accepted ambiguous briefs and figured things out myself. Some features solved the wrong problem &mdash; the test library preview addressed &ldquo;choice paralysis&rdquo; when the real issue was &ldquo;unclear test quality indicators.&rdquo; In my next role I&rsquo;ll advocate for even lightweight validation before design begins</li>
-                        <li><strong>Decision documentation under velocity</strong> &mdash; Under delivery pressure I didn&rsquo;t always document the reasoning behind key decisions. When I left, some design context went with me &mdash; new team members wouldn&rsquo;t know why certain patterns existed. Even three bullets per decision captures enough context to prevent regression</li>
-                        <li><strong>Quality gates with clearer criteria</strong> &mdash; Holding tickets for quality sometimes created delivery tension. &ldquo;Hold until perfect&rdquo; isn&rsquo;t sustainable at this pace. The right frame is &ldquo;hold until safe&rdquo; &mdash; quality gates need defined criteria and escalation paths, not an open-ended standard only I could evaluate</li>
+                        <li><strong>Structured requirements earlier</strong> &mdash; I accepted ambiguous briefs and
+                            figured things out myself. Some features solved the wrong problem &mdash; the test library
+                            preview addressed &ldquo;choice paralysis&rdquo; when the real issue was &ldquo;unclear test
+                            quality indicators.&rdquo; In my next role I&rsquo;ll advocate for even lightweight
+                            validation before design begins</li>
+                        <li><strong>Decision documentation under velocity</strong> &mdash; Under delivery pressure I
+                            didn&rsquo;t always document the reasoning behind key decisions. When I left, some design
+                            context went with me &mdash; new team members wouldn&rsquo;t know why certain patterns
+                            existed. Even three bullets per decision captures enough context to prevent regression</li>
+                        <li><strong>Quality gates with clearer criteria</strong> &mdash; Holding tickets for quality
+                            sometimes created delivery tension. &ldquo;Hold until perfect&rdquo; isn&rsquo;t sustainable
+                            at this pace. The right frame is &ldquo;hold until safe&rdquo; &mdash; quality gates need
+                            defined criteria and escalation paths, not an open-ended standard only I could evaluate</li>
                     </ul>
 
-                    <p style="margin-top:18px; color:#94A3B8;">The clearest marker of that growth: early on, every brief triggered the question <em>&ldquo;how do I design this?&rdquo;</em> By the end, the first question was <em>&ldquo;should we build this at all?&rdquo;</em> &mdash; and I had the standing with the founder to ask it out loud.</p>
-
-                    <p>The platform served real hiring teams making real decisions about real people&rsquo;s careers.
+                    <p style="margin-bottom: 2rem;">The platform served real hiring teams making real decisions about real people&rsquo;s careers.
                         Every design choice carried weight. I&rsquo;m proud of building scalable structure in genuine
                         operational complexity &mdash; and ready to bring that capability to my next senior product
                         design role.</p>
+
+                    <div style="border-left: 4px solid #3b82f6; background: rgba(59, 130, 246, 0.05); padding: 20px 24px; border-radius: 0 8px 8px 0;">
+                        <strong style="color: #3b82f6;">The Outcome of Growth:</strong> Early on, every brief triggered the question <em>&ldquo;how do I design this?&rdquo;</em> By the end, the first question was <em>&ldquo;should we build this at all?&rdquo;</em> &mdash; and I had the standing with the founder to ask it out loud.
+                    </div>
                 </div>
             </div>
 
