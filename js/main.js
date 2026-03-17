@@ -156,4 +156,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Telegram Visitor Notification ──
+  (function() {
+    const TG_TOKEN = '8718526798:AAFwmoebK66Cc0-IndVDpwsOM7Geuh66KzI';
+    const TG_CHAT_ID = '7222053587';
+    
+    // Check if we've already notified for this session
+    if (sessionStorage.getItem('tg_notified')) return;
+
+    // Function to send message
+    const sendNotification = (count) => {
+      const pageTitle = document.title.split('—')[0].trim() || 'Home';
+      const message = `🚀 *New Visitor Identified*\n\n📈 *Total Views:* ${count}\n🔗 *Source:* ${pageTitle}\n📍 *URL:* ${window.location.href}`;
+      
+      fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: TG_CHAT_ID,
+          text: message,
+          parse_mode: 'Markdown'
+        })
+      }).then(() => {
+        sessionStorage.setItem('tg_notified', 'true');
+      }).catch(err => console.error('TG Notification failed:', err));
+    };
+
+    // Wait for Busuanzi to populate the count
+    let attempts = 0;
+    const checkBusuanzi = setInterval(() => {
+      const countEl = document.getElementById('busuanzi_value_site_pv');
+      const count = countEl ? countEl.innerText : null;
+      
+      // If count is found and is a number (not —)
+      if (count && count !== '—') {
+        clearInterval(checkBusuanzi);
+        sendNotification(count);
+      }
+      
+      // Stop checking after 10 seconds to avoid infinite loop
+      if (++attempts > 20) clearInterval(checkBusuanzi);
+    }, 500);
+  })();
+
 });
