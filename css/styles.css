@@ -2522,7 +2522,7 @@ a {
     width: 100%;
     max-width: 680px;
     max-height: 90vh;
-    overflow-y: auto;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -2818,6 +2818,21 @@ a {
         width: calc(100% - 3rem);
         justify-content: center;
         white-space: normal;
+        text-align: center;
+    }
+}
+
+/* Tablet & mobile: equal-width full-row footer buttons */
+@media (max-width: 768px) {
+    .site-footer__action-right {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .site-footer__link,
+    .feedback-footer-btn {
+        flex: 1;
+        justify-content: center;
         text-align: center;
     }
 }

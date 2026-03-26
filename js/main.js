@@ -215,12 +215,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const pageTitle = document.title.split('—')[0].trim() || 'Portfolio';
     const pageUrl = window.location.href;
     const isCaseStudy = window.location.pathname.includes('/case-studies/');
-    const defaultTopic = isCaseStudy ? pageTitle : 'Portfolio overall';
+
+    // Map URL slug to exact case study names
+    const csNameMap = {
+      'testlify':          'Testlify',
+      'homes-collection':  'Homes collection',
+      'gray-institute':    'Gray Institute',
+      'milestone':         'Milestone',
+      'asvi-thoughtworks': 'ASVI Thoughtworks'
+    };
+    const slug = Object.keys(csNameMap).find(k => window.location.pathname.includes(k));
+    const csLabel = slug ? `Case study - ${csNameMap[slug]}` : null;
+    const defaultTopic = isCaseStudy && csLabel ? csLabel : 'Portfolio overall';
 
     // ── Inject modal HTML ──
     const modalHtml = `
       <div class="feedback-overlay" id="feedbackOverlay" role="dialog" aria-modal="true" aria-label="Share Feedback">
-        <div class="feedback-modal" id="feedbackModal">
+        <div class="feedback-modal" id="feedbackModal" data-lenis-prevent>
           <button class="feedback-modal__close" id="feedbackClose" aria-label="Close">&#x2715;</button>
 
           <div class="feedback-modal__header">
@@ -231,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           <span class="feedback-topic-label">What&rsquo;s your feedback about?</span>
           <div class="feedback-topic-chips" id="feedbackTopics">
-            ${isCaseStudy ? `<button class="feedback-chip selected" data-topic="${pageTitle}">${pageTitle}</button>` : ''}
+            ${isCaseStudy && csLabel ? `<button class="feedback-chip selected" data-topic="${csLabel}">${csLabel}</button>` : ''}
             <button class="feedback-chip${!isCaseStudy ? ' selected' : ''}" data-topic="Portfolio overall">Portfolio overall</button>
             <button class="feedback-chip" data-topic="Something else">Something else</button>
           </div>
