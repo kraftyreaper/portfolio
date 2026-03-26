@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pageTitle = document.title.split('—')[0].trim() || 'Portfolio';
     const pageUrl = window.location.href;
     const isCaseStudy = window.location.pathname.includes('/case-studies/');
-    const defaultTopic = isCaseStudy ? 'This case study' : 'Portfolio overall';
+    const defaultTopic = isCaseStudy ? pageTitle : 'Portfolio overall';
 
     // ── Inject modal HTML ──
     const modalHtml = `
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           <span class="feedback-topic-label">What&rsquo;s your feedback about?</span>
           <div class="feedback-topic-chips" id="feedbackTopics">
-            ${isCaseStudy ? `<button class="feedback-chip selected" data-topic="This case study">This case study</button>` : ''}
+            ${isCaseStudy ? `<button class="feedback-chip selected" data-topic="${pageTitle}">${pageTitle}</button>` : ''}
             <button class="feedback-chip${!isCaseStudy ? ' selected' : ''}" data-topic="Portfolio overall">Portfolio overall</button>
             <button class="feedback-chip" data-topic="Something else">Something else</button>
           </div>
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           <label class="feedback-optional-label" for="feedbackContact">Contact — optional</label>
           <input class="feedback-optional-input" id="feedbackContact" type="text" maxlength="200"
-            placeholder="Name, LinkedIn URL, or email — only if you&rsquo;d like a reply" />
+            placeholder="Name, LinkedIn, or email" />
 
           <button class="feedback-submit-btn" id="feedbackSubmit">Send Feedback</button>
 
@@ -264,13 +264,13 @@ document.addEventListener('DOMContentLoaded', () => {
       feedbackBtn.id = 'feedbackTrigger';
       feedbackBtn.setAttribute('aria-label', 'Share feedback about this portfolio');
       feedbackBtn.innerHTML = `
+        Share Feedback
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
         </svg>
-        Share Feedback
       `;
-      actionRight.appendChild(feedbackBtn);
+      actionRight.prepend(feedbackBtn);
 
       // Extend custom cursor hover to new button
       feedbackBtn.addEventListener('mouseenter', () => {

@@ -1829,20 +1829,19 @@ a {
     color: #000000;
     background: #FFFFFF;
     border: 1px solid #FFFFFF;
-    padding: var(--space-md) var(--space-2xl);
+    padding: var(--space-md) var(--space-xl);
     border-radius: var(--radius-xl);
-    /* Standardized to match cards */
     font-weight: 600;
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-base);
     transition: all var(--transition-fast);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .site-footer__link:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 18px rgba(234, 255, 113, 0.2);
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
     background: #FFFFFF;
-    border-color: var(--accent);
+    border-color: #FFFFFF;
     color: #000000;
 }
 
@@ -2519,9 +2518,12 @@ a {
     border-radius: var(--radius-xl);
     padding: var(--space-2xl);
     width: 100%;
-    max-width: 560px;
+    max-width: 680px;
     max-height: 90vh;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     position: relative;
     transform: translateY(28px) scale(0.97);
     transition: transform var(--transition-slow);
@@ -2532,18 +2534,9 @@ a {
     transform: translateY(0) scale(1);
 }
 
-/* Scrollbar within modal */
+/* Hide scrollbar track but keep scroll functional */
 .feedback-modal::-webkit-scrollbar {
-    width: 4px;
-}
-
-.feedback-modal::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.feedback-modal::-webkit-scrollbar-thumb {
-    background: var(--border-accent);
-    border-radius: 4px;
+    display: none;
 }
 
 /* Close button */
@@ -2615,8 +2608,9 @@ a {
 .feedback-topic-chips {
     display: flex;
     gap: 8px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-bottom: var(--space-xl);
+    overflow: visible;
 }
 
 .feedback-chip {
@@ -2630,6 +2624,8 @@ a {
     cursor: pointer;
     transition: all var(--transition-fast);
     line-height: 1.5;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .feedback-chip:hover {
@@ -2654,7 +2650,7 @@ a {
 
 .feedback-textarea {
     width: 100%;
-    min-height: 160px;
+    min-height: 120px;
     background: var(--bg-surface);
     border: 1px solid var(--border-card);
     border-radius: var(--radius-md);
