@@ -1833,6 +1833,7 @@ a {
     border-radius: var(--radius-xl);
     font-weight: 600;
     font-size: var(--font-size-base);
+    line-height: 1;
     transition: all var(--transition-fast);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -2475,6 +2476,7 @@ a {
     border-radius: var(--radius-xl);
     font-weight: 500;
     font-size: var(--font-size-base);
+    line-height: 1;
     font-family: var(--font-family);
     transition: all var(--transition-fast);
     cursor: pointer;
@@ -2683,11 +2685,9 @@ a {
 
 /* Optional contact field */
 .feedback-optional-label {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
     font-weight: 500;
-    color: var(--text-tertiary);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    color: var(--text-secondary);
     margin-bottom: 8px;
     display: block;
 }

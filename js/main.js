@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
       orientation: 'vertical',
       smoothWheel: true,
     });
+    window.__lenis = lenis;
 
     function raf(time) {
       lenis.raf(time);
@@ -297,12 +298,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function openModal() {
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
+      if (window.__lenis) window.__lenis.stop();
       setTimeout(() => textarea && textarea.focus(), 320);
     }
 
     function closeModal() {
       overlay.classList.remove('open');
       document.body.style.overflow = '';
+      if (window.__lenis) window.__lenis.start();
     }
 
     const trigger = document.getElementById('feedbackTrigger');
