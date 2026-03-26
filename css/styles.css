@@ -2827,6 +2827,7 @@ a {
     .site-footer__action-right {
         width: 100%;
         flex-direction: row;
+        gap: 8px;
     }
 
     .site-footer__link,
@@ -2834,5 +2835,8 @@ a {
         flex: 1;
         justify-content: center;
         text-align: center;
+        padding: var(--space-sm) var(--space-md);
+        font-size: var(--font-size-sm);
+        white-space: nowrap;
     }
 }
