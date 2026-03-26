@@ -206,4 +206,185 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
   })();
 
+  // ── Feedback System ──
+  (function () {
+    const TG_TOKEN = '8718526798:AAFwmoebK66Cc0-IndVDpwsOM7Geuh66KzI';
+    const TG_CHAT_ID = '7222053587';
+
+    const pageTitle = document.title.split('—')[0].trim() || 'Portfolio';
+    const pageUrl = window.location.href;
+    const isCaseStudy = window.location.pathname.includes('/case-studies/');
+    const defaultTopic = isCaseStudy ? 'This case study' : 'Portfolio overall';
+
+    // ── Inject modal HTML ──
+    const modalHtml = `
+      <div class="feedback-overlay" id="feedbackOverlay" role="dialog" aria-modal="true" aria-label="Share Feedback">
+        <div class="feedback-modal" id="feedbackModal">
+          <button class="feedback-modal__close" id="feedbackClose" aria-label="Close">&#x2715;</button>
+
+          <div class="feedback-modal__header">
+            <p class="feedback-modal__eyebrow">Anonymous &middot; No login required</p>
+            <h2 class="feedback-modal__title">Your honest take.</h2>
+            <p class="feedback-modal__subtitle">What worked? What didn&rsquo;t? Your perspective helps me improve &mdash; be as candid as you like.</p>
+          </div>
+
+          <span class="feedback-topic-label">What&rsquo;s your feedback about?</span>
+          <div class="feedback-topic-chips" id="feedbackTopics">
+            ${isCaseStudy ? `<button class="feedback-chip selected" data-topic="This case study">This case study</button>` : ''}
+            <button class="feedback-chip${!isCaseStudy ? ' selected' : ''}" data-topic="Portfolio overall">Portfolio overall</button>
+            <button class="feedback-chip" data-topic="Something else">Something else</button>
+          </div>
+
+          <label class="feedback-textarea-label" for="feedbackText">Your feedback</label>
+          <textarea class="feedback-textarea" id="feedbackText" maxlength="5000"
+            placeholder="Tell me what works, what doesn&rsquo;t, and why. The more specific, the more helpful."></textarea>
+          <div class="feedback-char-count"><span id="feedbackCharCount">0</span> / 5000</div>
+
+          <label class="feedback-optional-label" for="feedbackContact">Contact — optional</label>
+          <input class="feedback-optional-input" id="feedbackContact" type="text" maxlength="200"
+            placeholder="Name, LinkedIn URL, or email — only if you&rsquo;d like a reply" />
+
+          <button class="feedback-submit-btn" id="feedbackSubmit">Send Feedback</button>
+
+          <p class="feedback-modal__linkedin">
+            Prefer a direct conversation?&nbsp;
+            <a href="https://www.linkedin.com/in/prashantuxuidesign/" target="_blank" rel="noopener noreferrer">DM me on LinkedIn &rarr;</a>
+          </p>
+        </div>
+      </div>
+      <div class="feedback-toast" id="feedbackToast">&#x2705; Feedback sent &mdash; thank you!</div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+    // ── Inject footer trigger button ──
+    const actionRight = document.querySelector('.site-footer__action-right');
+    if (actionRight) {
+      const feedbackBtn = document.createElement('button');
+      feedbackBtn.className = 'feedback-footer-btn';
+      feedbackBtn.id = 'feedbackTrigger';
+      feedbackBtn.setAttribute('aria-label', 'Share feedback about this portfolio');
+      feedbackBtn.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        Share Feedback
+      `;
+      actionRight.appendChild(feedbackBtn);
+
+      // Extend custom cursor hover to new button
+      feedbackBtn.addEventListener('mouseenter', () => {
+        const cur = document.querySelector('.custom-cursor');
+        if (cur) cur.classList.add('active');
+      });
+      feedbackBtn.addEventListener('mouseleave', () => {
+        const cur = document.querySelector('.custom-cursor');
+        if (cur) cur.classList.remove('active');
+      });
+    }
+
+    // ── References ──
+    const overlay   = document.getElementById('feedbackOverlay');
+    const closeBtn  = document.getElementById('feedbackClose');
+    const textarea  = document.getElementById('feedbackText');
+    const charCount = document.getElementById('feedbackCharCount');
+    const submitBtn = document.getElementById('feedbackSubmit');
+    const toast     = document.getElementById('feedbackToast');
+    const contactInput = document.getElementById('feedbackContact');
+    let selectedTopic = defaultTopic;
+
+    // ── Open / Close ──
+    function openModal() {
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => textarea && textarea.focus(), 320);
+    }
+
+    function closeModal() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    const trigger = document.getElementById('feedbackTrigger');
+    if (trigger) trigger.addEventListener('click', openModal);
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+    // ── Topic chips ──
+    document.querySelectorAll('.feedback-chip').forEach((chip) => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.feedback-chip').forEach((c) => c.classList.remove('selected'));
+        chip.classList.add('selected');
+        selectedTopic = chip.dataset.topic;
+      });
+    });
+
+    // ── Char counter ──
+    textarea.addEventListener('input', () => {
+      charCount.textContent = textarea.value.length;
+    });
+
+    // ── Toast ──
+    function showToast() {
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 4000);
+    }
+
+    // ── Send to Telegram ──
+    async function sendFeedbackToTelegram(topic, text, contact) {
+      const contactLine = contact.trim() ? contact.trim() : 'Not provided';
+      const message =
+        `\u{1F4AC} *New Portfolio Feedback*\n` +
+        `\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n` +
+        `\u{1F4C4} *Page:* ${pageTitle}\n` +
+        `\u{1F4CC} *Topic:* ${topic}\n` +
+        `\u{1F4DD} *Feedback:*\n${text}\n\n` +
+        `\u{1F464} *Contact:* ${contactLine}\n` +
+        `\u{1F517} *URL:* ${pageUrl}`;
+
+      try {
+        await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: TG_CHAT_ID,
+            text: message,
+            parse_mode: 'Markdown'
+          })
+        });
+      } catch (err) {
+        console.error('Feedback send failed:', err);
+      }
+    }
+
+    // ── Submit ──
+    submitBtn.addEventListener('click', async () => {
+      const text = textarea.value.trim();
+
+      if (!text) {
+        textarea.focus();
+        textarea.style.borderColor = 'rgba(255, 80, 80, 0.5)';
+        setTimeout(() => { textarea.style.borderColor = ''; }, 2000);
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending\u2026';
+
+      await sendFeedbackToTelegram(selectedTopic, text, contactInput.value || '');
+
+      // Reset form
+      textarea.value = '';
+      charCount.textContent = '0';
+      contactInput.value = '';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Feedback';
+
+      closeModal();
+      showToast();
+    });
+  })();
+
 });
